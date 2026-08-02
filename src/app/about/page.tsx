@@ -1,0 +1,156 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { Button } from "@/components/ui/Button";
+import { ShieldCheck, Target, Eye, Users, Award, Quote, CheckCircle2, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+
+export default function AboutPage() {
+  return (
+    <div className="min-h-screen bg-[#090D16] text-slate-100 flex flex-col font-sans">
+      <Navbar />
+
+      {/* HERO SECTION */}
+      <section className="pt-32 pb-20 bg-slate-900/80 border-b border-slate-800 text-white relative overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-green-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-green-500/10 text-green-400 border border-green-500/20 mb-4"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
+            About KashGo Mobility
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight mb-6"
+          >
+            Connecting Kashmir Through <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300">
+              Trusted Mobility
+            </span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-slate-300 text-lg max-w-3xl mx-auto leading-relaxed"
+          >
+            KashGo was founded with a single mission: to simplify travel across Jammu, Kashmir &amp; Ladakh by bringing technology, verified local drivers, and riders together in one platform.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* MEET THE FOUNDER */}
+      <section className="py-20 bg-[#090D16]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="w-full max-w-md bg-slate-900 text-white rounded-3xl p-8 shadow-2xl border border-slate-800 text-center relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-green-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div className="relative w-56 h-72 mx-auto mb-6 rounded-2xl overflow-hidden border-2 border-green-500 shadow-xl bg-slate-950 p-1">
+                  <Image
+                    src="/images/founder.png"
+                    alt="Shaikh Shaheen Kamalmiya - Founder & CEO KashGo"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 224px"
+                    priority
+                    className="object-cover object-center rounded-xl"
+                  />
+                </div>
+
+                <h3 className="text-2xl font-black text-white mb-1">
+                  Shaikh Shaheen Kamalmiya
+                </h3>
+                <div className="text-xs font-extrabold text-green-400 uppercase tracking-widest mb-6">
+                  Founder &amp; CEO, KashGo
+                </div>
+
+                <div className="bg-slate-950 rounded-2xl p-4 text-left border border-slate-800 space-y-2">
+                  <Quote className="w-6 h-6 text-green-400" />
+                  <p className="text-slate-200 text-xs italic leading-relaxed font-medium">
+                    "Our mission isn't simply to build an app. It's to build trust—one journey at a time."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-7 space-y-6">
+              <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20">
+                Company Vision
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                Designed For Locals &amp; Visitors Alike
+              </h2>
+              <p className="text-slate-300 text-base leading-relaxed">
+                Navigating Kashmir should be seamless. KashGo combines native valley routes expertise with modern technology to deliver transparent pricing, punctual pickups, and background-verified drivers.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div className="p-4 bg-slate-900 rounded-2xl border border-slate-800 hover:border-green-500/40 transition-colors">
+                  <Target className="w-6 h-6 text-green-400 mb-2" />
+                  <div className="text-base font-bold text-white mb-1">Our Mission</div>
+                  <div className="text-xs text-slate-300">To provide safe, reliable, and technology-driven transportation across Kashmir.</div>
+                </div>
+
+                <div className="p-4 bg-slate-900 rounded-2xl border border-slate-800 hover:border-green-500/40 transition-colors">
+                  <Eye className="w-6 h-6 text-green-400 mb-2" />
+                  <div className="text-base font-bold text-white mb-1">Our Vision</div>
+                  <div className="text-xs text-slate-300">To become Kashmir's most trusted mobility network for locals and tourists alike.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CORE VALUES */}
+      <section className="py-20 bg-slate-900/60 border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20 mb-3 inline-block">
+              Our Principles
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+              The Core Values that Drive KashGo
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg">
+              We are building a platform rooted in integrity, transparency, and a deep commitment to the region.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { icon: ShieldCheck, title: "Safety & Trust", desc: "We stringently verify every driver partner and monitor rides to ensure that passengers always feel secure." },
+              { icon: Users, title: "Community First", desc: "Built by locals for locals (and our guests). We prioritize empowering local driver partners to grow with us." },
+              { icon: Award, title: "Excellence in Service", desc: "From maintaining clean vehicles to ensuring punctual pickups, we never compromise on quality." },
+            ].map(({ icon: Icon, title, desc }, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="bg-slate-950 rounded-3xl p-8 border border-slate-800 text-center hover:border-green-500/50 transition-colors group"
+              >
+                <div className="w-16 h-16 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center mx-auto mb-6 group-hover:bg-green-600 transition-colors">
+                  <Icon className="w-8 h-8 text-green-400 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">{desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
