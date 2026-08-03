@@ -29,6 +29,7 @@ import {
   Clock,
   ChevronRight,
   ChevronLeft,
+  ChevronDown,
   X,
   Award,
 } from "lucide-react";
@@ -757,100 +758,103 @@ export default function Home() {
           </div>
 
           <div ref={fleetRef} className="flex overflow-x-auto gap-6 pb-4 w-full snap-x snap-mandatory scrollbar-none lg:grid lg:grid-cols-2 lg:overflow-x-visible lg:pb-0 lg:gap-8">
-            {PREMIUM_FLEET.slice(0, showAllFleet ? PREMIUM_FLEET.length : 4).map((vehicle, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.05 }}
-                whileHover={{ y: -8, scale: 1.015 }}
-                className="flex flex-col md:flex-row min-w-[85vw] sm:min-w-[400px] lg:min-w-0 snap-center bg-slate-900 rounded-3xl border border-slate-800 hover:border-amber-500/50 hover:shadow-[0_15px_30px_rgba(245,158,11,0.08)] transition-all overflow-hidden group"
-              >
-                {/* Vehicle Image Container */}
-                <div
-                  className="relative w-full md:w-[42%] bg-slate-950 overflow-hidden shrink-0"
-                  style={{ minHeight: '260px' }}
+            {PREMIUM_FLEET.map((vehicle, idx) => {
+              const isExtra = idx >= 4;
+              return (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.05 }}
+                  whileHover={{ y: -8, scale: 1.015 }}
+                  className={`flex flex-col md:flex-row min-w-[85vw] sm:min-w-[400px] lg:min-w-0 snap-center bg-slate-900 rounded-3xl border border-slate-800 hover:border-amber-500/50 hover:shadow-[0_15px_30px_rgba(245,158,11,0.08)] transition-all overflow-hidden group ${isExtra && !showAllFleet ? "lg:hidden" : ""}`}
                 >
-                  <Image
-                    src={vehicle.img}
-                    alt={vehicle.name}
-                    fill
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, 30vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-slate-900 via-transparent to-transparent z-10"></div>
-                </div>
-
-                {/* Content */}
-                <div className="flex-1 p-6 md:p-8 space-y-4 flex flex-col justify-between">
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-black text-white tracking-tight leading-none group-hover:text-amber-400 transition-colors">
-                      {vehicle.name}
-                    </h3>
-                    <p className="text-xs text-slate-400 font-medium">
-                      {vehicle.subtitle}
-                    </p>
-                    <p className="text-xs text-slate-300 leading-relaxed pt-1">
-                      {vehicle.desc}
-                    </p>
+                  {/* Vehicle Image Container */}
+                  <div
+                    className="relative w-full md:w-[42%] bg-slate-950 overflow-hidden shrink-0"
+                    style={{ minHeight: '260px' }}
+                  >
+                    <Image
+                      src={vehicle.img}
+                      alt={vehicle.name}
+                      fill
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, 30vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-slate-900 via-transparent to-transparent z-10"></div>
                   </div>
 
-                  <div className="space-y-3 pt-2">
-                    {/* Capacity Specs */}
-                    <div className="grid grid-cols-2 gap-2 text-xs text-slate-300 bg-slate-950/80 p-2.5 rounded-xl border border-slate-800">
-                      <div className="flex items-center gap-1.5">
-                        <Users className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                        <span>{vehicle.capacity}</span>
+                  {/* Content */}
+                  <div className="flex-1 p-6 md:p-8 space-y-4 flex flex-col justify-between">
+                    <div className="space-y-2">
+                      <h3 className="text-xl font-black text-white tracking-tight leading-none group-hover:text-amber-400 transition-colors">
+                        {vehicle.name}
+                      </h3>
+                      <p className="text-xs text-slate-400 font-medium">
+                        {vehicle.subtitle}
+                      </p>
+                      <p className="text-xs text-slate-300 leading-relaxed pt-1">
+                        {vehicle.desc}
+                      </p>
+                    </div>
+
+                    <div className="space-y-3 pt-2">
+                      {/* Capacity Specs */}
+                      <div className="grid grid-cols-2 gap-2 text-xs text-slate-300 bg-slate-950/80 p-2.5 rounded-xl border border-slate-800">
+                        <div className="flex items-center gap-1.5">
+                          <Users className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                          <span>{vehicle.capacity}</span>
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <Car className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                          <span className="truncate">{vehicle.luggage}</span>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-1.5">
-                        <Car className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                        <span className="truncate">{vehicle.luggage}</span>
+
+                      {/* Ideal For Tags */}
+                      <div className="space-y-1">
+                        <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">
+                          Ideal For
+                        </div>
+                        <div className="flex flex-wrap gap-1">
+                          {vehicle.ideal.slice(0, 3).map((tag, tagIdx) => (
+                            <span
+                              key={tagIdx}
+                              className="text-[9px] font-extrabold px-2 py-0.5 rounded-full bg-slate-950 text-slate-300 border border-slate-850"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                          {vehicle.ideal.length > 3 && (
+                            <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded-full bg-slate-950 text-amber-400 border border-slate-850">
+                              +{vehicle.ideal.length - 3} more
+                            </span>
+                          )}
+                        </div>
                       </div>
                     </div>
 
-                    {/* Ideal For Tags */}
-                    <div className="space-y-1">
-                      <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">
-                        Ideal For
-                      </div>
-                      <div className="flex flex-wrap gap-1">
-                        {vehicle.ideal.slice(0, 3).map((tag, tagIdx) => (
-                          <span
-                            key={tagIdx}
-                            className="text-[9px] font-extrabold px-2 py-0.5 rounded-full bg-slate-950 text-slate-300 border border-slate-850"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                        {vehicle.ideal.length > 3 && (
-                          <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded-full bg-slate-950 text-amber-400 border border-slate-850">
-                            +{vehicle.ideal.length - 3} more
-                          </span>
-                        )}
-                      </div>
+                    {/* Book Button */}
+                    <div className="pt-4 z-10">
+                      <a
+                        href={`https://wa.me/917400180114?text=Hi%20KASHgo,%20I'd%2520like%2520to%2520book%2520a%2520ride%2520with%2520the%2520${encodeURIComponent(vehicle.name)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-900 font-extrabold text-xs py-3 rounded-2xl transition-all shadow-md active:scale-95 cursor-pointer"
+                      >
+                        <span>Book {vehicle.name.split(' ')[0]}</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </a>
                     </div>
                   </div>
-
-                  {/* Book Button */}
-                  <div className="pt-4 z-10">
-                    <a
-                      href={`https://wa.me/917400180114?text=Hi%20KASHgo,%20I'd%2520like%2520to%2520book%2520a%2520ride%2520with%2520the%2520${encodeURIComponent(vehicle.name)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-900 font-extrabold text-xs py-3 rounded-2xl transition-all shadow-md active:scale-95 cursor-pointer"
-                    >
-                      <span>Book {vehicle.name.split(' ')[0]}</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
 
-          {/* Toggle Expand Button for Premium Fleet */}
-          <div className="flex justify-center mt-10">
+          {/* Toggle Expand Button for Premium Fleet (Desktop Only) */}
+          <div className="hidden lg:flex justify-center mt-10">
             <Button
               variant="outline"
               size="md"
@@ -859,7 +863,7 @@ export default function Home() {
             >
               <span className="flex items-center gap-1.5 whitespace-nowrap">
                 {showAllFleet ? "Show Less Vehicles" : "View Full Fleet"}
-                <ChevronRight className={`w-4 h-4 transition-transform duration-300 ${showAllFleet ? "-rotate-90" : "rotate-90"}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${showAllFleet ? "rotate-180" : "rotate-0"}`} />
               </span>
             </Button>
           </div>
