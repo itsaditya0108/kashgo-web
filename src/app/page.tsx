@@ -260,6 +260,11 @@ export default function Home() {
                 <span>🚀 KASHgo App Launching Soon</span>
               </motion.div>
 
+              {/* Mobile-Only Phone Mockup directly below the badge */}
+              <div className="block lg:hidden w-full mt-2">
+                <HeroMobileMockup />
+              </div>
+
               {/* Main Headline */}
               <motion.h1
                 initial={{ opacity: 0, y: 15 }}
@@ -339,7 +344,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.95, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.8, type: "spring", stiffness: 90 }}
-              className="lg:col-span-6 mt-10 lg:mt-0 flex justify-center w-full"
+              className="lg:col-span-6 hidden lg:flex justify-center w-full"
             >
               <HeroMobileMockup />
             </motion.div>
