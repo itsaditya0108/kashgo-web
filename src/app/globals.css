@@ -76,16 +76,6 @@
   animation: shimmer-sweep 0.65s ease forwards;
 }
 
-/* ── Fluid Typography (clamp) ── */
-.text-fluid-hero {
-  font-size: clamp(2rem, 5vw + 0.5rem, 4.5rem);
-  line-height: 1.1;
-}
-.text-fluid-section {
-  font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
-  line-height: 1.2;
-}
-
 /* High-Contrast Kashmir Hero Backdrop */
 .hero-mountain-bg {
   position: relative;

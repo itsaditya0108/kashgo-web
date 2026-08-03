@@ -263,7 +263,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-fluid-hero font-black tracking-tight text-white"
+                className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-white"
               >
                 Ride{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">
@@ -545,7 +545,7 @@ export default function Home() {
               <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35">
                 Meet The Founder
               </span>
-              <h2 className="text-fluid-section font-extrabold text-white tracking-tight">
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
                 A Vision Inspired by Kashmir
               </h2>
               <p className="text-slate-300 text-base leading-relaxed">
@@ -751,7 +751,7 @@ export default function Home() {
             <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/35 rounded-full text-xs font-black uppercase tracking-wider">
               <Car className="w-3.5 h-3.5" /> Premium Mobility
             </span>
-            <h2 className="text-fluid-section font-extrabold text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
               Our Premium Fleet ⭐⭐⭐⭐⭐
             </h2>
             <p className="text-slate-300 text-base leading-relaxed">
