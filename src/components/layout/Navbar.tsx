@@ -63,7 +63,7 @@ export const Navbar: React.FC = () => {
                   className={`px-4 py-2 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 relative ${
                     isActive
                       ? "text-amber-400 font-bold"
-                      : "text-slate-300 hover:text-white hover:bg-slate-800/60"
+                      : "text-slate-300 hover:text-white hover:bg-amber-500/10"
                   }`}
                 >
                   {isActive && (
