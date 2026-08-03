@@ -295,16 +295,12 @@ export default function Home() {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="flex flex-wrap items-center gap-4 pt-2"
               >
-                <Link href="#app-download">
-                  <Button variant="primary" size="lg" icon={<Smartphone className="w-5 h-5" />}>
-                    Download App <span className="text-xs opacity-90 ml-1 font-extrabold">(Coming Soon)</span>
-                  </Button>
-                </Link>
-                <Link href="/contact">
-                  <Button variant="outline" size="lg" icon={<PhoneCall className="w-5 h-5" />}>
-                    Contact Us
-                  </Button>
-                </Link>
+                <Button href="#app-download" variant="primary" size="lg" icon={<Smartphone className="w-5 h-5" />}>
+                  Download App <span className="text-xs opacity-90 ml-1 font-extrabold">(Coming Soon)</span>
+                </Button>
+                <Button href="/contact" variant="outline" size="lg" icon={<PhoneCall className="w-5 h-5" />}>
+                  Contact Us
+                </Button>
               </motion.div>
 
               {/* Available Soon Badges */}
@@ -859,10 +855,11 @@ export default function Home() {
               variant="outline"
               size="md"
               onClick={() => setShowAllFleet(!showAllFleet)}
-              className="border-amber-500/50 hover:border-amber-400 text-amber-400 hover:text-amber-300 hover:bg-amber-500/10 gap-2"
+              className="border-amber-500/50 hover:border-amber-400 text-amber-400 hover:text-amber-300 hover:bg-amber-500/10 gap-2 whitespace-nowrap flex items-center"
             >
-              <span>{showAllFleet ? "Show Less Vehicles" : "View Full Fleet"}</span>
-              <ChevronRight className={`w-4 h-4 transition-transform duration-300 ${showAllFleet ? "-rotate-90" : "rotate-90"}`} />
+              <span>{showAllFleet ? "Show Less Vehicles" : "View Full Fleet"}
+                <ChevronRight className={`w-4 h-4 transition-transform duration-300 ${showAllFleet ? "-rotate-90" : "rotate-90"}`} />
+              </span>
             </Button>
           </div>
 
@@ -1022,11 +1019,9 @@ export default function Home() {
             </div>
 
             <div className="lg:col-span-4 flex justify-start lg:justify-end">
-              <Link href="/driver">
-                <Button variant="primary" size="lg" icon={<ArrowRight className="w-5 h-5" />}>
-                  Apply as Driver
-                </Button>
-              </Link>
+              <Button href="/driver" variant="primary" size="lg" icon={<ArrowRight className="w-5 h-5" />}>
+                Apply as Driver
+              </Button>
             </div>
           </div>
         </div>
@@ -1045,11 +1040,9 @@ export default function Home() {
             Soon, getting around will be easier than ever. Download the KASHgo app when it launches and experience travel designed for Kashmir.
           </p>
           <div className="pt-4">
-            <Link href="#app-download">
-              <Button variant="primary" size="lg" icon={<Smartphone className="w-5 h-5" />}>
-                Download App (Coming Soon)
-              </Button>
-            </Link>
+            <Button href="#app-download" variant="primary" size="lg" icon={<Smartphone className="w-5 h-5" />}>
+              Download App (Coming Soon)
+            </Button>
           </div>
         </div>
       </section>

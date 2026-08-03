@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
-import { motion, HTMLMotionProps } from "framer-motion";
+import { motion } from "framer-motion";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import Link from "next/link";
 
-interface ButtonProps extends HTMLMotionProps<"button"> {
+interface ButtonProps {
   variant?: "primary" | "secondary" | "outline" | "dark" | "ghost" | "yellow";
   size?: "sm" | "md" | "lg";
   children: React.ReactNode;
@@ -13,6 +14,10 @@ interface ButtonProps extends HTMLMotionProps<"button"> {
   iconPosition?: "left" | "right";
   fullWidth?: boolean;
   className?: string;
+  href?: string;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
+  disabled?: boolean;
+  type?: "button" | "submit" | "reset";
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -23,10 +28,14 @@ export const Button: React.FC<ButtonProps> = ({
   iconPosition = "left",
   fullWidth = false,
   className,
+  href,
+  onClick,
+  disabled,
+  type = "button",
   ...props
 }) => {
   const baseStyles =
-    "inline-flex items-center justify-center font-bold rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed select-none btn-shimmer";
+    "inline-flex items-center justify-center font-bold rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed select-none btn-shimmer whitespace-nowrap";
 
   const variants = {
     primary:
@@ -48,21 +57,18 @@ export const Button: React.FC<ButtonProps> = ({
     lg: "text-base px-8 py-4 gap-2.5",
   };
 
-  return (
-    <motion.button
-      whileHover={{ scale: 1.03 }}
-      whileTap={{ scale: 0.97 }}
-      className={twMerge(
-        clsx(
-          baseStyles,
-          variants[variant],
-          sizes[size],
-          fullWidth && "w-full",
-          className
-        )
-      )}
-      {...props}
-    >
+  const classes = twMerge(
+    clsx(
+      baseStyles,
+      variants[variant],
+      sizes[size],
+      fullWidth && "w-full",
+      className
+    )
+  );
+
+  const innerContent = (
+    <>
       {icon && iconPosition === "left" && (
         <span className="inline-block shrink-0">{icon}</span>
       )}
@@ -70,6 +76,36 @@ export const Button: React.FC<ButtonProps> = ({
       {icon && iconPosition === "right" && (
         <span className="inline-block shrink-0">{icon}</span>
       )}
+    </>
+  );
+
+  if (href) {
+    return (
+      <Link href={href} passHref legacyBehavior>
+        <motion.a
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.97 }}
+          className={classes}
+          onClick={onClick as any}
+          {...(props as any)}
+        >
+          {innerContent}
+        </motion.a>
+      </Link>
+    );
+  }
+
+  return (
+    <motion.button
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      className={classes}
+      onClick={onClick}
+      disabled={disabled}
+      type={type}
+      {...props}
+    >
+      {innerContent}
     </motion.button>
   );
 };
