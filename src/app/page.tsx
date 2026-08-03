@@ -211,6 +211,7 @@ const PREMIUM_FLEET = [
 export default function Home() {
   const [isFounderModalOpen, setIsFounderModalOpen] = useState(false);
   const [activeDestIndex, setActiveDestIndex] = useState(0);
+  const [showAllFleet, setShowAllFleet] = useState(false);
   const destinationsRef = useRef<HTMLDivElement>(null);
   const fleetRef = useRef<HTMLDivElement>(null);
 
@@ -760,7 +761,7 @@ export default function Home() {
           </div>
 
           <div ref={fleetRef} className="flex overflow-x-auto gap-6 pb-4 w-full snap-x snap-mandatory scrollbar-none lg:grid lg:grid-cols-2 lg:overflow-x-visible lg:pb-0 lg:gap-8">
-            {PREMIUM_FLEET.map((vehicle, idx) => (
+            {PREMIUM_FLEET.slice(0, showAllFleet ? PREMIUM_FLEET.length : 4).map((vehicle, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 30 }}
@@ -850,6 +851,19 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          {/* Toggle Expand Button for Premium Fleet */}
+          <div className="flex justify-center mt-10">
+            <Button
+              variant="outline"
+              size="md"
+              onClick={() => setShowAllFleet(!showAllFleet)}
+              className="border-amber-500/50 hover:border-amber-400 text-amber-400 hover:text-amber-300 hover:bg-amber-500/10 gap-2"
+            >
+              <span>{showAllFleet ? "Show Less Vehicles" : "View Full Fleet"}</span>
+              <ChevronRight className={`w-4 h-4 transition-transform duration-300 ${showAllFleet ? "-rotate-90" : "rotate-90"}`} />
+            </Button>
           </div>
 
           {/* Slider Arrow Indicators for Mobile Swipe */}
@@ -1018,33 +1032,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY PEOPLE WILL LOVE KASHGO */}
-      <section className="py-20 bg-[#090D16]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35 mb-3 inline-block">
-              Why People Will Love KASHgo
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
-              Built Around Real Travel Needs
-            </h2>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-            {TRAVEL_NEEDS_PILLS.map((pill, idx) => (
-              <div
-                key={idx}
-                className="px-5 py-3 rounded-full bg-slate-900 border border-slate-800 text-white font-bold text-sm flex items-center gap-2 shadow-xs hover:border-amber-500 transition-colors"
-              >
-                <div className="w-5 h-5 rounded-full bg-gradient-to-r from-amber-500 to-amber-400 text-slate-900 flex items-center justify-center">
-                  <Check className="w-3 h-3" />
-                </div>
-                <span>{pill}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* FINAL CTA SECTION */}
       <section className="py-20 bg-slate-950 text-white relative overflow-hidden border-t border-slate-800">
