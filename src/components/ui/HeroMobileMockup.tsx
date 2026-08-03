@@ -62,7 +62,7 @@ export const HeroMobileMockup: React.FC = () => {
 
               <div className="bg-slate-950 rounded-lg p-2.5 text-[10px] text-slate-400 flex items-center justify-between mt-1.5 border border-slate-800">
                 <span>Enter destination</span>
-                <span className="w-4 h-4 rounded-full bg-amber-600 text-white text-[9px] flex items-center justify-center font-bold shadow-xs">
+                <span className="w-4 h-4 rounded-full bg-gradient-to-r from-amber-500 to-amber-400 text-slate-900 text-[9px] flex items-center justify-center font-bold shadow-xs">
                   ➔
                 </span>
               </div>
@@ -109,7 +109,7 @@ export const HeroMobileMockup: React.FC = () => {
                   <div className="text-[11px] font-extrabold text-white">Sedan</div>
                   <div className="text-[8px] text-slate-400 font-medium">👤 4 Seats • 🛡️ Comfortable</div>
                 </div>
-                <div className="w-5 h-5 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold text-[10px] shrink-0 shadow-xs">
+                <div className="w-5 h-5 rounded-full bg-gradient-to-r from-amber-500 to-amber-400 text-slate-900 flex items-center justify-center font-bold text-[10px] shrink-0 shadow-xs">
                   ➔
                 </div>
               </div>

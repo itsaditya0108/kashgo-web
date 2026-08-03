@@ -98,7 +98,7 @@ export default function AboutPage() {
               <div className="pt-1">
                 <button
                   onClick={() => setIsFounderModalOpen(true)}
-                  className="group inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-extrabold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:scale-105 active:scale-95 cursor-pointer"
+                  className="group inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-900 font-extrabold text-sm px-6 py-3 rounded-full transition-all shadow-lg shadow-amber-500/25 hover:scale-105 active:scale-95 cursor-pointer"
                 >
                   <span>Know More</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

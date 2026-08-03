@@ -33,7 +33,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
           {badge}
         </span>
       )}
-      <div className="w-12 h-12 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300 mb-6">
+      <div className="w-12 h-12 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-600 group-hover:bg-gradient-to-r group-hover:from-amber-500 group-hover:to-amber-400 group-hover:text-slate-900 transition-colors duration-300 mb-6">
         <Icon className="w-6 h-6" />
       </div>
       <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-amber-600 transition-colors">

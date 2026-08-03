@@ -564,7 +564,7 @@ export default function Home() {
               <div className="pt-2">
                 <button
                   onClick={() => setIsFounderModalOpen(true)}
-                  className="group inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-extrabold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:scale-105 active:scale-95 cursor-pointer"
+                  className="group inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-900 font-extrabold text-sm px-6 py-3 rounded-full transition-all shadow-lg shadow-amber-500/25 hover:scale-105 active:scale-95 cursor-pointer"
                 >
                   <span>Know More</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -596,7 +596,7 @@ export default function Home() {
                 key={idx}
                 className="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-amber-500/60 transition-all flex items-start gap-4"
               >
-                <div className="w-8 h-8 rounded-full bg-amber-600 text-white flex items-center justify-center shrink-0 shadow-xs">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-r from-amber-500 to-amber-400 text-slate-900 flex items-center justify-center shrink-0 shadow-xs">
                   <Check className="w-4 h-4" />
                 </div>
                 <div className="text-base font-bold text-white pt-0.5">
@@ -712,7 +712,7 @@ export default function Home() {
                           e.stopPropagation();
                           window.open(place.link, '_blank');
                         }}
-                        className="inline-flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white font-extrabold text-xs px-4 py-2.5 rounded-xl transition-all shadow-md active:scale-95 cursor-pointer"
+                        className="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-900 font-extrabold text-xs px-4 py-2.5 rounded-xl transition-all shadow-md active:scale-95 cursor-pointer"
                       >
                         <span>Book Ride</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -841,7 +841,7 @@ export default function Home() {
                       href={`https://wa.me/917400180114?text=Hi%20KASHgo,%20I'd%2520like%2520to%2520book%2520a%2520ride%2520with%2520the%2520${encodeURIComponent(vehicle.name)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-extrabold text-xs py-3 rounded-2xl transition-all shadow-md active:scale-95 cursor-pointer"
+                      className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-900 font-extrabold text-xs py-3 rounded-2xl transition-all shadow-md active:scale-95 cursor-pointer"
                     >
                       <span>Book {vehicle.name.split(' ')[0]}</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -889,7 +889,7 @@ export default function Home() {
                 href="https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20need%20help%20choosing%20the%20right%20vehicle%20for%20my%20Kashmir%20trip."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-extrabold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:scale-105 active:scale-95 cursor-pointer"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-900 font-extrabold text-sm px-6 py-3 rounded-full transition-all shadow-lg shadow-amber-500/25 hover:scale-105 active:scale-95 cursor-pointer"
               >
                 <span>🚖 Book Your Ride Today</span>
                 <ArrowRight className="w-4 h-4" />
@@ -942,7 +942,7 @@ export default function Home() {
                     <div className="text-sm font-bold">Fast Kashmir Ride Booking</div>
                     <div className="text-xs text-slate-400 mt-1">Srinagar Airport ➔ Gulmarg Pass</div>
                   </div>
-                  <div className="p-3 bg-amber-600 text-white font-extrabold text-xs rounded-xl text-center">
+                  <div className="p-3 bg-gradient-to-r from-amber-500 to-amber-400 text-slate-900 font-extrabold text-xs rounded-xl text-center">
                     Driver Assigned • Tariq M. (4.9★)
                   </div>
                 </div>
@@ -1036,7 +1036,7 @@ export default function Home() {
                 key={idx}
                 className="px-5 py-3 rounded-full bg-slate-900 border border-slate-800 text-white font-bold text-sm flex items-center gap-2 shadow-xs hover:border-amber-500 transition-colors"
               >
-                <div className="w-5 h-5 rounded-full bg-amber-600 text-white flex items-center justify-center">
+                <div className="w-5 h-5 rounded-full bg-gradient-to-r from-amber-500 to-amber-400 text-slate-900 flex items-center justify-center">
                   <Check className="w-3 h-3" />
                 </div>
                 <span>{pill}</span>

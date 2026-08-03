@@ -38,7 +38,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
       className="flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-2xl hover:border-amber-400 transition-all duration-300 relative overflow-hidden"
     >
       {badge && (
-        <div className="absolute top-0 right-0 bg-amber-600 text-white text-[11px] font-extrabold uppercase px-4 py-1 rounded-bl-xl tracking-wider">
+        <div className="absolute top-0 right-0 bg-gradient-to-r from-amber-500 to-amber-400 text-slate-900 text-[11px] font-extrabold uppercase px-4 py-1 rounded-bl-xl tracking-wider">
           {badge}
         </div>
       )}

@@ -138,7 +138,7 @@ export const Footer: React.FC = () => {
                   <button
                     type="submit"
                     aria-label="Subscribe for app launch"
-                    className="absolute right-1.5 top-1.5 bottom-1.5 bg-amber-600 hover:bg-amber-500 text-white font-bold px-2.5 rounded-lg flex items-center justify-center transition-colors"
+                    className="absolute right-1.5 top-1.5 bottom-1.5 bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-900 font-bold px-2.5 rounded-lg flex items-center justify-center transition-colors"
                   >
                     <Send className="w-3.5 h-3.5" />
                   </button>
