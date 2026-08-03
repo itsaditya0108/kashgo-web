@@ -116,7 +116,7 @@ export const HeroMobileMockup: React.FC = () => {
             </div>
 
             {/* Bottom Safety Trust Shield */}
-            <div className="bg-amber-500/10 border border-amber-500/30 rounded-lg p-2 flex items-center gap-1.5">
+            <div className="bg-amber-500/20 border border-amber-500/40 rounded-lg p-2 flex items-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 text-amber-400 shrink-0" />
               <div>
                 <div className="text-[8.5px] font-extrabold text-white">Safe Rides, Trusted Drivers</div>

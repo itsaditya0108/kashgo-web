@@ -69,7 +69,7 @@ export const Navbar: React.FC = () => {
                   {isActive && (
                     <motion.div
                       layoutId="activeNavTab"
-                      className="absolute inset-0 bg-slate-800/90 rounded-full border border-amber-500/30"
+                      className="absolute inset-0 bg-slate-800/90 rounded-full border border-amber-500/40"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -121,7 +121,7 @@ export const Navbar: React.FC = () => {
                     href={link.href}
                     className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
                       isActive
-                        ? "bg-amber-500/10 text-amber-400 font-bold border border-amber-500/20"
+                        ? "bg-amber-500/20 text-amber-400 font-bold border border-amber-500/35"
                         : "text-slate-300 hover:bg-slate-900"
                     }`}
                   >

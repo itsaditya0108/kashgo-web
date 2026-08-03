@@ -79,7 +79,7 @@ export default function DriverPage() {
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-4"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/35 mb-4"
           >
             <Car className="w-4 h-4 text-amber-400" />
             <span>Drive with KASHgo</span>
@@ -112,7 +112,7 @@ export default function DriverPage() {
       <section className="py-16 bg-[#090D16] border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 mb-3 inline-block">
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35 mb-3 inline-block">
               Driver Partner Benefits
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
@@ -129,7 +129,7 @@ export default function DriverPage() {
                 transition={{ delay: idx * 0.08 }}
                 className="p-5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-4 hover:border-amber-500/40 transition-colors"
               >
-                <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/35 flex items-center justify-center shrink-0">
                   <Icon className="w-5 h-5 text-amber-400" />
                 </div>
                 <div>
@@ -148,7 +148,7 @@ export default function DriverPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Left Requirements */}
             <div className="lg:col-span-5 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35">
                 Requirements
               </span>
               <h2 className="text-3xl font-extrabold text-white">
@@ -190,7 +190,7 @@ export default function DriverPage() {
                     exit={{ opacity: 0, scale: 0.95 }}
                     className="py-12 text-center flex flex-col items-center bg-slate-950 rounded-2xl border border-slate-800 p-6"
                   >
-                    <div className="w-16 h-16 bg-amber-500/10 text-amber-400 rounded-full flex items-center justify-center mb-4 border border-amber-500/20">
+                    <div className="w-16 h-16 bg-amber-500/20 text-amber-400 rounded-full flex items-center justify-center mb-4 border border-amber-500/35">
                       <CheckCircle2 className="w-10 h-10" />
                     </div>
                     <h4 className="text-2xl font-bold text-white mb-2">

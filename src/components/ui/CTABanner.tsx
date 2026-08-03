@@ -34,7 +34,7 @@ export const CTABanner: React.FC<CTABannerProps> = ({
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-6"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-400 border border-amber-500/35 mb-6"
         >
           <ShieldCheck className="w-4 h-4 text-amber-400" />
           <span>Kashmir & Ladakh Premier Mobility Platform</span>

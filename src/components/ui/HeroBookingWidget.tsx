@@ -49,7 +49,7 @@ export const HeroBookingWidget: React.FC = () => {
   return (
     <div className="w-full bg-white/90 backdrop-blur-xl border border-slate-200/90 rounded-3xl p-6 sm:p-8 shadow-2xl shadow-slate-900/10 relative overflow-hidden">
       {/* Background Subtle Accent */}
-      <div className="absolute -top-24 -right-24 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute -top-24 -right-24 w-48 h-48 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="flex items-center justify-between pb-6 mb-6 border-b border-slate-100">
         <div className="flex items-center gap-2">

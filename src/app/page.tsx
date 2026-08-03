@@ -231,8 +231,8 @@ export default function Home() {
       <section className="relative pt-28 pb-20 lg:pt-24 lg:pb-32 overflow-hidden hero-mountain-bg text-white">
         {/* Ambient Glow Lights */}
         <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-amber-500/15 rounded-full blur-[120px] pointer-events-none"></div>
-        <div className="absolute top-1/3 left-10 w-[350px] h-[350px] bg-amber-500/10 rounded-full blur-[100px] pointer-events-none animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none animate-pulse" style={{ animationDuration: '6s' }}></div>
+        <div className="absolute top-1/3 left-10 w-[350px] h-[350px] bg-amber-500/20 rounded-full blur-[100px] pointer-events-none animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-amber-500/20 rounded-full blur-[120px] pointer-events-none animate-pulse" style={{ animationDuration: '6s' }}></div>
         {/* Dark Backing Shadow for Text Column Visibility */}
         <div className="absolute top-12 left-0 w-[550px] h-[450px] bg-slate-950/70 rounded-full blur-[90px] pointer-events-none z-0"></div>
 
@@ -355,9 +355,9 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.1, duration: 0.5 }}
               whileHover={{ y: -4, scale: 1.01 }}
-              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-amber-500/30 transition-all cursor-default"
+              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-amber-500/40 transition-all cursor-default"
             >
-              <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/20">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/35">
                 <Users className="w-5 h-5" />
               </div>
               <div>
@@ -372,9 +372,9 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.5 }}
               whileHover={{ y: -4, scale: 1.01 }}
-              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-amber-500/30 transition-all cursor-default"
+              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-amber-500/40 transition-all cursor-default"
             >
-              <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/20">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/35">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
@@ -389,9 +389,9 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.5 }}
               whileHover={{ y: -4, scale: 1.01 }}
-              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-amber-500/30 transition-all cursor-default"
+              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-amber-500/40 transition-all cursor-default"
             >
-              <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/20">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/35">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div>
@@ -406,9 +406,9 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.5 }}
               whileHover={{ y: -4, scale: 1.01 }}
-              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-amber-500/30 transition-all cursor-default"
+              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-amber-500/40 transition-all cursor-default"
             >
-              <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/20">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/35">
                 <Star className="w-5 h-5" />
               </div>
               <div>
@@ -423,7 +423,7 @@ export default function Home() {
       {/* TRUSTED BY KASHMIR */}
       <section className="py-20 bg-slate-900/60 border-y border-slate-800">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
-          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-extrabold tracking-wider uppercase bg-amber-500/10 text-amber-400 border border-amber-500/30">
+          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-extrabold tracking-wider uppercase bg-amber-500/20 text-amber-400 border border-amber-500/40">
             Trusted by Kashmir, Built for Everyone
           </span>
 
@@ -446,7 +446,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35">
                 About KASHgo
               </span>
               <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
@@ -463,7 +463,7 @@ export default function Home() {
 
             {/* Right Feature Card */}
             <div className="lg:col-span-6 bg-slate-900 text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-2xl border border-slate-800">
-              <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+              <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
               <h3 className="text-2xl font-bold text-white mb-6">
                 Why Kashmir Chooses KASHgo
@@ -542,7 +542,7 @@ export default function Home() {
 
             {/* Right Story Content */}
             <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35">
                 Meet The Founder
               </span>
               <h2 className="text-fluid-section font-extrabold text-white tracking-tight">
@@ -579,7 +579,7 @@ export default function Home() {
       <section className="py-20 bg-[#090D16]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 mb-3 inline-block">
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35 mb-3 inline-block">
               Regional Excellence
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
@@ -612,7 +612,7 @@ export default function Home() {
       <section id="categories" className="py-20 bg-slate-900/80 text-white relative overflow-hidden border-y border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 mb-3 inline-block">
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35 mb-3 inline-block">
               Ride Categories
             </span>
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
@@ -633,7 +633,7 @@ export default function Home() {
                   <div className="text-4xl p-3 bg-slate-900 rounded-2xl border border-slate-800">
                     {cat.icon}
                   </div>
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/35">
                     {cat.badge}
                   </span>
                 </div>
@@ -653,7 +653,7 @@ export default function Home() {
       <section className="py-20 bg-[#090D16] border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-full text-xs font-black uppercase tracking-wider">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/35 rounded-full text-xs font-black uppercase tracking-wider">
               <Compass className="w-3.5 h-3.5" /> Iconic Destinations
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -693,7 +693,7 @@ export default function Home() {
 
                   {/* Card Content */}
                   <div className="relative z-20 space-y-2 text-left">
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-slate-950/80 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-slate-950/80 text-amber-400 border border-amber-500/40 backdrop-blur-sm">
                       {place.badge}
                     </span>
                     <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-none pt-1">
@@ -748,7 +748,7 @@ export default function Home() {
       <section className="py-20 bg-slate-950 border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-full text-xs font-black uppercase tracking-wider">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/35 rounded-full text-xs font-black uppercase tracking-wider">
               <Car className="w-3.5 h-3.5" /> Premium Mobility
             </span>
             <h2 className="text-fluid-section font-extrabold text-white tracking-tight">
@@ -874,7 +874,7 @@ export default function Home() {
           <div className="mt-16 bg-gradient-to-r from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 md:p-10 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
             <div className="space-y-3 max-w-2xl text-center md:text-left">
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20">
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/35">
                 ⭐ Help &amp; Support
               </span>
               <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
@@ -906,7 +906,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35">
                 App Experience
               </span>
               <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
@@ -955,7 +955,7 @@ export default function Home() {
       {/* COMING SOON BANNER */}
       <section id="app-download" className="py-20 bg-slate-900 text-white relative overflow-hidden border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 mb-4 inline-block">
+          <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35 mb-4 inline-block">
             Coming Soon
           </span>
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-4 max-w-3xl mx-auto">
@@ -996,7 +996,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35">
                 Become a Driver
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
@@ -1022,7 +1022,7 @@ export default function Home() {
       <section className="py-20 bg-[#090D16]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 mb-3 inline-block">
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35 mb-3 inline-block">
               Why People Will Love KASHgo
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -1108,7 +1108,7 @@ export default function Home() {
 
                 {/* Basic Info */}
                 <div className="space-y-2">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-full text-[10px] font-extrabold uppercase tracking-widest">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/35 rounded-full text-[10px] font-extrabold uppercase tracking-widest">
                     <Award className="w-3 h-3" /> Founder Profile
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-white leading-none">

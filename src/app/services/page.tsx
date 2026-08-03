@@ -60,7 +60,7 @@ export default function ServicesPage() {
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-4"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/35 mb-4"
           >
             <Car className="w-4 h-4 text-amber-400" />
             <span>KASHgo Ride Categories</span>
@@ -106,7 +106,7 @@ export default function ServicesPage() {
                   <div className="text-4xl p-3 bg-slate-950 rounded-2xl border border-slate-800 shadow-xs">
                     {cat.icon}
                   </div>
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/35">
                     {cat.badge}
                   </span>
                 </div>
@@ -134,7 +134,7 @@ export default function ServicesPage() {
       {/* FINAL CTA */}
       <section className="py-16 bg-slate-950 text-white text-center border-t border-slate-800">
         <div className="max-w-4xl mx-auto px-4 space-y-6">
-          <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 inline-block">
+          <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35 inline-block">
             Coming Soon
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white">Kashmir Is Waiting.</h2>

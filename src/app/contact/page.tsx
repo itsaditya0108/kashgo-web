@@ -70,7 +70,7 @@ export default function ContactPage() {
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-4"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/35 mb-4"
           >
             <Headphones className="w-4 h-4 text-amber-400" />
             <span>KASHgo Support & Offices</span>
@@ -105,7 +105,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Left Contact Info Cards */}
             <div className="lg:col-span-5 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35">
                 Direct Contact
               </span>
               <h2 className="text-3xl font-extrabold text-white">
@@ -114,7 +114,7 @@ export default function ContactPage() {
 
               <div className="space-y-4 pt-2">
                 <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
@@ -136,7 +136,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
@@ -166,7 +166,7 @@ export default function ContactPage() {
                     exit={{ opacity: 0, scale: 0.95 }}
                     className="py-12 text-center flex flex-col items-center bg-slate-950 rounded-2xl border border-slate-800 p-6"
                   >
-                    <div className="w-16 h-16 bg-amber-500/10 text-amber-400 rounded-full flex items-center justify-center mb-4">
+                    <div className="w-16 h-16 bg-amber-500/20 text-amber-400 rounded-full flex items-center justify-center mb-4">
                       <CheckCircle2 className="w-10 h-10" />
                     </div>
                     <h4 className="text-2xl font-bold text-white mb-2">
@@ -302,7 +302,7 @@ export default function ContactPage() {
               <p className="text-slate-400 text-xs leading-relaxed mb-4">
                 Srinagar HQ: Rajbagh Lal Mandi • Leh Office: Fort Road
               </p>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-400 border border-amber-500/35">
                 <Globe className="w-3.5 h-3.5" /> Coordinates Verified (kashgo.in)
               </div>
             </div>

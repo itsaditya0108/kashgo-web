@@ -22,7 +22,7 @@ export default function AboutPage() {
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-4"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/35 mb-4"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
             About KASHgo Mobility
@@ -55,7 +55,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 flex justify-center">
               <div className="w-full max-w-lg bg-slate-900 text-white rounded-3xl p-10 shadow-2xl border border-slate-800 text-center relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div className="absolute top-0 right-0 w-48 h-48 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
                 {/* Real Founder Photo Frame in Circle shape */}
                 <div className="relative w-64 h-64 mx-auto mb-6 rounded-full overflow-hidden border-2 border-amber-500 shadow-xl bg-slate-950 p-1">
                   <Image
@@ -85,7 +85,7 @@ export default function AboutPage() {
             </div>
 
             <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35">
                 Company Vision
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -127,7 +127,7 @@ export default function AboutPage() {
       <section className="py-20 bg-slate-900/60 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 mb-3 inline-block">
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35 mb-3 inline-block">
               Our Principles
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
@@ -152,7 +152,7 @@ export default function AboutPage() {
                 transition={{ delay: idx * 0.1 }}
                 className="bg-slate-950 rounded-3xl p-8 border border-slate-800 text-center hover:border-amber-500/50 transition-colors group"
               >
-                <div className="w-16 h-16 rounded-full bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mx-auto mb-6 group-hover:bg-amber-600 transition-colors">
+                <div className="w-16 h-16 rounded-full bg-amber-500/20 border border-amber-500/35 flex items-center justify-center mx-auto mb-6 group-hover:bg-amber-600 transition-colors">
                   <Icon className="w-8 h-8 text-amber-400 group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
@@ -204,7 +204,7 @@ export default function AboutPage() {
 
                 {/* Basic Info */}
                 <div className="space-y-2">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-full text-[10px] font-extrabold uppercase tracking-widest">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/35 rounded-full text-[10px] font-extrabold uppercase tracking-widest">
                     <Award className="w-3 h-3" /> Founder Profile
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-white leading-none">

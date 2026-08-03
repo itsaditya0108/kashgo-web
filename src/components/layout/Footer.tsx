@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-950 text-white pt-16 pb-12 border-t border-slate-800 relative overflow-hidden">
       {/* Background Green Accent Glow */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
@@ -120,7 +120,7 @@ export const Footer: React.FC = () => {
               Be among the first to experience KASHgo when we launch.
             </p>
             {subscribed ? (
-              <div className="bg-green-950/60 border border-amber-500/30 text-amber-300 text-xs p-3 rounded-xl flex items-center gap-2">
+              <div className="bg-green-950/60 border border-amber-500/40 text-amber-300 text-xs p-3 rounded-xl flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
                 Subscribed for early access!
               </div>
