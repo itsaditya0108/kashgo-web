@@ -6,13 +6,12 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Smartphone, ChevronRight } from "lucide-react";
 import { Button } from "../ui/Button";
-import { KashGoLogo } from "../ui/KashGoLogo";
+import { KASHgoLogo } from "../ui/KASHgoLogo";
 
 const NAV_LINKS = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "How It Works", href: "/#how-it-works" },
   { name: "Become a Driver", href: "/driver" },
   { name: "Contact Us", href: "/contact" },
 ];
@@ -48,9 +47,9 @@ export const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Official KashGo Brand Logo */}
+          {/* Official KASHgo Brand Logo */}
           <Link href="/" className="group">
-            <KashGoLogo variant="light" size="md" showTagline={true} />
+            <KASHgoLogo variant="light" size="md" showTagline={true} />
           </Link>
 
           {/* Desktop Nav Links */}

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Send, CheckCircle2, Shield, Heart } from "lucide-react";
 import { FaInstagram, FaXTwitter, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
-import { KashGoLogo } from "../ui/KashGoLogo";
+import { KASHgoLogo } from "../ui/KASHgoLogo";
 
 export const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -29,13 +29,13 @@ export const Footer: React.FC = () => {
           {/* Brand Col */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="inline-block">
-              <KashGoLogo variant="light" size="md" showTagline={true} />
+              <KASHgoLogo variant="light" size="md" showTagline={true} />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-              KashGo is building a modern ride-booking platform designed exclusively for Kashmir. Connecting passengers with verified local drivers through seamless mobile technology.
+              KASHgo is building a modern ride-booking platform designed exclusively for Kashmir. Connecting passengers with verified local drivers through seamless mobile technology.
             </p>
             <div className="text-sm font-bold text-green-400 italic">
-              "Ride Smart. Ride Local. Ride KashGo."
+              "Ride Smart. Ride Local. Ride KASHgo."
             </div>
             <div className="flex items-center gap-2 text-xs text-green-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800 w-fit">
               <Shield className="w-4 h-4 text-green-400" /> Built Exclusively for Kashmir
@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
                 href="https://instagram.com/kashgo.in"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="KashGo on Instagram"
+                aria-label="KASHgo on Instagram"
                 className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-green-400 hover:border-green-500/40 transition-colors"
               >
                 <FaInstagram className="w-4 h-4" />
@@ -56,7 +56,7 @@ export const Footer: React.FC = () => {
                 href="https://twitter.com/kashgo_in"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="KashGo on X (Twitter)"
+                aria-label="KASHgo on X (Twitter)"
                 className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-green-400 hover:border-green-500/40 transition-colors"
               >
                 <FaXTwitter className="w-4 h-4" />
@@ -65,16 +65,16 @@ export const Footer: React.FC = () => {
                 href="https://linkedin.com/company/kashgo"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="KashGo on LinkedIn"
+                aria-label="KASHgo on LinkedIn"
                 className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-green-400 hover:border-green-500/40 transition-colors"
               >
                 <FaLinkedinIn className="w-4 h-4" />
               </a>
               <a
-                href="https://wa.me/911942400001"
+                href="https://wa.me/917400180114"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="KashGo on WhatsApp"
+                aria-label="KASHgo on WhatsApp"
                 className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-green-400 hover:border-green-500/40 transition-colors"
               >
                 <FaWhatsapp className="w-4 h-4" />
@@ -89,7 +89,7 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-sm text-slate-400">
               <li><Link href="/" className="hover:text-green-400 transition-colors">Home</Link></li>
-              <li><Link href="/about" className="hover:text-green-400 transition-colors">About KashGo</Link></li>
+              <li><Link href="/about" className="hover:text-green-400 transition-colors">About KASHgo</Link></li>
               <li><Link href="/services" className="hover:text-green-400 transition-colors">Ride Categories</Link></li>
               <li><Link href="/driver" className="hover:text-green-400 transition-colors">Become a Driver</Link></li>
               <li><Link href="/contact" className="hover:text-green-400 transition-colors">Contact Us</Link></li>
@@ -117,7 +117,7 @@ export const Footer: React.FC = () => {
               Launch Updates
             </h4>
             <p className="text-xs text-slate-400 mb-3">
-              Be among the first to experience KashGo when we launch.
+              Be among the first to experience KASHgo when we launch.
             </p>
             {subscribed ? (
               <div className="bg-green-950/60 border border-green-500/30 text-green-300 text-xs p-3 rounded-xl flex items-center gap-2">
@@ -149,11 +149,11 @@ export const Footer: React.FC = () => {
             <div className="mt-6 space-y-2 text-xs text-slate-400">
               <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-green-400" />
-                <span>+91 194 240001 (Support)</span>
+                <span>+91 7400180114 (Support)</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-green-400" />
-                <span>support@kashgo.in</span>
+                <span>kashgo2026@gmail.com</span>
               </div>
               <div className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" />
@@ -174,7 +174,7 @@ export const Footer: React.FC = () => {
         {/* Bottom row: copyright left, credit right */}
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
           <div>
-            © {new Date().getFullYear()} KashGo Mobility Technologies Pvt. Ltd. All rights reserved.
+            © {new Date().getFullYear()} KASHgo Mobility Technologies Pvt. Ltd. All rights reserved.
           </div>
           <div className="flex items-center gap-1.5 text-slate-400">
             <span>Made with</span>

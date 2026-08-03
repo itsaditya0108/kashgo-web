@@ -82,7 +82,7 @@ export default function DriverPage() {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-green-500/10 text-green-400 border border-green-500/20 mb-4"
           >
             <Car className="w-4 h-4 text-green-400" />
-            <span>Drive with KashGo</span>
+            <span>Drive with KASHgo</span>
           </motion.div>
 
           <motion.h1
@@ -116,7 +116,7 @@ export default function DriverPage() {
               Driver Partner Benefits
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              Why Drive with KashGo?
+              Why Drive with KASHgo?
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

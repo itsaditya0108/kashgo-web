@@ -21,12 +21,12 @@ import {
 
 const FAQS = [
   {
-    q: "How do I book a ride with KashGo in Srinagar or Leh?",
-    a: "You can book directly via our website hero booking widget or through the KashGo mobile app. Simply select your pickup location, drop destination, ride class, and click confirm.",
+    q: "How do I book a ride with KASHgo in Srinagar or Leh?",
+    a: "You can book directly via our website hero booking widget or through the KASHgo mobile app. Simply select your pickup location, drop destination, ride class, and click confirm.",
   },
   {
-    q: "Are KashGo prices fixed or do they surge during tourist season?",
-    a: "KashGo operates on a transparent, upfront fare model. What you see on the screen before booking is what you pay—no hidden surge multipliers or unannounced charges.",
+    q: "Are KASHgo prices fixed or do they surge during tourist season?",
+    a: "KASHgo operates on a transparent, upfront fare model. What you see on the screen before booking is what you pay—no hidden surge multipliers or unannounced charges.",
   },
   {
     q: "Do you offer airport pickups for Srinagar (SXR) and Leh (IXL)?",
@@ -34,7 +34,7 @@ const FAQS = [
   },
   {
     q: "Can I book a 4x4 cab for Gulmarg or Zoji La Pass during snowfall?",
-    a: "Absolutely. Our KashGo Mountain 4x4 fleet is equipped with snow chains, heating systems, and experienced winter pass captains.",
+    a: "Absolutely. Our KASHgo Mountain 4x4 fleet is equipped with snow chains, heating systems, and experienced winter pass captains.",
   },
   {
     q: "What payment methods are supported?",
@@ -73,7 +73,7 @@ export default function ContactPage() {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-green-500/10 text-green-400 border border-green-500/20 mb-4"
           >
             <Headphones className="w-4 h-4 text-green-400" />
-            <span>KashGo Support & Offices</span>
+            <span>KASHgo Support & Offices</span>
           </motion.div>
 
           <motion.h1
@@ -119,7 +119,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold text-white uppercase tracking-wider">Helpline Phone</h3>
-                    <p className="text-slate-300 font-semibold text-base mt-1">+91 194 240001</p>
+                    <p className="text-slate-300 font-semibold text-base mt-1">+91 7400180114</p>
                     <p className="text-xs text-slate-400">Available 24/7 for active trip assistance</p>
                   </div>
                 </div>
@@ -130,7 +130,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold text-white uppercase tracking-wider">Email Address</h3>
-                    <p className="text-slate-300 font-semibold text-base mt-1">support@kashgo.in</p>
+                    <p className="text-slate-300 font-semibold text-base mt-1">kashgo2026@gmail.com</p>
                     <p className="text-xs text-slate-400">Average response within 2 hours</p>
                   </div>
                 </div>
@@ -287,6 +287,7 @@ export default function ContactPage() {
             badge="Location Map"
             title="Our Hub Locations in"
             highlightText="JK & Ladakh"
+            dark={true}
           />
 
           <div className="w-full h-80 rounded-3xl bg-slate-900 border border-slate-800 relative overflow-hidden flex items-center justify-center text-white shadow-xl">
@@ -316,6 +317,7 @@ export default function ContactPage() {
             badge="Help & FAQs"
             title="Frequently Asked"
             highlightText="Questions"
+            dark={true}
           />
 
           <div className="space-y-4">

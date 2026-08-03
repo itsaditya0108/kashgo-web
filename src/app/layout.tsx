@@ -9,31 +9,31 @@ const jakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kashgo.in"),
+  metadataBase: new URL("https://KASHgo.in"),
   title: {
-    default: "KashGo - Premier Ride-Hailing Platform for Kashmir",
-    template: "%s | KashGo Mobility",
+    default: "KASHgo - Premier Ride-Hailing Platform for Kashmir",
+    template: "%s | KASHgo Mobility",
   },
   description:
-    "KashGo is building a modern ride-booking platform designed exclusively for Kashmir. Book trusted city rides, airport transfers, and tourist passes.",
+    "KASHgo is building a modern ride-booking platform designed exclusively for Kashmir. Book trusted city rides, airport transfers, and tourist passes.",
   keywords: [
-    "KashGo",
-    "kashgo.in",
+    "KASHgo",
+    "KASHgo.in",
     "Kashmir Ride Hailing",
     "Taxi Booking Srinagar",
     "Cab Booking Kashmir",
     "Tourist Cab Kashmir",
     "Srinagar Airport Transfer",
   ],
-  authors: [{ name: "KashGo Mobility Team", url: "https://kashgo.in" }],
+  authors: [{ name: "KASHgo Mobility Team", url: "https://KASHgo.in" }],
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://kashgo.in",
-    title: "KashGo - Premier Ride-Hailing Platform for Kashmir",
+    url: "https://KASHgo.in",
+    title: "KASHgo - Premier Ride-Hailing Platform for Kashmir",
     description:
       "Modern, reliable ride-booking platform connecting Srinagar and Kashmir valley.",
-    siteName: "KashGo Mobility",
+    siteName: "KASHgo Mobility",
   },
 };
 

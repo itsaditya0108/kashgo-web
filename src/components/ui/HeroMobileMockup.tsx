@@ -30,9 +30,25 @@ export const HeroMobileMockup: React.FC = () => {
           <div className="bg-[#0B132B] rounded-[32px] overflow-hidden pt-5 pb-3.5 px-3 space-y-2.5 text-white border border-slate-800/80">
             {/* App Bar */}
             <div className="flex items-center justify-between pb-1.5 border-b border-slate-800/80">
-              <div className="flex items-center gap-1 font-black text-xs tracking-tight">
-                <span>KASH</span>
-                <span className="text-green-400">go</span>
+              <div className="flex items-center gap-1.5">
+                {/* Mini logo circle */}
+                <div className="w-5 h-5 rounded-full bg-green-600 flex items-center justify-center shrink-0">
+                  <svg viewBox="0 0 20 20" className="w-3.5 h-3.5" fill="none">
+                    <path d="M10 3 L14 8 L10 6 L6 8 Z" fill="white" />
+                    <rect x="7" y="10" width="6" height="4" rx="1" fill="white" />
+                    <circle cx="8" cy="14" r="0.8" fill="#0F172A"/>
+                    <circle cx="12" cy="14" r="0.8" fill="#0F172A"/>
+                  </svg>
+                </div>
+                {/* Brand text */}
+                <div className="flex items-center font-black text-[11px] tracking-tight leading-none">
+                  <span className="text-white">KASH</span>
+                  <span className="text-green-400">go</span>
+                  <span className="ml-0.5 flex flex-col gap-[1.5px] justify-center">
+                    <span className="w-1.5 h-[1.5px] bg-green-400 rounded-full"></span>
+                    <span className="w-1 h-[1.5px] bg-green-400 rounded-full"></span>
+                  </span>
+                </div>
               </div>
               <Menu className="w-3.5 h-3.5 text-slate-300 cursor-pointer" />
             </div>
@@ -80,7 +96,7 @@ export const HeroMobileMockup: React.FC = () => {
                 <div className="relative w-16 h-10 shrink-0 min-h-[40px] overflow-hidden rounded-md">
                   <Image
                     src="/images/white_sedan.png"
-                    alt="KashGo Sedan"
+                    alt="KASHgo Sedan"
                     fill
                     sizes="64px"
                     priority

@@ -63,7 +63,7 @@ export default function ServicesPage() {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-green-500/10 text-green-400 border border-green-500/20 mb-4"
           >
             <Car className="w-4 h-4 text-green-400" />
-            <span>KashGo Ride Categories</span>
+            <span>KASHgo Ride Categories</span>
           </motion.div>
 
           <motion.h1
@@ -138,7 +138,7 @@ export default function ServicesPage() {
             Coming Soon
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white">Kashmir Is Waiting.</h2>
-          <p className="text-slate-300 text-base max-w-xl mx-auto">Download the KashGo app when it launches and explore Kashmir like never before.</p>
+          <p className="text-slate-300 text-base max-w-xl mx-auto">Download the KASHgo app when it launches and explore Kashmir like never before.</p>
           <Link href="/#app-download">
             <Button variant="primary" size="lg" icon={<ArrowRight className="w-5 h-5" />}>
               Download App (Coming Soon)

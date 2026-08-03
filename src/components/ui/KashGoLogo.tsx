@@ -2,14 +2,14 @@
 
 import React from "react";
 
-interface KashGoLogoProps {
+interface KASHgoLogoProps {
   variant?: "light" | "dark";
   size?: "sm" | "md" | "lg";
   showTagline?: boolean;
   className?: string;
 }
 
-export const KashGoLogo: React.FC<KashGoLogoProps> = ({
+export const KASHgoLogo: React.FC<KASHgoLogoProps> = ({
   variant = "light",
   size = "md",
   showTagline = true,
@@ -87,10 +87,10 @@ export const KashGoLogo: React.FC<KashGoLogoProps> = ({
       <div className="flex flex-col">
         <div className="flex items-center leading-none tracking-tight font-black">
           <span className={`tracking-tight ${isLight ? "text-white" : "text-slate-900"} ${currentSize.text}`}>
-            Kash
+            KASH
           </span>
           <span className={`text-green-400 font-extrabold ${currentSize.text}`}>
-            Go
+            go
           </span>
           {/* Speed dashes icon next to 'go' */}
           <span className="ml-1 flex flex-col justify-center gap-0.5">

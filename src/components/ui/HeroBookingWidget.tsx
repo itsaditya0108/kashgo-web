@@ -19,9 +19,9 @@ const LOCATIONS = [
 ];
 
 const RIDE_TYPES = [
-  { id: "mini", name: "KashGo Mini", baseFare: 150, estMin: "3 mins away", icon: "🚗" },
-  { id: "sedan", name: "KashGo Prime Sedan", baseFare: 300, estMin: "5 mins away", icon: "🚘" },
-  { id: "suv4x4", name: "KashGo Mountain 4x4", baseFare: 800, estMin: "8 mins away", icon: "🚙" },
+  { id: "mini", name: "KASHgo Mini", baseFare: 150, estMin: "3 mins away", icon: "🚗" },
+  { id: "sedan", name: "KASHgo Prime Sedan", baseFare: 300, estMin: "5 mins away", icon: "🚘" },
+  { id: "suv4x4", name: "KASHgo Mountain 4x4", baseFare: 800, estMin: "8 mins away", icon: "🚙" },
 ];
 
 export const HeroBookingWidget: React.FC = () => {
@@ -82,7 +82,7 @@ export const HeroBookingWidget: React.FC = () => {
               Captain Matched!
             </h3>
             <p className="text-slate-600 text-sm max-w-xs mb-6">
-              Your KashGo captain is en route to <span className="font-semibold text-slate-900">{pickup}</span>. Estimated arrival in 4 mins.
+              Your KASHgo captain is en route to <span className="font-semibold text-slate-900">{pickup}</span>. Estimated arrival in 4 mins.
             </p>
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-xs text-slate-500 w-full max-w-xs">
               Booking Ref: <span className="font-mono font-bold text-slate-800">#KG-8921-SXR</span>

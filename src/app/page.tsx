@@ -6,7 +6,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { HeroMobileMockup } from "@/components/ui/HeroMobileMockup";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Car,
   ShieldCheck,
@@ -28,6 +28,8 @@ import {
   Shield,
   Clock,
   ChevronRight,
+  X,
+  Award,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -91,7 +93,114 @@ const TRAVEL_NEEDS_PILLS = [
   "Customer Support",
 ];
 
+const BEST_PLACES = [
+  {
+    name: "Gulmarg",
+    badge: "❄️ Gondola & Snow",
+    img: "/images/dest_gulmarg.png",
+    desc: "Famous for the Gulmarg Gondola, snow sports, and breathtaking alpine landscapes.",
+    cols: "lg:col-span-2",
+  },
+  {
+    name: "Sonmarg",
+    badge: "🏔️ Meadow",
+    img: "/images/dest_sonmarg.png",
+    desc: "The 'Meadow of Gold', gateway to Ladakh, rich glaciers, and alpine treks.",
+    cols: "lg:col-span-1",
+  },
+  {
+    name: "Dal Lake",
+    badge: "🛶 Shikara",
+    img: "/images/dest_dallake.png",
+    desc: "Explore floating gardens, houseboats, and romantic Shikara rides at sunset.",
+    cols: "lg:col-span-1",
+  },
+  {
+    name: "Pahalgam",
+    badge: "🌲 Valley",
+    img: "/images/dest_pahalgam.png",
+    desc: "Lidder river valley, Betaab valley, beautiful meadows, and peaceful pine forests.",
+    cols: "lg:col-span-1",
+  },
+];
+
+const PREMIUM_FLEET = [
+  {
+    name: "Toyota Corolla",
+    subtitle: "Comfortable Sedan for Everyday Travel",
+    desc: "Experience smooth and reliable rides with the Toyota Corolla. Perfect for airport transfers, city travel, and business trips.",
+    ideal: ["Airport Transfers", "Business Travel", "City Rides", "Couples"],
+    capacity: "4 Passengers",
+    luggage: "2 Large + 2 Cabin Bags",
+    img: "/images/corolla.jpg",
+  },
+  {
+    name: "Maruti Swift",
+    subtitle: "Smart Choice for Budget-Friendly Travel",
+    desc: "Compact, economical, and comfortable—ideal for local sightseeing and short-distance travel.",
+    ideal: ["Local Sightseeing", "Airport Pickup", "Solo Travelers", "Couples", "Budget Travel"],
+    capacity: "4 Passengers",
+    luggage: "2 Medium Bags",
+    img: "/images/swift.jpg",
+  },
+  {
+    name: "Maruti Ertiga",
+    subtitle: "Spacious MPV for Family Adventures",
+    desc: "Travel together without compromising comfort. Perfect for families and small groups.",
+    ideal: ["Family Trips", "Local Tours", "Airport Transfers", "Weekend Getaways"],
+    capacity: "6–7 Passengers",
+    luggage: "Large Luggage Space",
+    img: "/images/ertiga.jpg",
+  },
+  {
+    name: "Hyundai Creta",
+    subtitle: "Stylish SUV for Comfortable Journeys",
+    desc: "A premium SUV offering smooth performance, modern interiors, and excellent comfort for long-distance travel.",
+    ideal: ["Family Tours", "Honeymoon Trips", "Hill Stations", "Long Drives", "Sightseeing", "Road Trips"],
+    capacity: "4-5 Passengers",
+    luggage: "2 Large + 2 Cabin Bags",
+    img: "/images/creta.jpg",
+  },
+  {
+    name: "Honda City",
+    subtitle: "Executive Sedan with Premium Comfort",
+    desc: "Designed for travelers who value elegance, comfort, and a refined driving experience.",
+    ideal: ["Corporate Travel", "Airport Transfers", "Business Meetings", "City Tours", "Outstation Trips"],
+    capacity: "4 Passengers",
+    luggage: "Spacious Boot",
+    img: "/images/city.jpg",
+  },
+  {
+    name: "Toyota Innova Crysta",
+    subtitle: "Spacious Comfort for Every Journey",
+    desc: "Enjoy legendary reliability and spacious comfort in Kashmir's favorite premium MPV.",
+    ideal: ["Family Trips", "Airport Transfers", "Group Travel", "Pilgrimage", "Outstation Rides"],
+    capacity: "6-7 Passengers",
+    luggage: "Large Luggage Space",
+    img: "/images/innova.jpg",
+  },
+  {
+    name: "Tempo Traveller",
+    subtitle: "Group Travel, Made Comfortable",
+    desc: "Travel together with maximum comfort. Ideal for family vacations, corporate outings, and group tours.",
+    ideal: ["Group Tours", "Corporate Trips", "School Excursions", "Pilgrimage Tours", "Adventure Trips"],
+    capacity: "9-17 Passengers",
+    luggage: "Spacious Luggage Area",
+    img: "/images/tempo.jpg",
+  },
+  {
+    name: "Mahindra Bolero",
+    subtitle: "Powerful. Reliable. Built for Every Road",
+    desc: "Built for adventure and challenging terrains, the Bolero delivers confidence and performance on every journey.",
+    ideal: ["Village Trips", "Family Travel", "Mountain Roads", "Group Travel", "Adventure"],
+    capacity: "7-9 Passengers",
+    luggage: "Large Boot Space",
+    img: "/images/bolero.jpg",
+  },
+];
+
 export default function Home() {
+  const [isFounderModalOpen, setIsFounderModalOpen] = useState(false);
   return (
     <div className="min-h-screen bg-[#090D16] text-slate-100 flex flex-col font-sans selection:bg-green-400 selection:text-slate-950">
       <Navbar />
@@ -127,7 +236,7 @@ export default function Home() {
 
               {/* Subtitle Paragraph */}
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
-                KashGo is building a modern ride-booking platform designed exclusively for Kashmir. Whether you're arriving as a tourist or commuting as a local, booking a trusted ride will soon be effortless.
+                KASHgo is building a modern ride-booking platform designed exclusively for Kashmir. Whether you're arriving as a tourist or commuting as a local, booking a trusted ride will soon be effortless.
               </p>
 
               {/* Action Buttons */}
@@ -236,7 +345,7 @@ export default function Home() {
           </h2>
 
           <p className="text-slate-300 text-lg sm:text-xl leading-relaxed">
-            From airport pickups and city rides to unforgettable journeys through the valley, KashGo brings technology, trusted drivers and local expertise together in one seamless platform.
+            From airport pickups and city rides to unforgettable journeys through the valley, KASHgo brings technology, trusted drivers and local expertise together in one seamless platform.
           </p>
         </div>
       </section>
@@ -247,7 +356,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
               <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20">
-                About KashGo
+                About KASHgo
               </span>
               <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
                 More Than a Ride. <br />
@@ -257,10 +366,10 @@ export default function Home() {
                 Every great journey starts with trust.
               </p>
               <p className="text-slate-300 text-base leading-relaxed">
-                KashGo was founded with a vision to simplify travel across Kashmir through technology. We believe booking a ride should be fast, transparent and stress-free—whether you're a tourist discovering the valley or a local commuting every day.
+                KASHgo was founded with a vision to simplify travel across Kashmir through technology. We believe booking a ride should be fast, transparent and stress-free—whether you're a tourist discovering the valley or a local commuting every day.
               </p>
               <p className="text-slate-300 text-base leading-relaxed">
-                By connecting passengers with verified local drivers through an intuitive mobile app, KashGo aims to redefine how people experience travel across Kashmir.
+                By connecting passengers with verified local drivers through an intuitive mobile app, KASHgo aims to redefine how people experience travel across Kashmir.
               </p>
               <div className="p-5 bg-slate-900 border-l-4 border-green-500 text-white font-bold text-base rounded-r-2xl border border-slate-800 shadow-md">
                 "This isn't just about reaching a destination. It's about making every journey safer, smarter and more comfortable."
@@ -272,7 +381,7 @@ export default function Home() {
               <div className="absolute top-0 right-0 w-80 h-80 bg-green-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
               <h3 className="text-2xl font-bold text-white mb-6">
-                Why Kashmir Chooses KashGo
+                Why Kashmir Chooses KASHgo
               </h3>
 
               <div className="space-y-4">
@@ -317,16 +426,16 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Founder Photo Display */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="w-full max-w-md bg-slate-950 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-800 relative overflow-hidden text-center">
-                {/* Real Founder Photo Frame */}
-                <div className="relative w-56 h-72 mx-auto mb-6 rounded-2xl overflow-hidden border-2 border-green-500 shadow-xl bg-slate-900 p-1">
+              <div className="w-full max-w-lg bg-slate-950 text-white rounded-3xl p-8 sm:p-10 shadow-2xl border border-slate-800 relative overflow-hidden text-center">
+                {/* Real Founder Photo Frame in Circle shape */}
+                <div className="relative w-64 h-64 mx-auto mb-6 rounded-full overflow-hidden border-2 border-green-500 shadow-xl bg-slate-900 p-1">
                   <Image
                     src="/images/founder.png"
-                    alt="Shaikh Shaheen Kamalmiya - Founder & CEO KashGo"
+                    alt="Shaikh Shaheen Kamalmiya - Founder & CEO KASHgo"
                     fill
-                    sizes="(max-width: 768px) 100vw, 224px"
+                    sizes="(max-width: 768px) 100vw, 256px"
                     priority
-                    className="object-cover object-center rounded-xl"
+                    className="object-cover object-center rounded-full"
                   />
                 </div>
 
@@ -334,7 +443,7 @@ export default function Home() {
                   Shaikh Shaheen Kamalmiya
                 </h3>
                 <div className="text-xs font-extrabold text-green-400 uppercase tracking-widest mb-6">
-                  Founder &amp; CEO, KashGo
+                  Founder &amp; CEO, KASHgo
                 </div>
 
                 <div className="bg-slate-900 rounded-2xl p-4 text-left border border-slate-800 space-y-2">
@@ -364,8 +473,18 @@ export default function Home() {
                 "Why should finding a trusted ride still feel complicated?"
               </div>
               <p className="text-slate-300 text-base leading-relaxed">
-                That question became the foundation of KashGo. Driven by a passion for technology and customer experience, the vision was to create a ride-booking platform designed specifically for the people of Kashmir—combining local knowledge with modern technology to deliver a smoother travel experience for everyone.
+                That question became the foundation of KASHgo. Driven by a passion for technology and customer experience, the vision was to create a ride-booking platform designed specifically for the people of Kashmir—combining local knowledge with modern technology to deliver a smoother travel experience for everyone.
               </p>
+
+              <div className="pt-2">
+                <button
+                  onClick={() => setIsFounderModalOpen(true)}
+                  className="group inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-extrabold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:scale-105 active:scale-95 cursor-pointer"
+                >
+                  <span>Know More</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -379,10 +498,10 @@ export default function Home() {
               Regional Excellence
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
-              What Makes KashGo Different?
+              What Makes KASHgo Different?
             </h2>
             <p className="text-slate-300 text-base sm:text-lg">
-              Not every ride-booking platform understands Kashmir. KashGo is designed from the ground up for the unique travel needs of the region.
+              Not every ride-booking platform understands Kashmir. KASHgo is designed from the ground up for the unique travel needs of the region.
             </p>
           </div>
 
@@ -445,6 +564,188 @@ export default function Home() {
         </div>
       </section>
 
+      {/* BEST PLACES TO VISIT */}
+      <section className="py-20 bg-[#090D16] border-t border-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-500/10 text-green-400 border border-green-500/20 rounded-full text-xs font-black uppercase tracking-wider">
+              <Compass className="w-3.5 h-3.5" /> Iconic Destinations
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              Visit the Best Places in Kashmir
+            </h2>
+            <p className="text-slate-300 text-base leading-relaxed">
+              Discover breathtaking valleys, snow-covered mountains, serene lakes, and iconic destinations with KASHgo.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {BEST_PLACES.map((place, idx) => (
+              <div
+                key={idx}
+                className={`${place.cols} group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 flex flex-col justify-end p-6 min-h-[360px] md:min-h-[420px] transition-all duration-300 hover:border-green-500/40 hover:shadow-[0_0_30px_rgba(34,197,94,0.1)]`}
+              >
+                {/* Background Image with Overlay */}
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src={place.img}
+                    alt={place.name}
+                    fill
+                    className="object-cover object-center group-hover:scale-110 transition-transform duration-500 ease-out"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                  {/* Subtle dark gradient overlay to ensure text is fully readable */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent group-hover:via-slate-950/20 transition-all duration-350 z-10"></div>
+                </div>
+
+                {/* Card Content */}
+                <div className="relative z-20 space-y-3">
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-slate-950/80 text-green-400 border border-green-500/30 backdrop-blur-sm">
+                    {place.badge}
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+                    {place.name.toUpperCase()}
+                  </h3>
+                  <p className="text-slate-200 text-xs sm:text-sm leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">
+                    {place.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PREMIUM FLEET SECTION */}
+      <section className="py-20 bg-slate-950 border-t border-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-500/10 text-green-400 border border-green-500/20 rounded-full text-xs font-black uppercase tracking-wider">
+              <Car className="w-3.5 h-3.5" /> Premium Mobility
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              Our Premium Fleet ⭐⭐⭐⭐⭐
+            </h2>
+            <p className="text-slate-300 text-base leading-relaxed">
+              Find the Perfect Vehicle for Every Journey. Whether you're traveling solo, with family, or in a group, our carefully maintained fleet offers comfort, safety, and reliability for every trip across Kashmir.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {PREMIUM_FLEET.map((vehicle, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col bg-slate-900 rounded-3xl border border-slate-800 hover:border-green-500/50 hover:shadow-[0_0_30px_rgba(34,197,94,0.05)] transition-all overflow-hidden group"
+              >
+                {/* Vehicle Image Container */}
+                <div className="relative w-full h-52 bg-slate-950 overflow-hidden">
+                  <Image
+                    src={vehicle.img}
+                    alt={vehicle.name}
+                    fill
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 p-6 space-y-4 flex flex-col justify-between">
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-black text-white tracking-tight leading-none group-hover:text-green-400 transition-colors">
+                      {vehicle.name}
+                    </h3>
+                    <p className="text-xs text-slate-400 font-medium">
+                      {vehicle.subtitle}
+                    </p>
+                    <p className="text-xs text-slate-300 leading-relaxed pt-1">
+                      {vehicle.desc}
+                    </p>
+                  </div>
+
+                  <div className="space-y-3 pt-2">
+                    {/* Capacity Specs */}
+                    <div className="grid grid-cols-2 gap-2 text-xs text-slate-300 bg-slate-950/80 p-2.5 rounded-xl border border-slate-800">
+                      <div className="flex items-center gap-1.5">
+                        <Users className="w-3.5 h-3.5 text-green-400 shrink-0" />
+                        <span>{vehicle.capacity}</span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <Car className="w-3.5 h-3.5 text-green-400 shrink-0" />
+                        <span className="truncate">{vehicle.luggage}</span>
+                      </div>
+                    </div>
+
+                    {/* Ideal For Tags */}
+                    <div className="space-y-1">
+                      <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">
+                        Ideal For
+                      </div>
+                      <div className="flex flex-wrap gap-1">
+                        {vehicle.ideal.slice(0, 3).map((tag, tagIdx) => (
+                          <span
+                            key={tagIdx}
+                            className="text-[9px] font-extrabold px-2 py-0.5 rounded-full bg-slate-950 text-slate-300 border border-slate-850"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                        {vehicle.ideal.length > 3 && (
+                          <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded-full bg-slate-950 text-green-400 border border-slate-850">
+                            +{vehicle.ideal.length - 3} more
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Book Button */}
+                  <div className="pt-4 z-10">
+                    <a
+                      href={`https://wa.me/917400180114?text=Hi%20KASHgo,%20I'd%2520like%2520to%2520book%2520a%2520ride%2520with%2520the%2520${encodeURIComponent(vehicle.name)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-extrabold text-xs py-3 rounded-2xl transition-all shadow-md active:scale-95 cursor-pointer"
+                    >
+                      <span>Book {vehicle.name.split(' ')[0]}</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Section CTA Card */}
+          <div className="mt-16 bg-gradient-to-r from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 md:p-10 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="absolute top-0 right-0 w-80 h-80 bg-green-500/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="space-y-3 max-w-2xl text-center md:text-left">
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-green-500/10 text-green-400 border border-green-500/20">
+                ⭐ Help &amp; Support
+              </span>
+              <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+                Need Help Choosing the Right Vehicle?
+              </h3>
+              <p className="text-sm text-slate-300 leading-relaxed">
+                Whether you're planning a romantic getaway, a family vacation, or a group adventure, our team will help you select the perfect vehicle for your trip.
+              </p>
+            </div>
+            <div className="shrink-0 text-center space-y-2">
+              <a
+                href="https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20need%20help%20choosing%20the%20right%20vehicle%20for%20my%20Kashmir%20trip."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-extrabold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:scale-105 active:scale-95 cursor-pointer"
+              >
+                <span>🚖 Book Your Ride Today</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <p className="text-[10px] text-slate-400 font-medium">Explore Kashmir in Comfort!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* APP EXPERIENCE */}
       <section id="how-it-works" className="py-20 bg-[#090D16]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -482,7 +783,7 @@ export default function Home() {
             <div className="lg:col-span-6 flex justify-center">
               <div className="w-full max-w-sm bg-slate-950 rounded-[44px] p-4 border-4 border-slate-800 shadow-2xl">
                 <div className="bg-slate-900 rounded-[36px] p-5 border border-slate-800 text-white space-y-4">
-                  <div className="text-xs text-green-400 font-bold uppercase tracking-wider">KashGo App Live Preview</div>
+                  <div className="text-xs text-green-400 font-bold uppercase tracking-wider">KASHgo App Live Preview</div>
                   <div className="bg-slate-950 p-4 rounded-2xl border border-slate-800">
                     <div className="text-sm font-bold">Fast Kashmir Ride Booking</div>
                     <div className="text-xs text-slate-400 mt-1">Srinagar Airport ➔ Gulmarg Pass</div>
@@ -504,10 +805,10 @@ export default function Home() {
             Coming Soon
           </span>
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-4 max-w-3xl mx-auto">
-            The KashGo App Is On Its Way.
+            The KASHgo App Is On Its Way.
           </h2>
           <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mb-10">
-            We're working behind the scenes to deliver a seamless ride-booking experience across Kashmir. Be among the first to experience KashGo when we launch.
+            We're working behind the scenes to deliver a seamless ride-booking experience across Kashmir. Be among the first to experience KASHgo when we launch.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -545,7 +846,7 @@ export default function Home() {
                 Become a Driver
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-                Drive with KashGo
+                Drive with KASHgo
               </h2>
               <p className="text-slate-300 text-base leading-relaxed">
                 Become a valued partner in Kashmir's growing mobility network. Enjoy flexible working hours, transparent earnings and the opportunity to connect with thousands of riders across the region.
@@ -568,7 +869,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20 mb-3 inline-block">
-              Why People Will Love KashGo
+              Why People Will Love KASHgo
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
               Built Around Real Travel Needs
@@ -600,7 +901,7 @@ export default function Home() {
             Kashmir Is Waiting.
           </h2>
           <p className="text-slate-300 text-lg max-w-2xl mx-auto leading-relaxed">
-            Soon, getting around will be easier than ever. Download the KashGo app when it launches and experience travel designed for Kashmir.
+            Soon, getting around will be easier than ever. Download the KASHgo app when it launches and experience travel designed for Kashmir.
           </p>
           <div className="pt-4">
             <Link href="#app-download">
@@ -611,6 +912,108 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FOUNDER POPUP MODAL */}
+      <AnimatePresence>
+        {isFounderModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md"
+            onClick={() => setIsFounderModalOpen(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 20, opacity: 0 }}
+              animate={{ scale: 1, y: 0, opacity: 1 }}
+              exit={{ scale: 0.9, y: 20, opacity: 0 }}
+              transition={{ type: "spring", duration: 0.5 }}
+              className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-slate-900 border border-slate-800 text-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl space-y-6"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setIsFounderModalOpen(false)}
+                className="absolute top-4 right-4 p-2 rounded-full bg-slate-850 border border-slate-700 text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start text-center md:text-left">
+                {/* Founder Circular Image */}
+                <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-green-500 shadow-xl bg-slate-950 shrink-0">
+                  <Image
+                    src="/images/founder.png"
+                    alt="Shaikh Shaheen Kamalmiya"
+                    fill
+                    sizes="176px"
+                    priority
+                    className="object-cover object-center"
+                  />
+                </div>
+
+                {/* Basic Info */}
+                <div className="space-y-2">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-500/10 text-green-400 border border-green-500/20 rounded-full text-[10px] font-extrabold uppercase tracking-widest">
+                    <Award className="w-3 h-3" /> Founder Profile
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-white leading-none">
+                    Shaikh Shaheen Kamalmiya
+                  </h3>
+                  <p className="text-green-400 font-extrabold text-sm sm:text-base">
+                    Founder & Director – KASHgo
+                  </p>
+                  <p className="text-xs text-slate-400 font-semibold tracking-wider uppercase">
+                    Mumbai, India
+                  </p>
+                </div>
+              </div>
+
+              <hr className="border-slate-800" />
+
+              {/* Bio Details */}
+              <div className="space-y-4 text-slate-300 text-sm leading-relaxed text-left">
+                <p>
+                  Shaikh Shaheen Kamalmiya is the <strong className="text-white font-semibold">Founder and Director of KASHgo</strong>, a technology-driven mobility platform dedicated to delivering safe, reliable, and customer-centric transportation services across Jammu & Kashmir.
+                </p>
+                <p>
+                  Based in Mumbai, she is an accomplished technology and business leader with over <strong className="text-white font-semibold">20 years of professional experience</strong> in Information Technology, Digital Transformation, Enterprise Project Management, and Business Strategy. Throughout her career, she has successfully led complex technology initiatives, managed large-scale transformation programs, and driven operational excellence across diverse industries.
+                </p>
+                <p>
+                  She holds a Postgraduate degree and an MBA from Mumbai, along with the globally recognized <strong className="text-white font-semibold">Project Management Professional (PMP®)</strong> certification. Her expertise includes strategic planning, project governance, process optimization, stakeholder management, technology implementation, and organizational leadership.
+                </p>
+                <p>
+                  As the visionary behind KASHgo, Shaheen is committed to building a modern, technology-enabled mobility ecosystem that prioritizes safety, innovation, reliability, and customer satisfaction. Her mission is to create a trusted transportation platform that enhances connectivity, generates employment opportunities, and contributes to the sustainable growth of Jammu & Kashmir.
+                </p>
+              </div>
+
+              {/* Professional Highlights list */}
+              <div className="bg-slate-950/80 border border-slate-800 rounded-2xl p-5 space-y-3 text-left">
+                <h4 className="text-xs font-black uppercase tracking-wider text-green-400">
+                  Professional Highlights
+                </h4>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-300">
+                  {[
+                    "Founder & Director – KASHgo",
+                    "Based in Mumbai, India",
+                    "20+ years of IT & Digital leadership",
+                    "Postgraduate and MBA from Mumbai",
+                    "Project Management Professional (PMP®)",
+                    "Digital Transformation & EPM Expert",
+                    "Operations & Technology Innovation",
+                    "Focused on Sustainable Business Growth",
+                  ].map((highlight, index) => (
+                    <li key={index} className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-green-500 shrink-0" />
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <Footer />
     </div>

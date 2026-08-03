@@ -17,7 +17,7 @@ interface CTABannerProps {
 
 export const CTABanner: React.FC<CTABannerProps> = ({
   title = "Ready for a Safer, Smoother Ride Across Kashmir & Ladakh?",
-  subtitle = "Download the KashGo app or register as a driver captain today. Transparent pricing, verified local captains, and 24/7 mountain support.",
+  subtitle = "Download the KASHgo app or register as a driver captain today. Transparent pricing, verified local captains, and 24/7 mountain support.",
   primaryCtaText = "Book a Ride Now",
   primaryCtaLink = "/contact",
   secondaryCtaText = "Become a Driver",
