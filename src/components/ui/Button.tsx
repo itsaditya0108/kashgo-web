@@ -30,9 +30,9 @@ export const Button: React.FC<ButtonProps> = ({
 
   const variants = {
     primary:
-      "bg-gradient-to-r from-amber-400 to-yellow-300 hover:from-amber-300 hover:to-yellow-200 text-slate-900 font-extrabold shadow-lg shadow-amber-500/30 border border-amber-300/50",
+      "bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-900 font-extrabold shadow-lg shadow-amber-500/25 border border-amber-400/40",
     yellow:
-      "bg-gradient-to-r from-amber-400 to-yellow-300 hover:from-amber-300 hover:to-yellow-200 text-slate-900 font-extrabold shadow-lg shadow-amber-500/30 border border-amber-300/50",
+      "bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-900 font-extrabold shadow-lg shadow-amber-500/25 border border-amber-400/40",
     secondary:
       "bg-amber-50 hover:bg-amber-100 text-amber-900 font-semibold border border-amber-200",
     outline:
