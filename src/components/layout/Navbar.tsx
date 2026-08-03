@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Smartphone, ChevronRight } from "lucide-react";
 import { Button } from "../ui/Button";
-import { KASHgoLogo } from "../ui/KASHgoLogo";
+import { KASHgoLogo } from "../ui/KashGoLogo";
 
 const NAV_LINKS = [
   { name: "Home", href: "/" },

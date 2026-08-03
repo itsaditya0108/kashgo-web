@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 
 interface KASHgoLogoProps {
   variant?: "light" | "dark";
@@ -25,7 +24,7 @@ export const KASHgoLogo: React.FC<KASHgoLogoProps> = ({
 
   return (
     <div className={`flex items-center gap-2.5 select-none ${className}`}>
-      {/* Actual KASHgo Logo PNG — use unoptimized with explicit px size */}
+      {/* Actual KASHgo Logo PNG */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/images/kashgo-logo.png"

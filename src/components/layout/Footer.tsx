@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Send, CheckCircle2, Shield, Heart } from "lucide-react";
 import { FaInstagram, FaXTwitter, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
-import { KASHgoLogo } from "../ui/KASHgoLogo";
+import { KASHgoLogo } from "../ui/KashGoLogo";
 
 export const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
