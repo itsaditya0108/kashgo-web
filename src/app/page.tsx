@@ -339,7 +339,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.95, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.8, type: "spring", stiffness: 90 }}
-              className="lg:col-span-6 hidden lg:block"
+              className="lg:col-span-6 mt-10 lg:mt-0 flex justify-center w-full"
             >
               <HeroMobileMockup />
             </motion.div>
