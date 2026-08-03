@@ -81,17 +81,20 @@ export const Button: React.FC<ButtonProps> = ({
 
   if (href) {
     return (
-      <Link href={href} passHref legacyBehavior>
-        <motion.a
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
+      <motion.div
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 0.97 }}
+        className={fullWidth ? "w-full" : "inline-block"}
+      >
+        <Link
+          href={href}
           className={classes}
           onClick={onClick as any}
           {...(props as any)}
         >
           {innerContent}
-        </motion.a>
-      </Link>
+        </Link>
+      </motion.div>
     );
   }
 
