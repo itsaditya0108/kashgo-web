@@ -42,9 +42,9 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-green-50 text-green-700 border border-green-200/80 mb-3"
+          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-amber-50 text-amber-700 border border-amber-200/80 mb-3"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-green-600 animate-pulse"></span>
+          <span className="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>
           {badge}
         </motion.div>
       )}
@@ -61,7 +61,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
       >
         {title}{" "}
         {highlightText && (
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-500">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-500">
             {highlightText}
           </span>
         )}

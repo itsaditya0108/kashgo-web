@@ -35,16 +35,16 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
       whileHover={{ y: -8 }}
-      className="flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-2xl hover:border-green-400 transition-all duration-300 relative overflow-hidden"
+      className="flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-2xl hover:border-amber-400 transition-all duration-300 relative overflow-hidden"
     >
       {badge && (
-        <div className="absolute top-0 right-0 bg-green-600 text-white text-[11px] font-extrabold uppercase px-4 py-1 rounded-bl-xl tracking-wider">
+        <div className="absolute top-0 right-0 bg-amber-600 text-white text-[11px] font-extrabold uppercase px-4 py-1 rounded-bl-xl tracking-wider">
           {badge}
         </div>
       )}
 
       <div>
-        <span className="text-xs font-bold uppercase tracking-wider text-green-600 mb-2 block">
+        <span className="text-xs font-bold uppercase tracking-wider text-amber-600 mb-2 block">
           {category}
         </span>
         <h3 className="text-2xl font-bold text-slate-900 mb-2">{title}</h3>
@@ -56,7 +56,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
             {priceStarting}{" "}
             <span className="text-xs font-normal text-slate-500">/ ride</span>
           </div>
-          <div className="mt-2 text-xs font-semibold text-green-700 bg-green-100/60 inline-block px-2.5 py-1 rounded-lg">
+          <div className="mt-2 text-xs font-semibold text-amber-700 bg-amber-100/60 inline-block px-2.5 py-1 rounded-lg">
             Fleet: {vehicleTypes}
           </div>
         </div>
@@ -64,7 +64,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
         <div className="space-y-3 mb-8">
           {features.map((feature, idx) => (
             <div key={idx} className="flex items-center gap-3 text-sm text-slate-700">
-              <div className="w-5 h-5 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0">
+              <div className="w-5 h-5 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
                 <Check className="w-3.5 h-3.5" />
               </div>
               <span>{feature}</span>

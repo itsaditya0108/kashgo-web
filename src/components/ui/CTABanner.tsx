@@ -26,17 +26,17 @@ export const CTABanner: React.FC<CTABannerProps> = ({
   return (
     <div className="relative my-16 sm:my-24 overflow-hidden rounded-3xl bg-slate-900 text-white shadow-2xl p-8 sm:p-12 md:p-16 border border-slate-800">
       {/* Background Glowing Ambient Orbs */}
-      <div className="absolute top-0 right-0 -mt-12 -mr-12 w-96 h-96 bg-green-600/30 rounded-full blur-3xl pointer-events-none animate-pulse-glow"></div>
-      <div className="absolute bottom-0 left-0 -mb-12 -ml-12 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-0 right-0 -mt-12 -mr-12 w-96 h-96 bg-amber-600/30 rounded-full blur-3xl pointer-events-none animate-pulse-glow"></div>
+      <div className="absolute bottom-0 left-0 -mb-12 -ml-12 w-80 h-80 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-green-500/10 text-green-400 border border-green-500/20 mb-6"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-6"
         >
-          <ShieldCheck className="w-4 h-4 text-green-400" />
+          <ShieldCheck className="w-4 h-4 text-amber-400" />
           <span>Kashmir & Ladakh Premier Mobility Platform</span>
         </motion.div>
 
@@ -82,7 +82,7 @@ export const CTABanner: React.FC<CTABannerProps> = ({
               variant="outline"
               size="lg"
               fullWidth
-              className="border-slate-700 text-white hover:border-green-500 hover:text-green-400"
+              className="border-slate-700 text-white hover:border-amber-500 hover:text-amber-400"
               icon={<Car className="w-5 h-5" />}
             >
               {secondaryCtaText}

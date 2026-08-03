@@ -13,7 +13,7 @@ export const HeroMobileMockup: React.FC = () => {
         <div className="w-7 h-7 rounded-full bg-slate-800 flex items-center justify-center shadow-lg border border-slate-700 text-sm">
           📍
         </div>
-        <svg className="w-24 h-10 stroke-green-500 stroke-2 fill-none" viewBox="0 0 100 50">
+        <svg className="w-24 h-10 stroke-amber-500 stroke-2 fill-none" viewBox="0 0 100 50">
           <path d="M10 35 Q 50 10 90 20" strokeDasharray="4 4" />
         </svg>
       </div>
@@ -62,7 +62,7 @@ export const HeroMobileMockup: React.FC = () => {
 
               <div className="bg-slate-950 rounded-lg p-2.5 text-[10px] text-slate-400 flex items-center justify-between mt-1.5 border border-slate-800">
                 <span>Enter destination</span>
-                <span className="w-4 h-4 rounded-full bg-green-600 text-white text-[9px] flex items-center justify-center font-bold shadow-xs">
+                <span className="w-4 h-4 rounded-full bg-amber-600 text-white text-[9px] flex items-center justify-center font-bold shadow-xs">
                   ➔
                 </span>
               </div>
@@ -70,9 +70,9 @@ export const HeroMobileMockup: React.FC = () => {
 
             {/* 4 Category Tabs */}
             <div className="grid grid-cols-4 gap-1.5">
-              <div className="py-2 px-1 bg-green-500/15 border border-green-500/40 rounded-lg text-center">
+              <div className="py-2 px-1 bg-amber-500/15 border border-amber-500/40 rounded-lg text-center">
                 <div className="text-[11px]">🚖</div>
-                <div className="text-[7.5px] font-extrabold text-green-400 mt-0.5">City Rides</div>
+                <div className="text-[7.5px] font-extrabold text-amber-400 mt-0.5">City Rides</div>
               </div>
               <div className="py-2 px-1 bg-slate-950 border border-slate-800 rounded-lg text-center">
                 <div className="text-[11px]">✈️</div>
@@ -109,15 +109,15 @@ export const HeroMobileMockup: React.FC = () => {
                   <div className="text-[11px] font-extrabold text-white">Sedan</div>
                   <div className="text-[8px] text-slate-400 font-medium">👤 4 Seats • 🛡️ Comfortable</div>
                 </div>
-                <div className="w-5 h-5 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-[10px] shrink-0 shadow-xs">
+                <div className="w-5 h-5 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold text-[10px] shrink-0 shadow-xs">
                   ➔
                 </div>
               </div>
             </div>
 
             {/* Bottom Safety Trust Shield */}
-            <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-2 flex items-center gap-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-green-400 shrink-0" />
+            <div className="bg-amber-500/10 border border-amber-500/30 rounded-lg p-2 flex items-center gap-1.5">
+              <ShieldCheck className="w-3.5 h-3.5 text-amber-400 shrink-0" />
               <div>
                 <div className="text-[8.5px] font-extrabold text-white">Safe Rides, Trusted Drivers</div>
                 <div className="text-[7.5px] text-slate-300">Your safety is our priority</div>

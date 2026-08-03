@@ -41,7 +41,7 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-slate-950/92 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.4)] border-b border-green-500/10 py-3"
+          ? "bg-slate-950/92 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.4)] border-b border-amber-500/10 py-3"
           : "bg-gradient-to-b from-slate-950/90 to-transparent backdrop-blur-xs py-5"
       }`}
     >
@@ -62,14 +62,14 @@ export const Navbar: React.FC = () => {
                   href={link.href}
                   className={`px-4 py-2 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 relative ${
                     isActive
-                      ? "text-green-400 font-bold"
+                      ? "text-amber-400 font-bold"
                       : "text-slate-300 hover:text-white hover:bg-slate-800/60"
                   }`}
                 >
                   {isActive && (
                     <motion.div
                       layoutId="activeNavTab"
-                      className="absolute inset-0 bg-slate-800/90 rounded-full border border-green-500/30"
+                      className="absolute inset-0 bg-slate-800/90 rounded-full border border-amber-500/30"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -96,7 +96,7 @@ export const Navbar: React.FC = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Navigation Menu"
-            className="lg:hidden p-2 rounded-xl text-slate-200 hover:text-green-400 hover:bg-slate-900 focus:outline-none transition-colors border border-slate-800"
+            className="lg:hidden p-2 rounded-xl text-slate-200 hover:text-amber-400 hover:bg-slate-900 focus:outline-none transition-colors border border-slate-800"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -121,7 +121,7 @@ export const Navbar: React.FC = () => {
                     href={link.href}
                     className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
                       isActive
-                        ? "bg-green-500/10 text-green-400 font-bold border border-green-500/20"
+                        ? "bg-amber-500/10 text-amber-400 font-bold border border-amber-500/20"
                         : "text-slate-300 hover:bg-slate-900"
                     }`}
                   >

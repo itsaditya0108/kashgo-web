@@ -54,15 +54,15 @@ export default function ServicesPage() {
 
       {/* HEADER BANNER */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-slate-950 text-white relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-green-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-green-500/10 text-green-400 border border-green-500/20 mb-4"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-4"
           >
-            <Car className="w-4 h-4 text-green-400" />
+            <Car className="w-4 h-4 text-amber-400" />
             <span>KASHgo Ride Categories</span>
           </motion.div>
 
@@ -73,7 +73,7 @@ export default function ServicesPage() {
             className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight max-w-4xl mx-auto"
           >
             Every Journey Has a{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">
               Perfect Ride.
             </span>
           </motion.h1>
@@ -100,17 +100,17 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-green-500 hover:shadow-xl transition-all group"
+                className="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-amber-500 hover:shadow-xl transition-all group"
               >
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-4xl p-3 bg-slate-950 rounded-2xl border border-slate-800 shadow-xs">
                     {cat.icon}
                   </div>
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full bg-green-500/10 text-green-400 border border-green-500/20">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">
                     {cat.badge}
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
                   {cat.title}
                 </h3>
                 <p className="text-slate-300 text-sm leading-relaxed mb-6">
@@ -119,9 +119,9 @@ export default function ServicesPage() {
 
                 <div className="pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-semibold text-slate-300">
                   <span className="flex items-center gap-1.5 text-slate-200">
-                    <ShieldCheck className="w-4 h-4 text-green-400" /> Verified Driver
+                    <ShieldCheck className="w-4 h-4 text-amber-400" /> Verified Driver
                   </span>
-                  <Link href="/contact" className="text-green-400 hover:text-green-300 transition-colors">
+                  <Link href="/contact" className="text-amber-400 hover:text-amber-300 transition-colors">
                     Inquire Ride ➔
                   </Link>
                 </div>
@@ -134,7 +134,7 @@ export default function ServicesPage() {
       {/* FINAL CTA */}
       <section className="py-16 bg-slate-950 text-white text-center border-t border-slate-800">
         <div className="max-w-4xl mx-auto px-4 space-y-6">
-          <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20 inline-block">
+          <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 inline-block">
             Coming Soon
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white">Kashmir Is Waiting.</h2>

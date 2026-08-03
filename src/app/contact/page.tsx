@@ -64,15 +64,15 @@ export default function ContactPage() {
 
       {/* HEADER BANNER */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-slate-900 text-white relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-green-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-green-500/10 text-green-400 border border-green-500/20 mb-4"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-4"
           >
-            <Headphones className="w-4 h-4 text-green-400" />
+            <Headphones className="w-4 h-4 text-amber-400" />
             <span>KASHgo Support & Offices</span>
           </motion.div>
 
@@ -83,7 +83,7 @@ export default function ContactPage() {
             className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight max-w-4xl mx-auto"
           >
             We're Here to Help You{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">
               Move Smoothly.
             </span>
           </motion.h1>
@@ -105,7 +105,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Left Contact Info Cards */}
             <div className="lg:col-span-5 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
                 Direct Contact
               </span>
               <h2 className="text-3xl font-extrabold text-white">
@@ -114,7 +114,7 @@ export default function ContactPage() {
 
               <div className="space-y-4 pt-2">
                 <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-green-500/10 text-green-400 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-green-500/10 text-green-400 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
@@ -136,7 +136,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-green-500/10 text-green-400 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
@@ -166,7 +166,7 @@ export default function ContactPage() {
                     exit={{ opacity: 0, scale: 0.95 }}
                     className="py-12 text-center flex flex-col items-center bg-slate-950 rounded-2xl border border-slate-800 p-6"
                   >
-                    <div className="w-16 h-16 bg-green-500/10 text-green-400 rounded-full flex items-center justify-center mb-4">
+                    <div className="w-16 h-16 bg-amber-500/10 text-amber-400 rounded-full flex items-center justify-center mb-4">
                       <CheckCircle2 className="w-10 h-10" />
                     </div>
                     <h4 className="text-2xl font-bold text-white mb-2">
@@ -196,7 +196,7 @@ export default function ContactPage() {
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           placeholder="e.g. Rahul Sharma"
-                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-green-600 transition-all"
+                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-600 transition-all"
                         />
                       </div>
 
@@ -210,7 +210,7 @@ export default function ContactPage() {
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="rahul@example.com"
-                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-green-600 transition-all"
+                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-600 transition-all"
                         />
                       </div>
                     </div>
@@ -225,7 +225,7 @@ export default function ContactPage() {
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="+91 98765 43210"
-                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-green-600 transition-all"
+                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-600 transition-all"
                         />
                       </div>
 
@@ -236,7 +236,7 @@ export default function ContactPage() {
                         <select
                           value={formData.subject}
                           onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-green-600 transition-all"
+                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-600 transition-all"
                         >
                           <option value="Ride Booking Inquiry">Ride Booking Inquiry</option>
                           <option value="Airport Pickup Special">Airport Pickup Special</option>
@@ -257,7 +257,7 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder="Please describe how we can help you..."
-                        className="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-sm text-white focus:outline-none focus:border-green-600 transition-all"
+                        className="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-sm text-white focus:outline-none focus:border-amber-600 transition-all"
                       ></textarea>
                     </div>
 
@@ -292,17 +292,17 @@ export default function ContactPage() {
 
           <div className="w-full h-80 rounded-3xl bg-slate-900 border border-slate-800 relative overflow-hidden flex items-center justify-center text-white shadow-xl">
             {/* Styled Map Graphic Background */}
-            <div className="absolute inset-0 bg-[radial-gradient(#16a34a_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(#d97706_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none"></div>
 
             <div className="relative z-10 text-center max-w-md p-6 bg-slate-950/80 backdrop-blur-md rounded-2xl border border-slate-800">
-              <div className="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center mx-auto mb-3 text-white">
+              <div className="w-12 h-12 rounded-full bg-amber-600 flex items-center justify-center mx-auto mb-3 text-white">
                 <MapPin className="w-6 h-6 animate-bounce" />
               </div>
               <h4 className="text-xl font-bold text-white mb-2">Interactive Location Hubs</h4>
               <p className="text-slate-400 text-xs leading-relaxed mb-4">
                 Srinagar HQ: Rajbagh Lal Mandi • Leh Office: Fort Road
               </p>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-green-500/10 text-green-400 border border-green-500/20">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">
                 <Globe className="w-3.5 h-3.5" /> Coordinates Verified (kashgo.in)
               </div>
             </div>
@@ -334,7 +334,7 @@ export default function ContactPage() {
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
-                      className={`w-5 h-5 text-green-400 transition-transform duration-200 ${
+                      className={`w-5 h-5 text-amber-400 transition-transform duration-200 ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />

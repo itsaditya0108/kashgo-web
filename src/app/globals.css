@@ -4,10 +4,10 @@
   :root {
     --background: #090D16;
     --foreground: #F8FAFC;
-    --primary: #16A34A;
-    --primary-hover: #15803D;
-    --primary-light: #DCFCE7;
-    --green-accent: #22C55E;
+    --primary: #d97706;
+    --primary-hover: #b45309;
+    --primary-light: #fef3c7;
+    --green-accent: #f59e0b;
     --dark-slate: #090D16;
     --subtle-gray: #1E293B;
     --card-border: #334155;
@@ -38,12 +38,12 @@
 }
 
 .glass-card-hover:hover {
-  border-color: rgba(34, 197, 94, 0.5);
-  box-shadow: 0 10px 30px -10px rgba(34, 197, 94, 0.15);
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.15);
 }
 
 .green-glow {
-  box-shadow: 0 0 50px -10px rgba(22, 163, 74, 0.25);
+  box-shadow: 0 0 50px -10px rgba(217, 119, 6, 0.25);
 }
 
 /* ── Shimmer Button Micro-Interaction ── */
@@ -112,7 +112,7 @@
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #16A34A;
+  background: #d97706;
 }
 
 /* Hide scrollbar utility class */

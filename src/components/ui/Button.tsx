@@ -26,20 +26,20 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    "inline-flex items-center justify-center font-bold rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed select-none btn-shimmer";
+    "inline-flex items-center justify-center font-bold rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed select-none btn-shimmer";
 
   const variants = {
     primary:
-      "bg-green-600 hover:bg-green-500 text-white font-extrabold shadow-lg shadow-green-600/25 border border-green-500",
+      "bg-amber-600 hover:bg-amber-500 text-white font-extrabold shadow-lg shadow-amber-600/25 border border-amber-500",
     yellow:
-      "bg-green-600 hover:bg-green-500 text-white font-extrabold shadow-lg shadow-green-600/25 border border-green-500",
+      "bg-amber-600 hover:bg-amber-500 text-white font-extrabold shadow-lg shadow-amber-600/25 border border-amber-500",
     secondary:
-      "bg-green-50 hover:bg-green-100 text-green-900 font-semibold border border-green-200",
+      "bg-amber-50 hover:bg-amber-100 text-amber-900 font-semibold border border-amber-200",
     outline:
-      "bg-slate-900/60 backdrop-blur-md border border-slate-700 hover:border-green-500 text-white hover:text-green-400",
+      "bg-slate-900/60 backdrop-blur-md border border-slate-700 hover:border-amber-500 text-white hover:text-amber-400",
     dark: "bg-slate-900 hover:bg-slate-800 text-white shadow-md shadow-slate-900/10 border border-slate-800",
     ghost:
-      "bg-transparent hover:bg-slate-100/10 text-slate-200 hover:text-green-400",
+      "bg-transparent hover:bg-slate-100/10 text-slate-200 hover:text-amber-400",
   };
 
   const sizes = {

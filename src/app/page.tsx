@@ -224,15 +224,15 @@ export default function Home() {
     }
   };
   return (
-    <div className="min-h-screen bg-[#090D16] text-slate-100 flex flex-col font-sans selection:bg-green-400 selection:text-slate-950">
+    <div className="min-h-screen bg-[#090D16] text-slate-100 flex flex-col font-sans selection:bg-amber-400 selection:text-slate-950">
       <Navbar />
 
       {/* HERO SECTION */}
       <section className="relative pt-28 pb-20 lg:pt-24 lg:pb-32 overflow-hidden hero-mountain-bg text-white">
         {/* Ambient Glow Lights */}
-        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-green-500/15 rounded-full blur-[120px] pointer-events-none"></div>
-        <div className="absolute top-1/3 left-10 w-[350px] h-[350px] bg-green-500/10 rounded-full blur-[100px] pointer-events-none animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none animate-pulse" style={{ animationDuration: '6s' }}></div>
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-amber-500/15 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute top-1/3 left-10 w-[350px] h-[350px] bg-amber-500/10 rounded-full blur-[100px] pointer-events-none animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none animate-pulse" style={{ animationDuration: '6s' }}></div>
         {/* Dark Backing Shadow for Text Column Visibility */}
         <div className="absolute top-12 left-0 w-[550px] h-[450px] bg-slate-950/70 rounded-full blur-[90px] pointer-events-none z-0"></div>
 
@@ -252,9 +252,9 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.15, duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest bg-slate-950/90 text-green-400 border border-green-500/40 backdrop-blur-md shadow-lg"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest bg-slate-950/90 text-amber-400 border border-amber-500/40 backdrop-blur-md shadow-lg"
               >
-                <span className="w-2.5 h-2.5 rounded-full bg-green-400 shadow-[0_0_12px_rgba(74,222,128,0.85)] animate-pulse"></span>
+                <span className="w-2.5 h-2.5 rounded-full bg-amber-400 shadow-[0_0_12px_rgba(74,222,128,0.85)] animate-pulse"></span>
                 <span>🚀 KASHgo App Launching Soon</span>
               </motion.div>
 
@@ -266,12 +266,12 @@ export default function Home() {
                 className="text-fluid-hero font-black tracking-tight text-white"
               >
                 Ride{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-300 to-green-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">
                   Smarter.
                 </span>
                 <br />
                 Explore{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-300 to-green-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">
                   Kashmir
                 </span>{" "}
                 Better.
@@ -321,7 +321,7 @@ export default function Home() {
                     <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-white"><path d="M17.52 14.28A1.28 1.28 0 0 0 18.8 13A1.28 1.28 0 0 0 17.52 11.72A1.28 1.28 0 0 0 16.24 13A1.28 1.28 0 0 0 17.52 14.28M6.48 14.28A1.28 1.28 0 0 0 7.76 13A1.28 1.28 0 0 0 6.48 11.72A1.28 1.28 0 0 0 5.2 13A1.28 1.28 0 0 0 6.48 14.28M12.96 4.79L14.9 1.45C14.97 1.34 14.93 1.19 14.81 1.12C14.7 1.05 14.54 1.09 14.47 1.2L12.47 4.67C11 4 9.4 4 7.53 4.67L5.53 1.2C5.46 1.09 5.3 1.05 5.19 1.12C5.07 1.19 5.03 1.34 5.1 1.45L7.04 4.79C3.12 6.94 0.5 11.23 0 16.5H24C23.5 11.23 20.88 6.94 16.96 4.79Z" /></svg>
                     <div>
                       <div className="text-xs font-bold text-white">Android</div>
-                      <div className="text-[10px] text-green-400 font-extrabold">Coming Soon</div>
+                      <div className="text-[10px] text-amber-400 font-extrabold">Coming Soon</div>
                     </div>
                   </div>
 
@@ -329,7 +329,7 @@ export default function Home() {
                     <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-white"><path d="M18.72 13.56C18.75 16.63 21.2 17.57 21.23 17.58C21.2 17.65 20.83 18.9 19.92 20.24C19.14 21.39 18.32 22.52 17.06 22.55C15.82 22.58 15.42 21.82 14 21.82C12.57 21.82 12.09 22.52 10.93 22.58C9.69 22.64 8.76 21.39 7.94 20.24C6.26 17.81 4.96 13.72 6.67 10.74C7.52 9.27 8.94 8.35 10.45 8.32C11.66 8.29 12.78 9.12 13.53 9.12C14.27 9.12 15.63 8.11 17.11 8.24C17.72 8.27 19.46 8.5 20.61 10.18C20.52 10.23 18.7 11.3 18.72 13.56M14.77 5.56C15.42 4.77 15.87 3.69 15.75 2.5C14.72 2.55 13.52 3.19 12.85 3.97C12.26 4.66 11.72 5.75 11.87 6.9C13 6.99 14.12 6.35 14.77 5.56Z" /></svg>
                     <div>
                       <div className="text-xs font-bold text-white">iOS</div>
-                      <div className="text-[10px] text-green-400 font-extrabold">Coming Soon</div>
+                      <div className="text-[10px] text-amber-400 font-extrabold">Coming Soon</div>
                     </div>
                   </div>
                 </div>
@@ -355,9 +355,9 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.1, duration: 0.5 }}
               whileHover={{ y: -4, scale: 1.01 }}
-              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-green-500/30 transition-all cursor-default"
+              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-amber-500/30 transition-all cursor-default"
             >
-              <div className="w-10 h-10 rounded-xl bg-green-500/10 text-green-400 flex items-center justify-center shrink-0 border border-green-500/20">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/20">
                 <Users className="w-5 h-5" />
               </div>
               <div>
@@ -372,9 +372,9 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.5 }}
               whileHover={{ y: -4, scale: 1.01 }}
-              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-green-500/30 transition-all cursor-default"
+              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-amber-500/30 transition-all cursor-default"
             >
-              <div className="w-10 h-10 rounded-xl bg-green-500/10 text-green-400 flex items-center justify-center shrink-0 border border-green-500/20">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/20">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
@@ -389,9 +389,9 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.5 }}
               whileHover={{ y: -4, scale: 1.01 }}
-              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-green-500/30 transition-all cursor-default"
+              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-amber-500/30 transition-all cursor-default"
             >
-              <div className="w-10 h-10 rounded-xl bg-green-500/10 text-green-400 flex items-center justify-center shrink-0 border border-green-500/20">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/20">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div>
@@ -406,9 +406,9 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.5 }}
               whileHover={{ y: -4, scale: 1.01 }}
-              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-green-500/30 transition-all cursor-default"
+              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-amber-500/30 transition-all cursor-default"
             >
-              <div className="w-10 h-10 rounded-xl bg-green-500/10 text-green-400 flex items-center justify-center shrink-0 border border-green-500/20">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/20">
                 <Star className="w-5 h-5" />
               </div>
               <div>
@@ -423,13 +423,13 @@ export default function Home() {
       {/* TRUSTED BY KASHMIR */}
       <section className="py-20 bg-slate-900/60 border-y border-slate-800">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
-          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-extrabold tracking-wider uppercase bg-green-500/10 text-green-400 border border-green-500/30">
+          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-extrabold tracking-wider uppercase bg-amber-500/10 text-amber-400 border border-amber-500/30">
             Trusted by Kashmir, Built for Everyone
           </span>
 
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
             Instead of creating another cab service, we're building a{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">
               smarter way to travel
             </span>{" "}
             across Kashmir.
@@ -446,24 +446,24 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
                 About KASHgo
               </span>
               <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
                 More Than a Ride. <br />
-                <span className="text-green-400">A Better Way to Move Across Kashmir.</span>
+                <span className="text-amber-400">A Better Way to Move Across Kashmir.</span>
               </h2>
               <p className="text-slate-300 text-base leading-relaxed">
                 KASHgo is built to simplify travel across Kashmir through transparent, fast, and stress-free digital booking. By connecting you with verified local drivers, we make every journey across the valley safer, smarter, and more reliable.
               </p>
-              <div className="p-5 bg-slate-900 border-l-4 border-green-500 text-white font-bold text-base rounded-r-2xl border border-slate-800 shadow-md">
+              <div className="p-5 bg-slate-900 border-l-4 border-amber-500 text-white font-bold text-base rounded-r-2xl border border-slate-800 shadow-md">
                 "This isn't just about reaching a destination. It's about making every journey safer, smarter and more comfortable."
               </div>
             </div>
 
             {/* Right Feature Card */}
             <div className="lg:col-span-6 bg-slate-900 text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-2xl border border-slate-800">
-              <div className="absolute top-0 right-0 w-80 h-80 bg-green-500/10 rounded-full blur-3xl pointer-events-none"></div>
+              <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
               <h3 className="text-2xl font-bold text-white mb-6">
                 Why Kashmir Chooses KASHgo
@@ -513,7 +513,7 @@ export default function Home() {
             <div className="lg:col-span-5 flex justify-center">
               <div className="w-full max-w-lg bg-slate-950 text-white rounded-3xl p-8 sm:p-10 shadow-2xl border border-slate-800 relative overflow-hidden text-center">
                 {/* Real Founder Photo Frame in Circle shape */}
-                <div className="relative w-64 h-64 mx-auto mb-6 rounded-full overflow-hidden border-2 border-green-500 shadow-xl bg-slate-900 p-1">
+                <div className="relative w-64 h-64 mx-auto mb-6 rounded-full overflow-hidden border-2 border-amber-500 shadow-xl bg-slate-900 p-1">
                   <Image
                     src="/images/founder.png"
                     alt="Shaikh Shaheen Kamalmiya - Founder & CEO KASHgo"
@@ -527,12 +527,12 @@ export default function Home() {
                 <h3 className="text-2xl font-black text-white mb-1">
                   Shaikh Shaheen Kamalmiya
                 </h3>
-                <div className="text-xs font-extrabold text-green-400 uppercase tracking-widest mb-6">
+                <div className="text-xs font-extrabold text-amber-400 uppercase tracking-widest mb-6">
                   Founder &amp; CEO, KASHgo
                 </div>
 
                 <div className="bg-slate-900 rounded-2xl p-4 text-left border border-slate-800 space-y-2">
-                  <Quote className="w-6 h-6 text-green-400" />
+                  <Quote className="w-6 h-6 text-amber-400" />
                   <p className="text-slate-200 text-xs italic leading-relaxed font-medium">
                     "Our mission isn't simply to build an app. It's to build trust—one journey at a time."
                   </p>
@@ -542,7 +542,7 @@ export default function Home() {
 
             {/* Right Story Content */}
             <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
                 Meet The Founder
               </span>
               <h2 className="text-fluid-section font-extrabold text-white tracking-tight">
@@ -554,7 +554,7 @@ export default function Home() {
               <p className="text-slate-300 text-base leading-relaxed">
                 As tourism continues to grow and everyday travel becomes more important, one question remained:
               </p>
-              <div className="p-4 bg-slate-950 border-2 border-green-500 rounded-2xl shadow-sm font-extrabold text-white text-lg">
+              <div className="p-4 bg-slate-950 border-2 border-amber-500 rounded-2xl shadow-sm font-extrabold text-white text-lg">
                 "Why should finding a trusted ride still feel complicated?"
               </div>
               <p className="text-slate-300 text-base leading-relaxed">
@@ -564,7 +564,7 @@ export default function Home() {
               <div className="pt-2">
                 <button
                   onClick={() => setIsFounderModalOpen(true)}
-                  className="group inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-extrabold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:scale-105 active:scale-95 cursor-pointer"
+                  className="group inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-extrabold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:scale-105 active:scale-95 cursor-pointer"
                 >
                   <span>Know More</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -579,7 +579,7 @@ export default function Home() {
       <section className="py-20 bg-[#090D16]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20 mb-3 inline-block">
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 mb-3 inline-block">
               Regional Excellence
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
@@ -594,9 +594,9 @@ export default function Home() {
             {DIFFERENTIATORS.map((item, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-green-500/60 transition-all flex items-start gap-4"
+                className="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-amber-500/60 transition-all flex items-start gap-4"
               >
-                <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center shrink-0 shadow-xs">
+                <div className="w-8 h-8 rounded-full bg-amber-600 text-white flex items-center justify-center shrink-0 shadow-xs">
                   <Check className="w-4 h-4" />
                 </div>
                 <div className="text-base font-bold text-white pt-0.5">
@@ -612,7 +612,7 @@ export default function Home() {
       <section id="categories" className="py-20 bg-slate-900/80 text-white relative overflow-hidden border-y border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20 mb-3 inline-block">
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 mb-3 inline-block">
               Ride Categories
             </span>
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
@@ -627,17 +627,17 @@ export default function Home() {
             {RIDE_CATEGORIES.map((cat, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-3xl bg-slate-950 border border-slate-800 hover:border-green-500 transition-all group"
+                className="p-8 rounded-3xl bg-slate-950 border border-slate-800 hover:border-amber-500 transition-all group"
               >
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-4xl p-3 bg-slate-900 rounded-2xl border border-slate-800">
                     {cat.icon}
                   </div>
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full bg-green-500/10 text-green-400 border border-green-500/20">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">
                     {cat.badge}
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
                   {cat.title}
                 </h3>
                 <p className="text-slate-300 text-sm leading-relaxed">
@@ -653,7 +653,7 @@ export default function Home() {
       <section className="py-20 bg-[#090D16] border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-500/10 text-green-400 border border-green-500/20 rounded-full text-xs font-black uppercase tracking-wider">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-full text-xs font-black uppercase tracking-wider">
               <Compass className="w-3.5 h-3.5" /> Iconic Destinations
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -676,7 +676,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.05 }}
                   whileHover={{ y: isActive ? 0 : -6 }}
-                  className={`${isActive ? "lg:flex-[2]" : "lg:flex-[1]"} min-w-[85vw] sm:min-w-[340px] lg:min-w-0 snap-center min-h-[360px] md:min-h-[440px] group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 flex flex-col justify-end p-6 transition-all duration-500 ease-in-out hover:border-green-500/40 hover:shadow-[0_15px_30px_rgba(34,197,94,0.15)] cursor-pointer`}
+                  className={`${isActive ? "lg:flex-[2]" : "lg:flex-[1]"} min-w-[85vw] sm:min-w-[340px] lg:min-w-0 snap-center min-h-[360px] md:min-h-[440px] group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 flex flex-col justify-end p-6 transition-all duration-500 ease-in-out hover:border-amber-500/40 hover:shadow-[0_15px_30px_rgba(245,158,11,0.15)] cursor-pointer`}
                 >
                   {/* Background Image with Overlay */}
                   <div className="absolute inset-0 z-0">
@@ -693,7 +693,7 @@ export default function Home() {
 
                   {/* Card Content */}
                   <div className="relative z-20 space-y-2 text-left">
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-slate-950/80 text-green-400 border border-green-500/30 backdrop-blur-sm">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-slate-950/80 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
                       {place.badge}
                     </span>
                     <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-none pt-1">
@@ -712,7 +712,7 @@ export default function Home() {
                           e.stopPropagation();
                           window.open(place.link, '_blank');
                         }}
-                        className="inline-flex items-center gap-1.5 bg-green-600 hover:bg-green-700 text-white font-extrabold text-xs px-4 py-2.5 rounded-xl transition-all shadow-md active:scale-95 cursor-pointer"
+                        className="inline-flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white font-extrabold text-xs px-4 py-2.5 rounded-xl transition-all shadow-md active:scale-95 cursor-pointer"
                       >
                         <span>Book Ride</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -728,14 +728,14 @@ export default function Home() {
           <div className="flex lg:hidden items-center justify-center gap-3 mt-6">
             <button
               onClick={() => scrollContainer(destinationsRef, "left")}
-              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-white flex items-center justify-center active:bg-green-600 transition-colors shadow-md cursor-pointer hover:border-green-500/40"
+              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-white flex items-center justify-center active:bg-amber-600 transition-colors shadow-md cursor-pointer hover:border-amber-500/40"
               aria-label="Previous Destination"
             >
               <ChevronLeft className="w-5 h-5 text-slate-300" />
             </button>
             <button
               onClick={() => scrollContainer(destinationsRef, "right")}
-              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-white flex items-center justify-center active:bg-green-600 transition-colors shadow-md cursor-pointer hover:border-green-500/40"
+              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-white flex items-center justify-center active:bg-amber-600 transition-colors shadow-md cursor-pointer hover:border-amber-500/40"
               aria-label="Next Destination"
             >
               <ChevronRight className="w-5 h-5 text-slate-300" />
@@ -748,7 +748,7 @@ export default function Home() {
       <section className="py-20 bg-slate-950 border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-500/10 text-green-400 border border-green-500/20 rounded-full text-xs font-black uppercase tracking-wider">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-full text-xs font-black uppercase tracking-wider">
               <Car className="w-3.5 h-3.5" /> Premium Mobility
             </span>
             <h2 className="text-fluid-section font-extrabold text-white tracking-tight">
@@ -768,7 +768,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.05 }}
                 whileHover={{ y: -8, scale: 1.015 }}
-                className="flex flex-col md:flex-row min-w-[85vw] sm:min-w-[400px] lg:min-w-0 snap-center bg-slate-900 rounded-3xl border border-slate-800 hover:border-green-500/50 hover:shadow-[0_15px_30px_rgba(34,197,94,0.08)] transition-all overflow-hidden group"
+                className="flex flex-col md:flex-row min-w-[85vw] sm:min-w-[400px] lg:min-w-0 snap-center bg-slate-900 rounded-3xl border border-slate-800 hover:border-amber-500/50 hover:shadow-[0_15px_30px_rgba(245,158,11,0.08)] transition-all overflow-hidden group"
               >
                 {/* Vehicle Image Container */}
                 <div
@@ -788,7 +788,7 @@ export default function Home() {
                 {/* Content */}
                 <div className="flex-1 p-6 md:p-8 space-y-4 flex flex-col justify-between">
                   <div className="space-y-2">
-                    <h3 className="text-xl font-black text-white tracking-tight leading-none group-hover:text-green-400 transition-colors">
+                    <h3 className="text-xl font-black text-white tracking-tight leading-none group-hover:text-amber-400 transition-colors">
                       {vehicle.name}
                     </h3>
                     <p className="text-xs text-slate-400 font-medium">
@@ -803,11 +803,11 @@ export default function Home() {
                     {/* Capacity Specs */}
                     <div className="grid grid-cols-2 gap-2 text-xs text-slate-300 bg-slate-950/80 p-2.5 rounded-xl border border-slate-800">
                       <div className="flex items-center gap-1.5">
-                        <Users className="w-3.5 h-3.5 text-green-400 shrink-0" />
+                        <Users className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                         <span>{vehicle.capacity}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <Car className="w-3.5 h-3.5 text-green-400 shrink-0" />
+                        <Car className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                         <span className="truncate">{vehicle.luggage}</span>
                       </div>
                     </div>
@@ -827,7 +827,7 @@ export default function Home() {
                           </span>
                         ))}
                         {vehicle.ideal.length > 3 && (
-                          <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded-full bg-slate-950 text-green-400 border border-slate-850">
+                          <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded-full bg-slate-950 text-amber-400 border border-slate-850">
                             +{vehicle.ideal.length - 3} more
                           </span>
                         )}
@@ -841,7 +841,7 @@ export default function Home() {
                       href={`https://wa.me/917400180114?text=Hi%20KASHgo,%20I'd%2520like%2520to%2520book%2520a%2520ride%2520with%2520the%2520${encodeURIComponent(vehicle.name)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-extrabold text-xs py-3 rounded-2xl transition-all shadow-md active:scale-95 cursor-pointer"
+                      className="w-full inline-flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-extrabold text-xs py-3 rounded-2xl transition-all shadow-md active:scale-95 cursor-pointer"
                     >
                       <span>Book {vehicle.name.split(' ')[0]}</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -856,14 +856,14 @@ export default function Home() {
           <div className="flex lg:hidden items-center justify-center gap-3 mt-6">
             <button
               onClick={() => scrollContainer(fleetRef, "left")}
-              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-white flex items-center justify-center active:bg-green-600 transition-colors shadow-md cursor-pointer hover:border-green-500/40"
+              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-white flex items-center justify-center active:bg-amber-600 transition-colors shadow-md cursor-pointer hover:border-amber-500/40"
               aria-label="Previous Vehicle"
             >
               <ChevronLeft className="w-5 h-5 text-slate-300" />
             </button>
             <button
               onClick={() => scrollContainer(fleetRef, "right")}
-              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-white flex items-center justify-center active:bg-green-600 transition-colors shadow-md cursor-pointer hover:border-green-500/40"
+              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-white flex items-center justify-center active:bg-amber-600 transition-colors shadow-md cursor-pointer hover:border-amber-500/40"
               aria-label="Next Vehicle"
             >
               <ChevronRight className="w-5 h-5 text-slate-300" />
@@ -872,9 +872,9 @@ export default function Home() {
 
           {/* Section CTA Card */}
           <div className="mt-16 bg-gradient-to-r from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 md:p-10 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="absolute top-0 right-0 w-80 h-80 bg-green-500/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
             <div className="space-y-3 max-w-2xl text-center md:text-left">
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-green-500/10 text-green-400 border border-green-500/20">
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20">
                 ⭐ Help &amp; Support
               </span>
               <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
@@ -889,7 +889,7 @@ export default function Home() {
                 href="https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20need%20help%20choosing%20the%20right%20vehicle%20for%20my%20Kashmir%20trip."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-extrabold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:scale-105 active:scale-95 cursor-pointer"
+                className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-extrabold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:scale-105 active:scale-95 cursor-pointer"
               >
                 <span>🚖 Book Your Ride Today</span>
                 <ArrowRight className="w-4 h-4" />
@@ -906,7 +906,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
                 App Experience
               </span>
               <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
@@ -926,7 +926,7 @@ export default function Home() {
                   "Manage your profile",
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3 p-3.5 bg-slate-900 rounded-xl border border-slate-800">
-                    <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-amber-400 shrink-0" />
                     <span className="text-sm font-bold text-white">{item}</span>
                   </div>
                 ))}
@@ -937,12 +937,12 @@ export default function Home() {
             <div className="lg:col-span-6 flex justify-center">
               <div className="w-full max-w-sm bg-slate-950 rounded-[44px] p-4 border-4 border-slate-800 shadow-2xl">
                 <div className="bg-slate-900 rounded-[36px] p-5 border border-slate-800 text-white space-y-4">
-                  <div className="text-xs text-green-400 font-bold uppercase tracking-wider">KASHgo App Live Preview</div>
+                  <div className="text-xs text-amber-400 font-bold uppercase tracking-wider">KASHgo App Live Preview</div>
                   <div className="bg-slate-950 p-4 rounded-2xl border border-slate-800">
                     <div className="text-sm font-bold">Fast Kashmir Ride Booking</div>
                     <div className="text-xs text-slate-400 mt-1">Srinagar Airport ➔ Gulmarg Pass</div>
                   </div>
-                  <div className="p-3 bg-green-600 text-white font-extrabold text-xs rounded-xl text-center">
+                  <div className="p-3 bg-amber-600 text-white font-extrabold text-xs rounded-xl text-center">
                     Driver Assigned • Tariq M. (4.9★)
                   </div>
                 </div>
@@ -955,7 +955,7 @@ export default function Home() {
       {/* COMING SOON BANNER */}
       <section id="app-download" className="py-20 bg-slate-900 text-white relative overflow-hidden border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20 mb-4 inline-block">
+          <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 mb-4 inline-block">
             Coming Soon
           </span>
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-4 max-w-3xl mx-auto">
@@ -968,23 +968,23 @@ export default function Home() {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <button
               type="button"
-              className="bg-slate-950 hover:bg-slate-800 text-white px-6 py-3.5 rounded-2xl border border-slate-800 hover:border-green-500/40 flex items-center gap-3 transition-colors cursor-pointer"
+              className="bg-slate-950 hover:bg-slate-800 text-white px-6 py-3.5 rounded-2xl border border-slate-800 hover:border-amber-500/40 flex items-center gap-3 transition-colors cursor-pointer"
             >
               <svg viewBox="0 0 24 24" className="w-8 h-8 fill-current text-white"><path d="M17.52 14.28A1.28 1.28 0 0 0 18.8 13A1.28 1.28 0 0 0 17.52 11.72A1.28 1.28 0 0 0 16.24 13A1.28 1.28 0 0 0 17.52 14.28M6.48 14.28A1.28 1.28 0 0 0 7.76 13A1.28 1.28 0 0 0 6.48 11.72A1.28 1.28 0 0 0 5.2 13A1.28 1.28 0 0 0 6.48 14.28M12.96 4.79L14.9 1.45C14.97 1.34 14.93 1.19 14.81 1.12C14.7 1.05 14.54 1.09 14.47 1.2L12.47 4.67C11 4 9.4 4 7.53 4.67L5.53 1.2C5.46 1.09 5.3 1.05 5.19 1.12C5.07 1.19 5.03 1.34 5.1 1.45L7.04 4.79C3.12 6.94 0.5 11.23 0 16.5H24C23.5 11.23 20.88 6.94 16.96 4.79Z" /></svg>
               <div className="text-left">
                 <div className="text-[10px] uppercase font-bold text-slate-400">Google Play</div>
-                <div className="text-sm font-bold text-green-400">Coming Soon</div>
+                <div className="text-sm font-bold text-amber-400">Coming Soon</div>
               </div>
             </button>
 
             <button
               type="button"
-              className="bg-slate-950 hover:bg-slate-800 text-white px-6 py-3.5 rounded-2xl border border-slate-800 hover:border-green-500/40 flex items-center gap-3 transition-colors cursor-pointer"
+              className="bg-slate-950 hover:bg-slate-800 text-white px-6 py-3.5 rounded-2xl border border-slate-800 hover:border-amber-500/40 flex items-center gap-3 transition-colors cursor-pointer"
             >
               <svg viewBox="0 0 24 24" className="w-8 h-8 fill-current text-white"><path d="M18.72 13.56C18.75 16.63 21.2 17.57 21.23 17.58C21.2 17.65 20.83 18.9 19.92 20.24C19.14 21.39 18.32 22.52 17.06 22.55C15.82 22.58 15.42 21.82 14 21.82C12.57 21.82 12.09 22.52 10.93 22.58C9.69 22.64 8.76 21.39 7.94 20.24C6.26 17.81 4.96 13.72 6.67 10.74C7.52 9.27 8.94 8.35 10.45 8.32C11.66 8.29 12.78 9.12 13.53 9.12C14.27 9.12 15.63 8.11 17.11 8.24C17.72 8.27 19.46 8.5 20.61 10.18C20.52 10.23 18.7 11.3 18.72 13.56M14.77 5.56C15.42 4.77 15.87 3.69 15.75 2.5C14.72 2.55 13.52 3.19 12.85 3.97C12.26 4.66 11.72 5.75 11.87 6.9C13 6.99 14.12 6.35 14.77 5.56Z" /></svg>
               <div className="text-left">
                 <div className="text-[10px] uppercase font-bold text-slate-400">App Store</div>
-                <div className="text-sm font-bold text-green-400">Coming Soon</div>
+                <div className="text-sm font-bold text-amber-400">Coming Soon</div>
               </div>
             </button>
           </div>
@@ -996,7 +996,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
                 Become a Driver
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
@@ -1022,7 +1022,7 @@ export default function Home() {
       <section className="py-20 bg-[#090D16]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20 mb-3 inline-block">
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 mb-3 inline-block">
               Why People Will Love KASHgo
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -1034,9 +1034,9 @@ export default function Home() {
             {TRAVEL_NEEDS_PILLS.map((pill, idx) => (
               <div
                 key={idx}
-                className="px-5 py-3 rounded-full bg-slate-900 border border-slate-800 text-white font-bold text-sm flex items-center gap-2 shadow-xs hover:border-green-500 transition-colors"
+                className="px-5 py-3 rounded-full bg-slate-900 border border-slate-800 text-white font-bold text-sm flex items-center gap-2 shadow-xs hover:border-amber-500 transition-colors"
               >
-                <div className="w-5 h-5 rounded-full bg-green-600 text-white flex items-center justify-center">
+                <div className="w-5 h-5 rounded-full bg-amber-600 text-white flex items-center justify-center">
                   <Check className="w-3 h-3" />
                 </div>
                 <span>{pill}</span>
@@ -1048,7 +1048,7 @@ export default function Home() {
 
       {/* FINAL CTA SECTION */}
       <section className="py-20 bg-slate-950 text-white relative overflow-hidden border-t border-slate-800">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-green-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10 space-y-6">
           <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
@@ -1095,7 +1095,7 @@ export default function Home() {
 
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start text-center md:text-left">
                 {/* Founder Circular Image */}
-                <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-green-500 shadow-xl bg-slate-950 shrink-0">
+                <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-amber-500 shadow-xl bg-slate-950 shrink-0">
                   <Image
                     src="/images/founder.png"
                     alt="Shaikh Shaheen Kamalmiya"
@@ -1108,13 +1108,13 @@ export default function Home() {
 
                 {/* Basic Info */}
                 <div className="space-y-2">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-500/10 text-green-400 border border-green-500/20 rounded-full text-[10px] font-extrabold uppercase tracking-widest">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-full text-[10px] font-extrabold uppercase tracking-widest">
                     <Award className="w-3 h-3" /> Founder Profile
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-white leading-none">
                     Shaikh Shaheen Kamalmiya
                   </h3>
-                  <p className="text-green-400 font-extrabold text-sm sm:text-base">
+                  <p className="text-amber-400 font-extrabold text-sm sm:text-base">
                     Founder & Director – KASHgo
                   </p>
                   <p className="text-xs text-slate-400 font-semibold tracking-wider uppercase">
@@ -1143,7 +1143,7 @@ export default function Home() {
 
               {/* Professional Highlights list */}
               <div className="bg-slate-950/80 border border-slate-800 rounded-2xl p-5 space-y-3 text-left">
-                <h4 className="text-xs font-black uppercase tracking-wider text-green-400">
+                <h4 className="text-xs font-black uppercase tracking-wider text-amber-400">
                   Professional Highlights
                 </h4>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-300">
@@ -1158,7 +1158,7 @@ export default function Home() {
                     "Focused on Sustainable Business Growth",
                   ].map((highlight, index) => (
                     <li key={index} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-green-500 shrink-0" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" />
                       <span>{highlight}</span>
                     </li>
                   ))}

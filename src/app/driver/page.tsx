@@ -73,15 +73,15 @@ export default function DriverPage() {
 
       {/* HEADER BANNER */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-slate-950 text-white relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-green-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-green-500/10 text-green-400 border border-green-500/20 mb-4"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-4"
           >
-            <Car className="w-4 h-4 text-green-400" />
+            <Car className="w-4 h-4 text-amber-400" />
             <span>Drive with KASHgo</span>
           </motion.div>
 
@@ -92,7 +92,7 @@ export default function DriverPage() {
             className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight max-w-4xl mx-auto"
           >
             Become a Valued Partner in{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">
               Kashmir's Mobility Network.
             </span>
           </motion.h1>
@@ -112,7 +112,7 @@ export default function DriverPage() {
       <section className="py-16 bg-[#090D16] border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20 mb-3 inline-block">
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 mb-3 inline-block">
               Driver Partner Benefits
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
@@ -127,10 +127,10 @@ export default function DriverPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.08 }}
-                className="p-5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-4 hover:border-green-500/40 transition-colors"
+                className="p-5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-4 hover:border-amber-500/40 transition-colors"
               >
-                <div className="w-10 h-10 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center shrink-0">
-                  <Icon className="w-5 h-5 text-green-400" />
+                <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0">
+                  <Icon className="w-5 h-5 text-amber-400" />
                 </div>
                 <div>
                   <div className="text-sm font-bold text-white mb-0.5">{title}</div>
@@ -148,7 +148,7 @@ export default function DriverPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Left Requirements */}
             <div className="lg:col-span-5 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
                 Requirements
               </span>
               <h2 className="text-3xl font-extrabold text-white">
@@ -165,7 +165,7 @@ export default function DriverPage() {
                   "Minimum 1 year of driving experience",
                 ].map((req, idx) => (
                   <div key={idx} className="flex items-start gap-3 p-3 bg-slate-900 rounded-xl border border-slate-800">
-                    <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                     <span className="text-sm text-slate-200">{req}</span>
                   </div>
                 ))}
@@ -190,7 +190,7 @@ export default function DriverPage() {
                     exit={{ opacity: 0, scale: 0.95 }}
                     className="py-12 text-center flex flex-col items-center bg-slate-950 rounded-2xl border border-slate-800 p-6"
                   >
-                    <div className="w-16 h-16 bg-green-500/10 text-green-400 rounded-full flex items-center justify-center mb-4 border border-green-500/20">
+                    <div className="w-16 h-16 bg-amber-500/10 text-amber-400 rounded-full flex items-center justify-center mb-4 border border-amber-500/20">
                       <CheckCircle2 className="w-10 h-10" />
                     </div>
                     <h4 className="text-2xl font-bold text-white mb-2">
@@ -220,7 +220,7 @@ export default function DriverPage() {
                           value={formData.fullName}
                           onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                           placeholder="e.g. Tariq Ahmad"
-                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-green-600 transition-all"
+                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-600 transition-all"
                         />
                       </div>
 
@@ -234,7 +234,7 @@ export default function DriverPage() {
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="+91 98765 43210"
-                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-green-600 transition-all"
+                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-600 transition-all"
                         />
                       </div>
                     </div>
@@ -247,7 +247,7 @@ export default function DriverPage() {
                         <select
                           value={formData.city}
                           onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-green-600 transition-all"
+                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-600 transition-all"
                         >
                           <option value="Srinagar">Srinagar</option>
                           <option value="Leh">Leh, Ladakh</option>
@@ -263,7 +263,7 @@ export default function DriverPage() {
                         <select
                           value={formData.vehicleType}
                           onChange={(e) => setFormData({ ...formData, vehicleType: e.target.value })}
-                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-green-600 transition-all"
+                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-600 transition-all"
                         >
                           <option value="Sedan">Sedan (Dzire, Etios)</option>
                           <option value="Hatchback">Hatchback (Swift, WagonR)</option>
