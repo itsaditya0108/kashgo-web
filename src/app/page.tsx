@@ -855,9 +855,10 @@ export default function Home() {
               variant="outline"
               size="md"
               onClick={() => setShowAllFleet(!showAllFleet)}
-              className="border-amber-500/50 hover:border-amber-400 text-amber-400 hover:text-amber-300 hover:bg-amber-500/10 gap-2 whitespace-nowrap flex items-center"
+              className="border-amber-500/50 hover:border-amber-400 text-amber-400 hover:text-amber-300 hover:bg-amber-500/10 gap-2"
             >
-              <span>{showAllFleet ? "Show Less Vehicles" : "View Full Fleet"}
+              <span className="flex items-center gap-1.5 whitespace-nowrap">
+                {showAllFleet ? "Show Less Vehicles" : "View Full Fleet"}
                 <ChevronRight className={`w-4 h-4 transition-transform duration-300 ${showAllFleet ? "-rotate-90" : "rotate-90"}`} />
               </span>
             </Button>
