@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Black background circle -->
+  <circle cx="100" cy="100" r="100" fill="#0a0a0a"/>
+
+  <!-- Golden outer ring -->
+  <circle cx="100" cy="88" r="60" fill="none" stroke="#F5C518" stroke-width="5"/>
+
+  <!-- Mountains (white/grey) -->
+  <!-- Left mountain -->
+  <polygon points="55,110 75,65 95,110" fill="#D0D0D0"/>
+  <!-- Centre mountain (tallest) -->
+  <polygon points="70,110 95,48 120,110" fill="#FFFFFF"/>
+  <!-- Right mountain -->
+  <polygon points="105,110 125,68 145,110" fill="#D0D0D0"/>
+
+  <!-- Snow caps -->
+  <polygon points="88,62 95,48 102,62" fill="white" opacity="0.95"/>
+  <polygon points="70,80 75,65 80,80" fill="white" opacity="0.85"/>
+  <polygon points="120,80 125,68 130,80" fill="white" opacity="0.85"/>
+
+  <!-- Road (winding) -->
+  <path d="M75,110 Q90,118 100,115 Q110,112 125,110" stroke="#888" stroke-width="2.5" fill="none"/>
+  <path d="M65,120 Q82,126 100,122 Q118,118 135,122" stroke="#666" stroke-width="2" fill="none"/>
+
+  <!-- Road surface -->
+  <path d="M70,112 Q100,120 130,113" stroke="#555" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+  <!-- Yellow car (front view simplified) -->
+  <!-- Car body -->
+  <rect x="82" y="97" width="36" height="16" rx="4" fill="#F5C518"/>
+  <!-- Car roof -->
+  <path d="M87,97 Q100,88 113,97 Z" fill="#E0B000"/>
+  <!-- Car headlights -->
+  <ellipse cx="87" cy="110" rx="4" ry="2.5" fill="white" opacity="0.9"/>
+  <ellipse cx="113" cy="110" rx="4" ry="2.5" fill="white" opacity="0.9"/>
+  <!-- Car grille -->
+  <rect x="95" y="107" width="10" height="3" rx="1" fill="#333"/>
+
+  <!-- KASH text -->
+  <text x="100" y="148" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="white" letter-spacing="1">KASH</text>
+  <!-- go text -->
+  <text x="100" y="165" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="16" font-weight="900" fill="#F5C518" letter-spacing="2">go</text>
+
+  <!-- Tagline -->
+  <text x="100" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#888" letter-spacing="1.5">RIDE KASHMIR. GO ANYWHERE.</text>
+</svg>

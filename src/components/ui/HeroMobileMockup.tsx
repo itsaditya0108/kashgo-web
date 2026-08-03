@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Menu, ShieldCheck } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const HeroMobileMockup: React.FC = () => {
   return (
@@ -27,26 +28,27 @@ export const HeroMobileMockup: React.FC = () => {
           </div>
 
           {/* Screen Content */}
-          <div className="bg-[#0B132B] rounded-[32px] overflow-hidden pt-5 pb-3.5 px-3 space-y-2.5 text-white border border-slate-800/80">
+          <div className="bg-[#0B132B] rounded-[32px] overflow-hidden pt-7 pb-6 px-3.5 space-y-4 text-white border border-slate-800/80">
             {/* App Bar */}
-            <div className="flex items-center justify-between pb-1.5 border-b border-slate-800/80">
+            <div className="flex items-center justify-between pb-2.5 border-b border-slate-800/80">
               <div className="flex items-center gap-1.5">
-                {/* Mini logo circle */}
-                <div className="w-5 h-5 rounded-full bg-green-600 flex items-center justify-center shrink-0">
-                  <svg viewBox="0 0 20 20" className="w-3.5 h-3.5" fill="none">
-                    <path d="M10 3 L14 8 L10 6 L6 8 Z" fill="white" />
-                    <rect x="7" y="10" width="6" height="4" rx="1" fill="white" />
-                    <circle cx="8" cy="14" r="0.8" fill="#0F172A"/>
-                    <circle cx="12" cy="14" r="0.8" fill="#0F172A"/>
-                  </svg>
-                </div>
+                {/* Real KASHgo Logo */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/kashgo-logo.png"
+                  alt="KASHgo"
+                  width={20}
+                  height={20}
+                  style={{ width: 20, height: 20 }}
+                  className="object-contain shrink-0"
+                />
                 {/* Brand text */}
                 <div className="flex items-center font-black text-[11px] tracking-tight leading-none">
                   <span className="text-white">KASH</span>
-                  <span className="text-green-400">go</span>
+                  <span className="text-yellow-400">go</span>
                   <span className="ml-0.5 flex flex-col gap-[1.5px] justify-center">
-                    <span className="w-1.5 h-[1.5px] bg-green-400 rounded-full"></span>
-                    <span className="w-1 h-[1.5px] bg-green-400 rounded-full"></span>
+                    <span className="w-1.5 h-[1.5px] bg-yellow-400 rounded-full"></span>
+                    <span className="w-1 h-[1.5px] bg-yellow-400 rounded-full"></span>
                   </span>
                 </div>
               </div>
@@ -54,11 +56,11 @@ export const HeroMobileMockup: React.FC = () => {
             </div>
 
             {/* Destination Input Box */}
-            <div className="bg-slate-900/90 rounded-xl p-2.5 border border-slate-800 space-y-1">
+            <div className="bg-slate-900/90 rounded-xl p-3 border border-slate-800 space-y-1.5">
               <div className="text-[9px] text-slate-400 font-medium">Welcome,</div>
               <div className="text-[11px] font-black text-white tracking-tight">Where are you going today?</div>
 
-              <div className="bg-slate-950 rounded-lg p-2 text-[10px] text-slate-400 flex items-center justify-between mt-1 border border-slate-800">
+              <div className="bg-slate-950 rounded-lg p-2.5 text-[10px] text-slate-400 flex items-center justify-between mt-1.5 border border-slate-800">
                 <span>Enter destination</span>
                 <span className="w-4 h-4 rounded-full bg-green-600 text-white text-[9px] flex items-center justify-center font-bold shadow-xs">
                   ➔
@@ -67,31 +69,31 @@ export const HeroMobileMockup: React.FC = () => {
             </div>
 
             {/* 4 Category Tabs */}
-            <div className="grid grid-cols-4 gap-1">
-              <div className="p-1 bg-green-500/15 border border-green-500/40 rounded-lg text-center">
+            <div className="grid grid-cols-4 gap-1.5">
+              <div className="py-2 px-1 bg-green-500/15 border border-green-500/40 rounded-lg text-center">
                 <div className="text-[11px]">🚖</div>
                 <div className="text-[7.5px] font-extrabold text-green-400 mt-0.5">City Rides</div>
               </div>
-              <div className="p-1 bg-slate-950 border border-slate-800 rounded-lg text-center">
+              <div className="py-2 px-1 bg-slate-950 border border-slate-800 rounded-lg text-center">
                 <div className="text-[11px]">✈️</div>
                 <div className="text-[7.5px] font-bold text-slate-300 mt-0.5">Airport</div>
               </div>
-              <div className="p-1 bg-slate-950 border border-slate-800 rounded-lg text-center">
+              <div className="py-2 px-1 bg-slate-950 border border-slate-800 rounded-lg text-center">
                 <div className="text-[11px]">🏔️</div>
                 <div className="text-[7.5px] font-bold text-slate-300 mt-0.5">Tourist</div>
               </div>
-              <div className="p-1 bg-slate-950 border border-slate-800 rounded-lg text-center">
+              <div className="py-2 px-1 bg-slate-950 border border-slate-800 rounded-lg text-center">
                 <div className="text-[11px]">🚙</div>
                 <div className="text-[7.5px] font-bold text-slate-300 mt-0.5">Outstation</div>
               </div>
             </div>
 
             {/* Vehicle Selection Card */}
-            <div className="space-y-1">
+            <div className="space-y-1.5">
               <div className="text-[11px] font-black text-white">Book a Ride Now</div>
               <div className="text-[8.5px] text-slate-400 font-medium">Choose your preferred vehicle</div>
 
-              <div className="bg-slate-950 rounded-xl p-2 border border-slate-800 flex items-center justify-between gap-1.5 shadow-inner">
+              <div className="bg-slate-950 rounded-xl p-2.5 border border-slate-800 flex items-center justify-between gap-1.5 shadow-inner">
                 {/* Fixed Parent Dimensions for Next Image */}
                 <div className="relative w-16 h-10 shrink-0 min-h-[40px] overflow-hidden rounded-md">
                   <Image
@@ -114,7 +116,7 @@ export const HeroMobileMockup: React.FC = () => {
             </div>
 
             {/* Bottom Safety Trust Shield */}
-            <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-1.5 flex items-center gap-1.5">
+            <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-2 flex items-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 text-green-400 shrink-0" />
               <div>
                 <div className="text-[8.5px] font-extrabold text-white">Safe Rides, Trusted Drivers</div>

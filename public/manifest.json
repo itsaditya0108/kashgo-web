@@ -1,0 +1,33 @@
+{
+  "name": "KASHgo — Ride Kashmir",
+  "short_name": "KASHgo",
+  "description": "Premier ride-hailing platform for Kashmir. Book trusted city rides, airport transfers, and tourist passes.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090D16",
+  "theme_color": "#16A34A",
+  "orientation": "portrait",
+  "categories": ["travel", "lifestyle"],
+  "icons": [
+    {
+      "src": "/images/kashgo-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/kashgo-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/kashmir_hero_bg.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "label": "KASHgo — Hero"
+    }
+  ]
+}

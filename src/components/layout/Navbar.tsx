@@ -39,9 +39,9 @@ export const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-slate-950/90 backdrop-blur-md shadow-lg border-b border-slate-800/80 py-3"
+          ? "bg-slate-950/92 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.4)] border-b border-green-500/10 py-3"
           : "bg-gradient-to-b from-slate-950/90 to-transparent backdrop-blur-xs py-5"
       }`}
     >

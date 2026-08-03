@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { PageTransition } from "@/components/ui/PageTransition";
 
 const jakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -26,6 +27,21 @@ export const metadata: Metadata = {
     "Srinagar Airport Transfer",
   ],
   authors: [{ name: "KASHgo Mobility Team", url: "https://KASHgo.in" }],
+  manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: "/images/kashgo-logo.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/images/kashgo-logo.png", type: "image/png" },
+    ],
+    shortcut: "/images/kashgo-logo.png",
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "KASHgo",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -45,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jakartaSans.variable} scroll-smooth`}>
       <body className="min-h-screen bg-[#090D16] text-slate-100 font-sans antialiased selection:bg-amber-400 selection:text-slate-950">
-        {children}
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );

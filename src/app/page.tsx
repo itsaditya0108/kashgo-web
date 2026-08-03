@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -28,6 +28,7 @@ import {
   Shield,
   Clock,
   ChevronRight,
+  ChevronLeft,
   X,
   Award,
 } from "lucide-react";
@@ -100,6 +101,8 @@ const BEST_PLACES = [
     img: "/images/dest_gulmarg.png",
     desc: "Famous for the Gulmarg Gondola, snow sports, and breathtaking alpine landscapes.",
     cols: "lg:col-span-2",
+    height: "min-h-[380px] md:min-h-[480px]",
+    link: "https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20want%20to%20book%20a%20ride%20to%20Gulmarg.",
   },
   {
     name: "Sonmarg",
@@ -107,6 +110,8 @@ const BEST_PLACES = [
     img: "/images/dest_sonmarg.png",
     desc: "The 'Meadow of Gold', gateway to Ladakh, rich glaciers, and alpine treks.",
     cols: "lg:col-span-1",
+    height: "min-h-[280px] md:min-h-[380px]",
+    link: "https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20want%20to%20book%20a%20ride%20to%20Sonmarg.",
   },
   {
     name: "Dal Lake",
@@ -114,6 +119,8 @@ const BEST_PLACES = [
     img: "/images/dest_dallake.png",
     desc: "Explore floating gardens, houseboats, and romantic Shikara rides at sunset.",
     cols: "lg:col-span-1",
+    height: "min-h-[280px] md:min-h-[380px]",
+    link: "https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20want%20to%20book%20a%20ride%20to%20Dal%20Lake%20in%20Srinagar.",
   },
   {
     name: "Pahalgam",
@@ -121,6 +128,8 @@ const BEST_PLACES = [
     img: "/images/dest_pahalgam.png",
     desc: "Lidder river valley, Betaab valley, beautiful meadows, and peaceful pine forests.",
     cols: "lg:col-span-1",
+    height: "min-h-[280px] md:min-h-[380px]",
+    link: "https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20want%20to%20book%20a%20ride%20to%20Pahalgam.",
   },
 ];
 
@@ -201,27 +210,61 @@ const PREMIUM_FLEET = [
 
 export default function Home() {
   const [isFounderModalOpen, setIsFounderModalOpen] = useState(false);
+  const [activeDestIndex, setActiveDestIndex] = useState(0);
+  const destinationsRef = useRef<HTMLDivElement>(null);
+  const fleetRef = useRef<HTMLDivElement>(null);
+
+  const scrollContainer = (ref: React.RefObject<HTMLDivElement | null>, direction: "left" | "right") => {
+    if (ref.current) {
+      const scrollAmount = ref.current.clientWidth * 0.85;
+      ref.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <div className="min-h-screen bg-[#090D16] text-slate-100 flex flex-col font-sans selection:bg-green-400 selection:text-slate-950">
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden hero-mountain-bg text-white">
+      <section className="relative pt-28 pb-20 lg:pt-24 lg:pb-32 overflow-hidden hero-mountain-bg text-white">
         {/* Ambient Glow Lights */}
         <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-green-500/15 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute top-1/3 left-10 w-[350px] h-[350px] bg-green-500/10 rounded-full blur-[100px] pointer-events-none animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none animate-pulse" style={{ animationDuration: '6s' }}></div>
+        {/* Dark Backing Shadow for Text Column Visibility */}
+        <div className="absolute top-12 left-0 w-[550px] h-[450px] bg-slate-950/70 rounded-full blur-[90px] pointer-events-none z-0"></div>
+
+
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Column Content */}
-            <div className="lg:col-span-6 space-y-6 text-left">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="lg:col-span-6 space-y-6 text-left"
+            >
               {/* Small Announcement Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest bg-slate-950/90 text-green-400 border border-green-500/40 backdrop-blur-md shadow-lg">
-                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                <span>🚀 WE ARE WORKING — APP LAUNCHING SOON ACROSS KASHMIR</span>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.15, duration: 0.5 }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest bg-slate-950/90 text-green-400 border border-green-500/40 backdrop-blur-md shadow-lg"
+              >
+                <span className="w-2.5 h-2.5 rounded-full bg-green-400 shadow-[0_0_12px_rgba(74,222,128,0.85)] animate-pulse"></span>
+                <span>🚀 KASHgo App Launching Soon</span>
+              </motion.div>
 
               {/* Main Headline */}
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-white">
+              <motion.h1
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="text-fluid-hero font-black tracking-tight text-white"
+              >
                 Ride{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-300 to-green-500">
                   Smarter.
@@ -232,15 +275,25 @@ export default function Home() {
                   Kashmir
                 </span>{" "}
                 Better.
-              </h1>
+              </motion.h1>
 
               {/* Subtitle Paragraph */}
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
+              <motion.p
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl"
+              >
                 KASHgo is building a modern ride-booking platform designed exclusively for Kashmir. Whether you're arriving as a tourist or commuting as a local, booking a trusted ride will soon be effortless.
-              </p>
+              </motion.p>
 
               {/* Action Buttons */}
-              <div className="flex flex-wrap items-center gap-4 pt-2">
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="flex flex-wrap items-center gap-4 pt-2"
+              >
                 <Link href="#app-download">
                   <Button variant="primary" size="lg" icon={<Smartphone className="w-5 h-5" />}>
                     Download App <span className="text-xs opacity-90 ml-1 font-extrabold">(Coming Soon)</span>
@@ -251,16 +304,21 @@ export default function Home() {
                     Contact Us
                   </Button>
                 </Link>
-              </div>
+              </motion.div>
 
               {/* Available Soon Badges */}
-              <div className="pt-4 border-t border-slate-800/80">
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+                className="pt-4 border-t border-slate-800/80"
+              >
                 <div className="text-[11px] uppercase font-extrabold tracking-widest text-slate-400 mb-3">
                   AVAILABLE SOON ON
                 </div>
                 <div className="flex flex-wrap items-center gap-3">
                   <div className="bg-slate-900/90 border border-slate-800 rounded-2xl px-4 py-2.5 flex items-center gap-3 shadow-md">
-                    <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-white"><path d="M17.52 14.28A1.28 1.28 0 0 0 18.8 13A1.28 1.28 0 0 0 17.52 11.72A1.28 1.28 0 0 0 16.24 13A1.28 1.28 0 0 0 17.52 14.28M6.48 14.28A1.28 1.28 0 0 0 7.76 13A1.28 1.28 0 0 0 6.48 11.72A1.28 1.28 0 0 0 5.2 13A1.28 1.28 0 0 0 6.48 14.28M12.96 4.79L14.9 1.45C14.97 1.34 14.93 1.19 14.81 1.12C14.7 1.05 14.54 1.09 14.47 1.2L12.47 4.67C11 4 9.4 4 7.53 4.67L5.53 1.2C5.46 1.09 5.3 1.05 5.19 1.12C5.07 1.19 5.03 1.34 5.1 1.45L7.04 4.79C3.12 6.94 0.5 11.23 0 16.5H24C23.5 11.23 20.88 6.94 16.96 4.79Z"/></svg>
+                    <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-white"><path d="M17.52 14.28A1.28 1.28 0 0 0 18.8 13A1.28 1.28 0 0 0 17.52 11.72A1.28 1.28 0 0 0 16.24 13A1.28 1.28 0 0 0 17.52 14.28M6.48 14.28A1.28 1.28 0 0 0 7.76 13A1.28 1.28 0 0 0 6.48 11.72A1.28 1.28 0 0 0 5.2 13A1.28 1.28 0 0 0 6.48 14.28M12.96 4.79L14.9 1.45C14.97 1.34 14.93 1.19 14.81 1.12C14.7 1.05 14.54 1.09 14.47 1.2L12.47 4.67C11 4 9.4 4 7.53 4.67L5.53 1.2C5.46 1.09 5.3 1.05 5.19 1.12C5.07 1.19 5.03 1.34 5.1 1.45L7.04 4.79C3.12 6.94 0.5 11.23 0 16.5H24C23.5 11.23 20.88 6.94 16.96 4.79Z" /></svg>
                     <div>
                       <div className="text-xs font-bold text-white">Android</div>
                       <div className="text-[10px] text-green-400 font-extrabold">Coming Soon</div>
@@ -268,25 +326,37 @@ export default function Home() {
                   </div>
 
                   <div className="bg-slate-900/90 border border-slate-800 rounded-2xl px-4 py-2.5 flex items-center gap-3 shadow-md">
-                    <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-white"><path d="M18.72 13.56C18.75 16.63 21.2 17.57 21.23 17.58C21.2 17.65 20.83 18.9 19.92 20.24C19.14 21.39 18.32 22.52 17.06 22.55C15.82 22.58 15.42 21.82 14 21.82C12.57 21.82 12.09 22.52 10.93 22.58C9.69 22.64 8.76 21.39 7.94 20.24C6.26 17.81 4.96 13.72 6.67 10.74C7.52 9.27 8.94 8.35 10.45 8.32C11.66 8.29 12.78 9.12 13.53 9.12C14.27 9.12 15.63 8.11 17.11 8.24C17.72 8.27 19.46 8.5 20.61 10.18C20.52 10.23 18.7 11.3 18.72 13.56M14.77 5.56C15.42 4.77 15.87 3.69 15.75 2.5C14.72 2.55 13.52 3.19 12.85 3.97C12.26 4.66 11.72 5.75 11.87 6.9C13 6.99 14.12 6.35 14.77 5.56Z"/></svg>
+                    <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-white"><path d="M18.72 13.56C18.75 16.63 21.2 17.57 21.23 17.58C21.2 17.65 20.83 18.9 19.92 20.24C19.14 21.39 18.32 22.52 17.06 22.55C15.82 22.58 15.42 21.82 14 21.82C12.57 21.82 12.09 22.52 10.93 22.58C9.69 22.64 8.76 21.39 7.94 20.24C6.26 17.81 4.96 13.72 6.67 10.74C7.52 9.27 8.94 8.35 10.45 8.32C11.66 8.29 12.78 9.12 13.53 9.12C14.27 9.12 15.63 8.11 17.11 8.24C17.72 8.27 19.46 8.5 20.61 10.18C20.52 10.23 18.7 11.3 18.72 13.56M14.77 5.56C15.42 4.77 15.87 3.69 15.75 2.5C14.72 2.55 13.52 3.19 12.85 3.97C12.26 4.66 11.72 5.75 11.87 6.9C13 6.99 14.12 6.35 14.77 5.56Z" /></svg>
                     <div>
                       <div className="text-xs font-bold text-white">iOS</div>
                       <div className="text-[10px] text-green-400 font-extrabold">Coming Soon</div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Right Column: Hero Mobile Mockup */}
-            <div className="lg:col-span-6 hidden lg:block">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 30 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ delay: 0.35, duration: 0.8, type: "spring", stiffness: 90 }}
+              className="lg:col-span-6 hidden lg:block"
+            >
               <HeroMobileMockup />
-            </div>
+            </motion.div>
           </div>
 
           {/* Bottom Highlights Bar */}
-          <div className="mt-16 pt-8 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800">
+          <div className="mt-16 pt-8 border-t border-slate-800/80 hidden md:grid grid-cols-2 md:grid-cols-4 gap-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              whileHover={{ y: -4, scale: 1.01 }}
+              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-green-500/30 transition-all cursor-default"
+            >
               <div className="w-10 h-10 rounded-xl bg-green-500/10 text-green-400 flex items-center justify-center shrink-0 border border-green-500/20">
                 <Users className="w-5 h-5" />
               </div>
@@ -294,9 +364,16 @@ export default function Home() {
                 <div className="text-xs font-bold text-white">Built for Everyone</div>
                 <div className="text-[11px] text-slate-400">Tourists &amp; Locals</div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              whileHover={{ y: -4, scale: 1.01 }}
+              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-green-500/30 transition-all cursor-default"
+            >
               <div className="w-10 h-10 rounded-xl bg-green-500/10 text-green-400 flex items-center justify-center shrink-0 border border-green-500/20">
                 <MapPin className="w-5 h-5" />
               </div>
@@ -304,9 +381,16 @@ export default function Home() {
                 <div className="text-xs font-bold text-white">Kashmir Focused</div>
                 <div className="text-[11px] text-slate-400">Built Exclusively for Kashmir</div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              whileHover={{ y: -4, scale: 1.01 }}
+              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-green-500/30 transition-all cursor-default"
+            >
               <div className="w-10 h-10 rounded-xl bg-green-500/10 text-green-400 flex items-center justify-center shrink-0 border border-green-500/20">
                 <ShieldCheck className="w-5 h-5" />
               </div>
@@ -314,9 +398,16 @@ export default function Home() {
                 <div className="text-xs font-bold text-white">Trusted &amp; Secure</div>
                 <div className="text-[11px] text-slate-400">Verified Drivers, Safe Rides</div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              whileHover={{ y: -4, scale: 1.01 }}
+              className="glass-card p-4 rounded-2xl flex items-center gap-3 border border-slate-800 hover:border-green-500/30 transition-all cursor-default"
+            >
               <div className="w-10 h-10 rounded-xl bg-green-500/10 text-green-400 flex items-center justify-center shrink-0 border border-green-500/20">
                 <Star className="w-5 h-5" />
               </div>
@@ -324,7 +415,7 @@ export default function Home() {
                 <div className="text-xs font-bold text-white">Better Every Day</div>
                 <div className="text-[11px] text-slate-400">Smarter Platform Experience</div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -363,13 +454,7 @@ export default function Home() {
                 <span className="text-green-400">A Better Way to Move Across Kashmir.</span>
               </h2>
               <p className="text-slate-300 text-base leading-relaxed">
-                Every great journey starts with trust.
-              </p>
-              <p className="text-slate-300 text-base leading-relaxed">
-                KASHgo was founded with a vision to simplify travel across Kashmir through technology. We believe booking a ride should be fast, transparent and stress-free—whether you're a tourist discovering the valley or a local commuting every day.
-              </p>
-              <p className="text-slate-300 text-base leading-relaxed">
-                By connecting passengers with verified local drivers through an intuitive mobile app, KASHgo aims to redefine how people experience travel across Kashmir.
+                KASHgo is built to simplify travel across Kashmir through transparent, fast, and stress-free digital booking. By connecting you with verified local drivers, we make every journey across the valley safer, smarter, and more reliable.
               </p>
               <div className="p-5 bg-slate-900 border-l-4 border-green-500 text-white font-bold text-base rounded-r-2xl border border-slate-800 shadow-md">
                 "This isn't just about reaching a destination. It's about making every journey safer, smarter and more comfortable."
@@ -460,7 +545,7 @@ export default function Home() {
               <span className="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20">
                 Meet The Founder
               </span>
-              <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+              <h2 className="text-fluid-section font-extrabold text-white tracking-tight">
                 A Vision Inspired by Kashmir
               </h2>
               <p className="text-slate-300 text-base leading-relaxed">
@@ -579,39 +664,82 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {BEST_PLACES.map((place, idx) => (
-              <div
-                key={idx}
-                className={`${place.cols} group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 flex flex-col justify-end p-6 min-h-[360px] md:min-h-[420px] transition-all duration-300 hover:border-green-500/40 hover:shadow-[0_0_30px_rgba(34,197,94,0.1)]`}
-              >
-                {/* Background Image with Overlay */}
-                <div className="absolute inset-0 z-0">
-                  <Image
-                    src={place.img}
-                    alt={place.name}
-                    fill
-                    className="object-cover object-center group-hover:scale-110 transition-transform duration-500 ease-out"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  />
-                  {/* Subtle dark gradient overlay to ensure text is fully readable */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent group-hover:via-slate-950/20 transition-all duration-350 z-10"></div>
-                </div>
+          <div ref={destinationsRef} className="flex flex-row overflow-x-auto gap-4 pb-4 w-full snap-x snap-mandatory scrollbar-none lg:flex-row lg:overflow-x-visible lg:pb-0 lg:gap-6 items-stretch">
+            {BEST_PLACES.map((place, idx) => {
+              const isActive = idx === activeDestIndex;
+              return (
+                <motion.div
+                  key={idx}
+                  onClick={() => setActiveDestIndex(idx)}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.05 }}
+                  whileHover={{ y: isActive ? 0 : -6 }}
+                  className={`${isActive ? "lg:flex-[2]" : "lg:flex-[1]"} min-w-[85vw] sm:min-w-[340px] lg:min-w-0 snap-center min-h-[360px] md:min-h-[440px] group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 flex flex-col justify-end p-6 transition-all duration-500 ease-in-out hover:border-green-500/40 hover:shadow-[0_15px_30px_rgba(34,197,94,0.15)] cursor-pointer`}
+                >
+                  {/* Background Image with Overlay */}
+                  <div className="absolute inset-0 z-0">
+                    <Image
+                      src={place.img}
+                      alt={place.name}
+                      fill
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                    {/* Subtle dark gradient overlay to ensure text is fully readable */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
+                  </div>
 
-                {/* Card Content */}
-                <div className="relative z-20 space-y-3">
-                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-slate-950/80 text-green-400 border border-green-500/30 backdrop-blur-sm">
-                    {place.badge}
-                  </span>
-                  <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-                    {place.name.toUpperCase()}
-                  </h3>
-                  <p className="text-slate-200 text-xs sm:text-sm leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">
-                    {place.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
+                  {/* Card Content */}
+                  <div className="relative z-20 space-y-2 text-left">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-slate-950/80 text-green-400 border border-green-500/30 backdrop-blur-sm">
+                      {place.badge}
+                    </span>
+                    <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-none pt-1">
+                      {place.name.toUpperCase()}
+                    </h3>
+
+                    {/* Show description in expanded mode or hover on smaller mode */}
+                    <p className={`text-slate-200 text-xs sm:text-sm leading-relaxed transition-all duration-300 ${isActive ? "opacity-100 max-h-24 mt-2" : "opacity-0 max-h-0 overflow-hidden md:group-hover:opacity-100 md:group-hover:max-h-24 md:group-hover:mt-2"}`}>
+                      {place.desc}
+                    </p>
+
+                    {/* Book Now trigger inside card */}
+                    <div className={`transition-all duration-300 ${isActive ? "opacity-100 translate-y-0 h-auto mt-3" : "opacity-0 translate-y-2 h-0 overflow-hidden"}`}>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(place.link, '_blank');
+                        }}
+                        className="inline-flex items-center gap-1.5 bg-green-600 hover:bg-green-700 text-white font-extrabold text-xs px-4 py-2.5 rounded-xl transition-all shadow-md active:scale-95 cursor-pointer"
+                      >
+                        <span>Book Ride</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Slider Arrow Indicators for Mobile Swipe */}
+          <div className="flex lg:hidden items-center justify-center gap-3 mt-6">
+            <button
+              onClick={() => scrollContainer(destinationsRef, "left")}
+              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-white flex items-center justify-center active:bg-green-600 transition-colors shadow-md cursor-pointer hover:border-green-500/40"
+              aria-label="Previous Destination"
+            >
+              <ChevronLeft className="w-5 h-5 text-slate-300" />
+            </button>
+            <button
+              onClick={() => scrollContainer(destinationsRef, "right")}
+              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-white flex items-center justify-center active:bg-green-600 transition-colors shadow-md cursor-pointer hover:border-green-500/40"
+              aria-label="Next Destination"
+            >
+              <ChevronRight className="w-5 h-5 text-slate-300" />
+            </button>
           </div>
         </div>
       </section>
@@ -623,7 +751,7 @@ export default function Home() {
             <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-500/10 text-green-400 border border-green-500/20 rounded-full text-xs font-black uppercase tracking-wider">
               <Car className="w-3.5 h-3.5" /> Premium Mobility
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <h2 className="text-fluid-section font-extrabold text-white tracking-tight">
               Our Premium Fleet ⭐⭐⭐⭐⭐
             </h2>
             <p className="text-slate-300 text-base leading-relaxed">
@@ -631,26 +759,34 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div ref={fleetRef} className="flex overflow-x-auto gap-6 pb-4 w-full snap-x snap-mandatory scrollbar-none lg:grid lg:grid-cols-2 lg:overflow-x-visible lg:pb-0 lg:gap-8">
             {PREMIUM_FLEET.map((vehicle, idx) => (
-              <div
+              <motion.div
                 key={idx}
-                className="flex flex-col bg-slate-900 rounded-3xl border border-slate-800 hover:border-green-500/50 hover:shadow-[0_0_30px_rgba(34,197,94,0.05)] transition-all overflow-hidden group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.05 }}
+                whileHover={{ y: -8, scale: 1.015 }}
+                className="flex flex-col md:flex-row min-w-[85vw] sm:min-w-[400px] lg:min-w-0 snap-center bg-slate-900 rounded-3xl border border-slate-800 hover:border-green-500/50 hover:shadow-[0_15px_30px_rgba(34,197,94,0.08)] transition-all overflow-hidden group"
               >
                 {/* Vehicle Image Container */}
-                <div className="relative w-full h-52 bg-slate-950 overflow-hidden">
+                <div
+                  className="relative w-full md:w-[42%] bg-slate-950 overflow-hidden shrink-0"
+                  style={{ minHeight: '260px' }}
+                >
                   <Image
                     src={vehicle.img}
                     alt={vehicle.name}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 768px) 100vw, 30vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-slate-900 via-transparent to-transparent z-10"></div>
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 p-6 space-y-4 flex flex-col justify-between">
+                <div className="flex-1 p-6 md:p-8 space-y-4 flex flex-col justify-between">
                   <div className="space-y-2">
                     <h3 className="text-xl font-black text-white tracking-tight leading-none group-hover:text-green-400 transition-colors">
                       {vehicle.name}
@@ -712,8 +848,26 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
+          </div>
+
+          {/* Slider Arrow Indicators for Mobile Swipe */}
+          <div className="flex lg:hidden items-center justify-center gap-3 mt-6">
+            <button
+              onClick={() => scrollContainer(fleetRef, "left")}
+              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-white flex items-center justify-center active:bg-green-600 transition-colors shadow-md cursor-pointer hover:border-green-500/40"
+              aria-label="Previous Vehicle"
+            >
+              <ChevronLeft className="w-5 h-5 text-slate-300" />
+            </button>
+            <button
+              onClick={() => scrollContainer(fleetRef, "right")}
+              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-white flex items-center justify-center active:bg-green-600 transition-colors shadow-md cursor-pointer hover:border-green-500/40"
+              aria-label="Next Vehicle"
+            >
+              <ChevronRight className="w-5 h-5 text-slate-300" />
+            </button>
           </div>
 
           {/* Section CTA Card */}
@@ -816,7 +970,7 @@ export default function Home() {
               type="button"
               className="bg-slate-950 hover:bg-slate-800 text-white px-6 py-3.5 rounded-2xl border border-slate-800 hover:border-green-500/40 flex items-center gap-3 transition-colors cursor-pointer"
             >
-              <svg viewBox="0 0 24 24" className="w-8 h-8 fill-current text-white"><path d="M17.52 14.28A1.28 1.28 0 0 0 18.8 13A1.28 1.28 0 0 0 17.52 11.72A1.28 1.28 0 0 0 16.24 13A1.28 1.28 0 0 0 17.52 14.28M6.48 14.28A1.28 1.28 0 0 0 7.76 13A1.28 1.28 0 0 0 6.48 11.72A1.28 1.28 0 0 0 5.2 13A1.28 1.28 0 0 0 6.48 14.28M12.96 4.79L14.9 1.45C14.97 1.34 14.93 1.19 14.81 1.12C14.7 1.05 14.54 1.09 14.47 1.2L12.47 4.67C11 4 9.4 4 7.53 4.67L5.53 1.2C5.46 1.09 5.3 1.05 5.19 1.12C5.07 1.19 5.03 1.34 5.1 1.45L7.04 4.79C3.12 6.94 0.5 11.23 0 16.5H24C23.5 11.23 20.88 6.94 16.96 4.79Z"/></svg>
+              <svg viewBox="0 0 24 24" className="w-8 h-8 fill-current text-white"><path d="M17.52 14.28A1.28 1.28 0 0 0 18.8 13A1.28 1.28 0 0 0 17.52 11.72A1.28 1.28 0 0 0 16.24 13A1.28 1.28 0 0 0 17.52 14.28M6.48 14.28A1.28 1.28 0 0 0 7.76 13A1.28 1.28 0 0 0 6.48 11.72A1.28 1.28 0 0 0 5.2 13A1.28 1.28 0 0 0 6.48 14.28M12.96 4.79L14.9 1.45C14.97 1.34 14.93 1.19 14.81 1.12C14.7 1.05 14.54 1.09 14.47 1.2L12.47 4.67C11 4 9.4 4 7.53 4.67L5.53 1.2C5.46 1.09 5.3 1.05 5.19 1.12C5.07 1.19 5.03 1.34 5.1 1.45L7.04 4.79C3.12 6.94 0.5 11.23 0 16.5H24C23.5 11.23 20.88 6.94 16.96 4.79Z" /></svg>
               <div className="text-left">
                 <div className="text-[10px] uppercase font-bold text-slate-400">Google Play</div>
                 <div className="text-sm font-bold text-green-400">Coming Soon</div>
@@ -827,7 +981,7 @@ export default function Home() {
               type="button"
               className="bg-slate-950 hover:bg-slate-800 text-white px-6 py-3.5 rounded-2xl border border-slate-800 hover:border-green-500/40 flex items-center gap-3 transition-colors cursor-pointer"
             >
-              <svg viewBox="0 0 24 24" className="w-8 h-8 fill-current text-white"><path d="M18.72 13.56C18.75 16.63 21.2 17.57 21.23 17.58C21.2 17.65 20.83 18.9 19.92 20.24C19.14 21.39 18.32 22.52 17.06 22.55C15.82 22.58 15.42 21.82 14 21.82C12.57 21.82 12.09 22.52 10.93 22.58C9.69 22.64 8.76 21.39 7.94 20.24C6.26 17.81 4.96 13.72 6.67 10.74C7.52 9.27 8.94 8.35 10.45 8.32C11.66 8.29 12.78 9.12 13.53 9.12C14.27 9.12 15.63 8.11 17.11 8.24C17.72 8.27 19.46 8.5 20.61 10.18C20.52 10.23 18.7 11.3 18.72 13.56M14.77 5.56C15.42 4.77 15.87 3.69 15.75 2.5C14.72 2.55 13.52 3.19 12.85 3.97C12.26 4.66 11.72 5.75 11.87 6.9C13 6.99 14.12 6.35 14.77 5.56Z"/></svg>
+              <svg viewBox="0 0 24 24" className="w-8 h-8 fill-current text-white"><path d="M18.72 13.56C18.75 16.63 21.2 17.57 21.23 17.58C21.2 17.65 20.83 18.9 19.92 20.24C19.14 21.39 18.32 22.52 17.06 22.55C15.82 22.58 15.42 21.82 14 21.82C12.57 21.82 12.09 22.52 10.93 22.58C9.69 22.64 8.76 21.39 7.94 20.24C6.26 17.81 4.96 13.72 6.67 10.74C7.52 9.27 8.94 8.35 10.45 8.32C11.66 8.29 12.78 9.12 13.53 9.12C14.27 9.12 15.63 8.11 17.11 8.24C17.72 8.27 19.46 8.5 20.61 10.18C20.52 10.23 18.7 11.3 18.72 13.56M14.77 5.56C15.42 4.77 15.87 3.69 15.75 2.5C14.72 2.55 13.52 3.19 12.85 3.97C12.26 4.66 11.72 5.75 11.87 6.9C13 6.99 14.12 6.35 14.77 5.56Z" /></svg>
               <div className="text-left">
                 <div className="text-[10px] uppercase font-bold text-slate-400">App Store</div>
                 <div className="text-sm font-bold text-green-400">Coming Soon</div>
