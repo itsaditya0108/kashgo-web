@@ -12,10 +12,17 @@ const LOCATIONS = [
   "Gulmarg Ski Resort",
   "Pahalgam Valley",
   "Sonamarg Meadow",
-  "Leh Main Market",
-  "Leh Airport (IXL)",
-  "Nubra Valley (Diskit)",
-  "Pangong Lake, Ladakh",
+  "Mata Vaishno Devi (Katra)",
+  "Amarnath Yatra Base Camp",
+  "Shiv Khori Cave Temple",
+  "Gurez Valley (Dawar)",
+  "Doodhpathri Meadow",
+  "Line of Control (LoC) Viewpoint",
+  "Line of Actual Control (LAC) Ladakh",
+  "Leh Ladakh (City Center)",
+  "Demchok Village (Indo-China Border)",
+  "Turtuk & Thang Village (Indo-Pak Border)",
+  "Sadhna Cafe (Kupwara)",
 ];
 
 const RIDE_TYPES = [

@@ -132,6 +132,105 @@ const BEST_PLACES = [
     height: "min-h-[280px] md:min-h-[380px]",
     link: "https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20want%20to%20book%20a%20ride%20to%20Pahalgam.",
   },
+  {
+    name: "Mata Vaishno Devi",
+    badge: "🛕 Holy Shrine & Trek",
+    img: "https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?auto=format&fit=crop&w=800&q=80",
+    desc: "Revered cave shrine dedicated to Vaishno Devi in the Trikuta Mountains, starting from Katra.",
+    cols: "lg:col-span-1",
+    height: "min-h-[280px] md:min-h-[380px]",
+    link: "https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20want%20to%20book%20a%20ride%20to%20Mata%20Vaishno%20Devi%20in%20Katra.",
+  },
+  {
+    name: "Amarnath Yatra",
+    badge: "🏔️ Ice Lingam Cave",
+    img: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=800&q=80",
+    desc: "Sacred annual pilgrimage to the ice cave of Lord Shiva, accessible via Baltal or Pahalgam.",
+    cols: "lg:col-span-1",
+    height: "min-h-[280px] md:min-h-[380px]",
+    link: "https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20want%20to%20book%20a%20ride%20to%20Amarnath%20Yatra%20Base%20Camp.",
+  },
+  {
+    name: "Shiv Khori Cave",
+    badge: "🕳️ Natural Cave Shrine",
+    img: "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=800&q=80",
+    desc: "Historic natural cave shrine of Lord Shiva in Reasi, featuring a self-formed stalagmite Lingam.",
+    cols: "lg:col-span-1",
+    height: "min-h-[280px] md:min-h-[380px]",
+    link: "https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20want%20to%20book%20a%20ride%20to%20Shiv%20Khori%20Cave.",
+  },
+  {
+    name: "Gurez Valley",
+    badge: "🏔️ Habba Khatoon Peak",
+    img: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80",
+    desc: "An untouched scenic valley bordered by the Kishanganga river and the iconic pyramid peak.",
+    cols: "lg:col-span-1",
+    height: "min-h-[280px] md:min-h-[380px]",
+    link: "https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20want%20to%20book%20a%20ride%20to%20Gurez%20Valley.",
+  },
+  {
+    name: "Doodhpathri",
+    badge: "🥛 Valley of Milk",
+    img: "https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?auto=format&fit=crop&w=800&q=80",
+    desc: "Stunning alpine meadow in Budgam with pine forests and the rushing Shaliganga river.",
+    cols: "lg:col-span-1",
+    height: "min-h-[280px] md:min-h-[380px]",
+    link: "https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20want%20to%20book%20a%20ride%20to%20Doodhpathri.",
+  },
+  {
+    name: "Line of Control (LoC)",
+    badge: "🪖 Border Viewpoints",
+    img: "https://images.unsplash.com/photo-1433832597046-4f10e10ac764?auto=format&fit=crop&w=800&q=80",
+    desc: "Witness the historical boundary border checkpoints and scenery at spots like Keran, Teetwal, or Uri.",
+    cols: "lg:col-span-1",
+    height: "min-h-[280px] md:min-h-[380px]",
+    link: "https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20want%20to%20book%20a%20ride%20to%20Line%20of%20Control%20(LoC)%20border.",
+  },
+  {
+    name: "Line of Actual Control (LAC)",
+    badge: "🇨🇳 India-China Border",
+    img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
+    desc: "Explore high-altitude Ladakh boundary vistas near Pangong Lake and Chushul along the LAC.",
+    cols: "lg:col-span-1",
+    height: "min-h-[280px] md:min-h-[380px]",
+    link: "https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20want%20to%20book%20a%20ride%20near%20Line%20of%20Actual%20Control%20(LAC)%20in%20Ladakh.",
+  },
+  {
+    name: "Leh Ladakh",
+    badge: "⛰️ Land of High Passes",
+    img: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+    desc: "Experience high-altitude deserts, deep blue lakes, ancient monasteries, and mountain passes.",
+    cols: "lg:col-span-1",
+    height: "min-h-[280px] md:min-h-[380px]",
+    link: "https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20want%20to%20book%20a%20ride%20in%20Leh%20Ladakh.",
+  },
+  {
+    name: "Demchok (India-China Border)",
+    badge: "🏡 Last Village (LAC)",
+    img: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80",
+    desc: "Southeastern Ladakh's remote border village along the Indus River and Line of Actual Control.",
+    cols: "lg:col-span-1",
+    height: "min-h-[280px] md:min-h-[380px]",
+    link: "https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20want%20to%20book%20a%20ride%20to%20Demchok%20on%20the%20India-China%20border.",
+  },
+  {
+    name: "Turtuk & Thang (India-Pakistan Border)",
+    badge: "🇵🇰 Last Village (LoC)",
+    img: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=800&q=80",
+    desc: "A beautiful Baltic village in Nubra Valley, the final civilian settlement before Pakistan border.",
+    cols: "lg:col-span-1",
+    height: "min-h-[280px] md:min-h-[380px]",
+    link: "https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20want%20to%20book%20a%20ride%20to%20Turtuk/Thang%20on%20the%20India-Pakistan%2520border.",
+  },
+  {
+    name: "Sadhna Cafe",
+    badge: "☕ Army-Run Sadhna Pass",
+    img: "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80",
+    desc: "An iconic high-altitude café run by the Indian Army at Sadhna Pass (SM Hill) in Kupwara.",
+    cols: "lg:col-span-1",
+    height: "min-h-[280px] md:min-h-[380px]",
+    link: "https://wa.me/917400180114?text=Hi%20KASHgo,%20I%20want%20to%20book%20a%20ride%20to%20Sadhna%20Cafe%20in%2520Kupwara.",
+  },
 ];
 
 const PREMIUM_FLEET = [
@@ -508,76 +607,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MEET THE FOUNDER */}
-      <section className="py-20 bg-slate-900/60 border-y border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Founder Photo Display */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="w-full max-w-lg bg-slate-950 text-white rounded-3xl p-8 sm:p-10 shadow-2xl border border-slate-800 relative overflow-hidden text-center">
-                {/* Real Founder Photo Frame in Circle shape */}
-                <div className="relative w-64 h-64 mx-auto mb-6 rounded-full overflow-hidden border-2 border-amber-500 shadow-xl bg-slate-900 p-1">
-                  <Image
-                    src="/images/founder.png"
-                    alt="Shaikh Shaheen Kamalmiya - Founder & CEO KASHgo"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 256px"
-                    priority
-                    className="object-cover object-center rounded-full"
-                  />
-                </div>
-
-                <h3 className="text-2xl font-black text-white mb-1">
-                  Shaikh Shaheen Kamalmiya
-                </h3>
-                <div className="text-xs font-extrabold text-amber-400 uppercase tracking-widest mb-6">
-                  Founder &amp; CEO, KASHgo
-                </div>
-
-                <div className="bg-slate-900 rounded-2xl p-4 text-left border border-slate-800 space-y-2">
-                  <Quote className="w-6 h-6 text-amber-400" />
-                  <p className="text-slate-200 text-xs italic leading-relaxed font-medium">
-                    "Our mission isn't simply to build an app. It's to build trust—one journey at a time."
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Story Content */}
-            <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35">
-                Meet The Founder
-              </span>
-              <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
-                A Vision Inspired by Kashmir
-              </h2>
-              <p className="text-slate-300 text-base leading-relaxed">
-                Great ideas often begin with a simple observation.
-              </p>
-              <p className="text-slate-300 text-base leading-relaxed">
-                As tourism continues to grow and everyday travel becomes more important, one question remained:
-              </p>
-              <div className="p-4 bg-slate-950 border-2 border-amber-500 rounded-2xl shadow-sm font-extrabold text-white text-lg">
-                "Why should finding a trusted ride still feel complicated?"
-              </div>
-              <p className="text-slate-300 text-base leading-relaxed">
-                That question became the foundation of KASHgo. Driven by a passion for technology and customer experience, the vision was to create a ride-booking platform designed specifically for the people of Kashmir—combining local knowledge with modern technology to deliver a smoother travel experience for everyone.
-              </p>
-
-              <div className="pt-2">
-                <button
-                  onClick={() => setIsFounderModalOpen(true)}
-                  className="group inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-900 font-extrabold text-sm px-6 py-3 rounded-full transition-all shadow-lg shadow-amber-500/25 hover:scale-105 active:scale-95 cursor-pointer"
-                >
-                  <span>Know More</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* WHAT MAKES KASHGO DIFFERENT */}
       <section className="py-20 bg-[#090D16]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -667,7 +696,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div ref={destinationsRef} className="flex flex-row overflow-x-auto gap-4 pb-4 w-full snap-x snap-mandatory scrollbar-none lg:flex-row lg:overflow-x-visible lg:pb-0 lg:gap-6 items-stretch">
+          <div ref={destinationsRef} className="flex flex-row overflow-x-auto touch-pan-y gap-4 pb-6 w-full scrollbar-none lg:gap-6 items-stretch">
             {BEST_PLACES.map((place, idx) => {
               const isActive = idx === activeDestIndex;
               return (
@@ -678,8 +707,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.05 }}
-                  whileHover={{ y: isActive ? 0 : -6 }}
-                  className={`${isActive ? "lg:flex-[2]" : "lg:flex-[1]"} min-w-[85vw] sm:min-w-[340px] lg:min-w-0 snap-center min-h-[360px] md:min-h-[440px] group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 flex flex-col justify-end p-6 transition-all duration-500 ease-in-out hover:border-amber-500/40 hover:shadow-[0_15px_30px_rgba(245,158,11,0.15)] cursor-pointer`}
+                  className={`min-w-[85vw] sm:min-w-[340px] ${isActive ? "lg:min-w-[calc(40%-18px)] lg:max-w-[calc(40%-18px)]" : "lg:min-w-[calc(20%-18px)] lg:max-w-[calc(20%-18px)]"} flex-shrink-0 min-h-[360px] md:min-h-[440px] group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 flex flex-col justify-end p-6 transition-all duration-500 ease-in-out transform hover:-translate-y-1.5 hover:border-amber-500/40 hover:shadow-[0_15px_30px_rgba(245,158,11,0.15)] cursor-pointer`}
                 >
                   {/* Background Image with Overlay */}
                   <div className="absolute inset-0 z-0">
@@ -727,18 +755,18 @@ export default function Home() {
             })}
           </div>
 
-          {/* Slider Arrow Indicators for Mobile Swipe */}
-          <div className="flex lg:hidden items-center justify-center gap-3 mt-6">
+          {/* Slider Arrow Indicators */}
+          <div className="flex items-center justify-center gap-3 mt-6">
             <button
               onClick={() => scrollContainer(destinationsRef, "left")}
-              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-white flex items-center justify-center active:bg-amber-600 transition-colors shadow-md cursor-pointer hover:border-amber-500/40"
+              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-white flex items-center justify-center hover:bg-slate-850 active:bg-amber-600 transition-colors shadow-md cursor-pointer hover:border-amber-500/40"
               aria-label="Previous Destination"
             >
               <ChevronLeft className="w-5 h-5 text-slate-300" />
             </button>
             <button
               onClick={() => scrollContainer(destinationsRef, "right")}
-              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-white flex items-center justify-center active:bg-amber-600 transition-colors shadow-md cursor-pointer hover:border-amber-500/40"
+              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-white flex items-center justify-center hover:bg-slate-850 active:bg-amber-600 transition-colors shadow-md cursor-pointer hover:border-amber-500/40"
               aria-label="Next Destination"
             >
               <ChevronRight className="w-5 h-5 text-slate-300" />
@@ -762,7 +790,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div ref={fleetRef} className="flex overflow-x-auto gap-6 pb-4 w-full snap-x snap-mandatory scrollbar-none lg:grid lg:grid-cols-2 lg:overflow-x-visible lg:pb-0 lg:gap-8">
+          <div ref={fleetRef} className="flex overflow-x-auto touch-pan-y gap-6 pb-4 w-full scrollbar-none lg:grid lg:grid-cols-2 lg:overflow-x-visible lg:pb-0 lg:gap-8">
             {PREMIUM_FLEET.map((vehicle, idx) => {
               const isExtra = idx >= 4;
               return (
@@ -772,8 +800,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.05 }}
-                  whileHover={{ y: -8, scale: 1.015 }}
-                  className={`flex flex-col md:flex-row min-w-[85vw] sm:min-w-[400px] lg:min-w-0 snap-center bg-slate-900 rounded-3xl border border-slate-800 hover:border-amber-500/50 hover:shadow-[0_15px_30px_rgba(245,158,11,0.08)] transition-all overflow-hidden group ${isExtra && !showAllFleet ? "lg:hidden" : ""}`}
+                  className={`flex flex-col md:flex-row min-w-[85vw] sm:min-w-[400px] lg:min-w-0 bg-slate-900 rounded-3xl border border-slate-800 hover:border-amber-500/50 hover:shadow-[0_15px_30px_rgba(245,158,11,0.08)] hover:-translate-y-2 hover:scale-[1.015] transform transition-all duration-350 ease-out overflow-hidden group ${isExtra && !showAllFleet ? "lg:hidden" : ""}`}
                 >
                   {/* Vehicle Image Container */}
                   <div
@@ -784,7 +811,7 @@ export default function Home() {
                       src={vehicle.img}
                       alt={vehicle.name}
                       fill
-                      className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, 30vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-slate-900 via-transparent to-transparent z-10"></div>
@@ -1032,6 +1059,76 @@ export default function Home() {
               <Button href="/driver" variant="primary" size="lg" icon={<ArrowRight className="w-5 h-5" />}>
                 Apply as Driver
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MEET THE FOUNDER */}
+      <section className="py-20 bg-slate-900/60 border-y border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left Founder Photo Display */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="w-full max-w-lg bg-slate-950 text-white rounded-3xl p-8 sm:p-10 shadow-2xl border border-slate-800 relative overflow-hidden text-center">
+                {/* Real Founder Photo Frame in Circle shape */}
+                <div className="relative w-64 h-64 mx-auto mb-6 rounded-full overflow-hidden border-2 border-amber-500 shadow-xl bg-slate-900 p-1">
+                  <Image
+                    src="/images/founder.png"
+                    alt="Shaikh Shaheen Kamalmiya - Founder & CEO KASHgo"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 256px"
+                    priority
+                    className="object-cover object-center rounded-full"
+                  />
+                </div>
+
+                <h3 className="text-2xl font-black text-white mb-1">
+                  Shaikh Shaheen Kamalmiya
+                </h3>
+                <div className="text-xs font-extrabold text-amber-400 uppercase tracking-widest mb-6">
+                  Founder &amp; CEO, KASHgo
+                </div>
+
+                <div className="bg-slate-900 rounded-2xl p-4 text-left border border-slate-800 space-y-2">
+                  <Quote className="w-6 h-6 text-amber-400" />
+                  <p className="text-slate-200 text-xs italic leading-relaxed font-medium">
+                    "Our mission isn't simply to build an app. It's to build trust—one journey at a time."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Story Content */}
+            <div className="lg:col-span-7 space-y-6">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/35">
+                Meet The Founder
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+                A Vision Inspired by Kashmir
+              </h2>
+              <p className="text-slate-300 text-base leading-relaxed">
+                Great ideas often begin with a simple observation.
+              </p>
+              <p className="text-slate-300 text-base leading-relaxed">
+                As tourism continues to grow and everyday travel becomes more important, one question remained:
+              </p>
+              <div className="p-4 bg-slate-950 border-2 border-amber-500 rounded-2xl shadow-sm font-extrabold text-white text-lg">
+                "Why should finding a trusted ride still feel complicated?"
+              </div>
+              <p className="text-slate-300 text-base leading-relaxed">
+                That question became the foundation of KASHgo. Driven by a passion for technology and customer experience, the vision was to create a ride-booking platform designed specifically for the people of Kashmir—combining local knowledge with modern technology to deliver a smoother travel experience for everyone.
+              </p>
+
+              <div className="pt-2">
+                <button
+                  onClick={() => setIsFounderModalOpen(true)}
+                  className="group inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-900 font-extrabold text-sm px-6 py-3 rounded-full transition-all shadow-lg shadow-amber-500/25 hover:scale-105 active:scale-95 cursor-pointer"
+                >
+                  <span>Know More</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
