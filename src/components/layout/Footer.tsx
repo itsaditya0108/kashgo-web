@@ -152,12 +152,16 @@ export const Footer: React.FC = () => {
                 <span>+91 7400180114 (Support)</span>
               </div>
               <div className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-amber-400" />
+                <span>+91 9169160316 (Landline)</span>
+              </div>
+              <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-amber-400" />
                 <span>kashgo2026@gmail.com</span>
               </div>
               <div className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />
-                <span>Srinagar &amp; Leh, Kashmir</span>
+                <span>Mumbai, Srinagar &amp; Leh</span>
               </div>
             </div>
           </div>

@@ -118,9 +118,22 @@ export default function ContactPage() {
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-bold text-white uppercase tracking-wider">Helpline Phone</h3>
-                    <p className="text-slate-300 font-semibold text-base mt-1">+91 7400180114</p>
-                    <p className="text-xs text-slate-400">Available 24/7 for active trip assistance</p>
+                    <h3 className="text-sm font-bold text-white uppercase tracking-wider">Helpline & Support</h3>
+                    <p className="text-slate-300 font-semibold text-base mt-1">+91 7400180114 (Support)</p>
+                    <p className="text-slate-300 font-semibold text-base mt-1">+91 9169160316 (Landline)</p>
+                    <p className="text-xs text-slate-400">Available for active trip assistance and inquiries</p>
+                  </div>
+                </div>
+
+                <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-bold text-white uppercase tracking-wider">Our Offices</h3>
+                    <p className="text-slate-300 font-medium text-xs mt-1.5"><strong className="text-amber-400">Srinagar:</strong> Rajbagh, Near Lal Mandi Road, Srinagar 190008</p>
+                    <p className="text-slate-300 font-medium text-xs mt-1.5"><strong className="text-amber-400">Leh:</strong> Fort Road, Leh, Ladakh 194101</p>
+                    <p className="text-slate-300 font-medium text-xs mt-1.5"><strong className="text-amber-400">Corporate:</strong> 401 Vishakha Arcade, Opp. Courtyard Restaurant, Andheri West, Near MVM College, Mumbai 400058</p>
                   </div>
                 </div>
 
