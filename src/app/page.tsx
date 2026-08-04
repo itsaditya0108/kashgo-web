@@ -737,7 +737,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.05 }}
-                  className={`min-w-[85vw] sm:min-w-[340px] ${isActive ? "lg:min-w-[calc(40%-18px)] lg:max-w-[calc(40%-18px)]" : "lg:min-w-[calc(20%-18px)] lg:max-w-[calc(20%-18px)]"} flex-shrink-0 min-h-[360px] md:min-h-[440px] group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 flex flex-col justify-end p-6 transition-all duration-500 ease-in-out transform hover:-translate-y-1.5 hover:border-amber-500/40 hover:shadow-[0_15px_30px_rgba(245,158,11,0.15)] cursor-pointer snap-start`}
+                  className={`min-w-full sm:min-w-[340px] ${isActive ? "lg:min-w-[calc(40%-18px)] lg:max-w-[calc(40%-18px)]" : "lg:min-w-[calc(20%-18px)] lg:max-w-[calc(20%-18px)]"} flex-shrink-0 min-h-[360px] md:min-h-[440px] group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 flex flex-col justify-end p-6 transition-all duration-500 ease-in-out transform hover:-translate-y-1.5 hover:border-amber-500/40 hover:shadow-[0_15px_30px_rgba(245,158,11,0.15)] cursor-pointer snap-start`}
                 >
                   {/* Background Image with Overlay */}
                   <div className="absolute inset-0 z-0">
