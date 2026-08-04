@@ -317,11 +317,41 @@ export default function Home() {
 
   const scrollContainer = (ref: React.RefObject<HTMLDivElement | null>, direction: "left" | "right") => {
     if (ref.current) {
-      const scrollAmount = ref.current.clientWidth * 0.85;
-      ref.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
+      const container = ref.current;
+      const cards = Array.from(container.children) as HTMLElement[];
+      if (cards.length > 0) {
+        const containerLeft = container.getBoundingClientRect().left;
+        const currentScroll = container.scrollLeft;
+        const tolerance = 10; // px tolerance for rounding errors or small offsets
+        
+        let targetScrollLeft = currentScroll;
+        
+        if (direction === "right") {
+          // Find the first card whose left edge is to the right of the container viewport's left edge
+          const nextCard = cards.find(card => {
+            const relativeLeft = card.getBoundingClientRect().left - containerLeft;
+            return relativeLeft > tolerance;
+          });
+          if (nextCard) {
+            targetScrollLeft = currentScroll + (nextCard.getBoundingClientRect().left - containerLeft);
+          }
+        } else {
+          // Find the last card whose left edge is to the left of the container viewport's left edge
+          const prevCards = cards.filter(card => {
+            const relativeLeft = card.getBoundingClientRect().left - containerLeft;
+            return relativeLeft < -tolerance;
+          });
+          if (prevCards.length > 0) {
+            const prevCard = prevCards[prevCards.length - 1];
+            targetScrollLeft = currentScroll + (prevCard.getBoundingClientRect().left - containerLeft);
+          }
+        }
+        
+        container.scrollTo({
+          left: targetScrollLeft,
+          behavior: "smooth",
+        });
+      }
     }
   };
   return (
@@ -696,7 +726,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div ref={destinationsRef} className="flex flex-row overflow-x-auto touch-pan-y gap-4 pb-6 w-full scrollbar-none lg:gap-6 items-stretch">
+          <div ref={destinationsRef} className="flex flex-row overflow-x-auto gap-4 pb-6 w-full scrollbar-none lg:gap-6 items-stretch snap-x snap-mandatory">
             {BEST_PLACES.map((place, idx) => {
               const isActive = idx === activeDestIndex;
               return (
@@ -707,7 +737,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.05 }}
-                  className={`min-w-[85vw] sm:min-w-[340px] ${isActive ? "lg:min-w-[calc(40%-18px)] lg:max-w-[calc(40%-18px)]" : "lg:min-w-[calc(20%-18px)] lg:max-w-[calc(20%-18px)]"} flex-shrink-0 min-h-[360px] md:min-h-[440px] group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 flex flex-col justify-end p-6 transition-all duration-500 ease-in-out transform hover:-translate-y-1.5 hover:border-amber-500/40 hover:shadow-[0_15px_30px_rgba(245,158,11,0.15)] cursor-pointer`}
+                  className={`min-w-[85vw] sm:min-w-[340px] ${isActive ? "lg:min-w-[calc(40%-18px)] lg:max-w-[calc(40%-18px)]" : "lg:min-w-[calc(20%-18px)] lg:max-w-[calc(20%-18px)]"} flex-shrink-0 min-h-[360px] md:min-h-[440px] group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 flex flex-col justify-end p-6 transition-all duration-500 ease-in-out transform hover:-translate-y-1.5 hover:border-amber-500/40 hover:shadow-[0_15px_30px_rgba(245,158,11,0.15)] cursor-pointer snap-start`}
                 >
                   {/* Background Image with Overlay */}
                   <div className="absolute inset-0 z-0">
@@ -790,7 +820,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div ref={fleetRef} className="flex overflow-x-auto touch-pan-y gap-6 pb-4 w-full scrollbar-none lg:grid lg:grid-cols-2 lg:overflow-x-visible lg:pb-0 lg:gap-8">
+          <div ref={fleetRef} className="flex overflow-x-auto gap-6 pb-4 w-full scrollbar-none lg:grid lg:grid-cols-2 lg:overflow-x-visible lg:pb-0 lg:gap-8 snap-x snap-mandatory">
             {PREMIUM_FLEET.map((vehicle, idx) => {
               const isExtra = idx >= 4;
               return (
@@ -800,7 +830,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.05 }}
-                  className={`flex flex-col md:flex-row min-w-[85vw] sm:min-w-[400px] lg:min-w-0 bg-slate-900 rounded-3xl border border-slate-800 hover:border-amber-500/50 hover:shadow-[0_15px_30px_rgba(245,158,11,0.08)] hover:-translate-y-2 hover:scale-[1.015] transform transition-all duration-350 ease-out overflow-hidden group ${isExtra && !showAllFleet ? "lg:hidden" : ""}`}
+                  className={`flex flex-col md:flex-row min-w-[85vw] sm:min-w-[400px] lg:min-w-0 bg-slate-900 rounded-3xl border border-slate-800 hover:border-amber-500/50 hover:shadow-[0_15px_30px_rgba(245,158,11,0.08)] hover:-translate-y-2 hover:scale-[1.015] transform transition-all duration-350 ease-out overflow-hidden group snap-start ${isExtra && !showAllFleet ? "lg:hidden" : ""}`}
                 >
                   {/* Vehicle Image Container */}
                   <div
