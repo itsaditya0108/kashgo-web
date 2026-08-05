@@ -25,7 +25,7 @@ export default function AboutPage() {
   const [isFounderModalOpen, setIsFounderModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#090D16] text-slate-100 flex flex-col font-sans selection:bg-amber-400 selection:text-slate-950">
+    <div className="min-h-screen w-full overflow-x-hidden bg-[#090D16] text-slate-100 flex flex-col font-sans selection:bg-amber-400 selection:text-slate-950">
       <Navbar />
 
       {/* HERO SECTION */}
@@ -99,7 +99,7 @@ export default function AboutPage() {
       </section>
 
       {/* THE CHALLENGE & THE VISION */}
-      <section className="py-20 bg-[#090D16] border-t border-slate-900">
+      <section className="py-20 bg-[#090D16] border-t border-slate-900 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
             {/* The Challenge Card */}

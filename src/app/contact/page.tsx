@@ -120,7 +120,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-sm font-bold text-white uppercase tracking-wider">Helpline & Support</h3>
                     <p className="text-slate-300 font-semibold text-base mt-1">+91 7400180114 (Support)</p>
-                    <p className="text-slate-300 font-semibold text-base mt-1">+91 9169160316 (Landline)</p>
+                    <p className="text-slate-300 font-semibold text-base mt-1">+91 8169160316 (Landline)</p>
                     <p className="text-xs text-slate-400">Available for active trip assistance and inquiries</p>
                   </div>
                 </div>
