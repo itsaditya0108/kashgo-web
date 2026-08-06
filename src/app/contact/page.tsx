@@ -131,9 +131,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold text-white uppercase tracking-wider">Our Offices</h3>
-                    <p className="text-slate-300 font-medium text-xs mt-1.5"><strong className="text-amber-400">Srinagar:</strong> Rajbagh, Near Lal Mandi Road, Srinagar 190008</p>
-                    <p className="text-slate-300 font-medium text-xs mt-1.5"><strong className="text-amber-400">Leh:</strong> Fort Road, Leh, Ladakh 194101</p>
-                    <p className="text-slate-300 font-medium text-xs mt-1.5"><strong className="text-amber-400">Corporate:</strong> 401 Vishakha Arcade, Opp. Courtyard Restaurant, Andheri West, Near MVM College, Mumbai 400058</p>
+                    <p className="text-slate-300 font-medium text-xs mt-1.5"><strong className="text-amber-400">Mumbai (HQ):</strong> 401 Vishakha Arcade, Opp. Courtyard Restaurant, Andheri West, Near MVM College, Mumbai 400058</p>
+                    <p className="text-slate-300 font-medium text-xs mt-1.5"><strong className="text-amber-400">Srinagar (Branch):</strong> Rajbagh, Near Lal Mandi Road, Srinagar 190008</p>
                   </div>
                 </div>
 
@@ -154,8 +153,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold text-white uppercase tracking-wider">Headquarters</h3>
-                    <p className="text-slate-300 font-medium text-sm mt-1">Srinagar: Rajbagh, Near Lal Mandi Road, Srinagar 190008</p>
-                    <p className="text-slate-300 font-medium text-sm mt-1">Leh: Fort Road, Leh, Ladakh 194101</p>
+                    <p className="text-slate-300 font-medium text-sm mt-1">401 Vishakha Arcade, Opp. Courtyard Restaurant, Andheri West, Near MVM College, Mumbai 400058</p>
                   </div>
                 </div>
               </div>
@@ -313,7 +311,7 @@ export default function ContactPage() {
               </div>
               <h4 className="text-xl font-bold text-white mb-2">Interactive Location Hubs</h4>
               <p className="text-slate-400 text-xs leading-relaxed mb-4">
-                Srinagar HQ: Rajbagh Lal Mandi • Leh Office: Fort Road
+                Srinagar Branch: Rajbagh Lal Mandi
               </p>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-400 border border-amber-500/35">
                 <Globe className="w-3.5 h-3.5" /> Coordinates Verified (kashgo.in)
